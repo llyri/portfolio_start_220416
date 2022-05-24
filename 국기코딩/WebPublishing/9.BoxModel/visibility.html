@@ -3,36 +3,35 @@
 <head>
 <meta charset="utf-8">
 <title>Display</title>
+<style>
+  p{
+    width: 100px;
+    height: 200px;
+    background-color: olive;
+    display: inline-block;
+  }
+
+  .hidden{
+    visibility: hidden;
+  }
+
+  .none{
+    display: none;
+  }
+</style>
 </head>
 
 <body>
 <h2>Visibility : hidden</h2>
-<p class="box2">엘레먼트 박스를 안보이게 합니다.</p>
+<p class="box1">1</p>
+<p class="box hidden">2</p>
+<p class="box1">3</p>
 
 <h2>display : none</h2>
-<p class="box2">엘레먼트 박스를 안보이게 합니다.</p>
+<p class="box2">1</p>
+<p class="box2 none">2</p>
+<p class="box3">3</p>
 
-<h2>Visibility : collapse</h2>
-<table>
-<col>
-<col>
-<col>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-</table>
 <h2>Visibility : inherit</h2>
 <div>
  부모 엘리먼트
