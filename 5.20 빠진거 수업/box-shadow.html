@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>box-shadow</title>
+	<style>
+		/*box-shadow:x축거리  y축거리 blur spread color  inset/outset*/
+		div {
+			width: 200px;
+			height: 200px;
+			background: skyblue;
+			margin: 50px;
+		}
+		.inset{box-shadow: 5px 5px 10px rgba(0,0,0,0.7) inset;}
+		.outset{box-shadow: 5px 5px 0 rgba(0,0,0,0.7);}
+		.blur{box-shadow: 5px 5px 0 rgba(0,0,0,0.7),
+					10px 10px 10px rgba(0,255,255,0.4),
+					-10px -10px 10px rgba(255,255,0,0.4);}
+		.spread{box-shadow: 10px 10px 10px 30px rgba(0,0,0,0.7);}
+
+	</style>
+</head>
+
+<body>
+	<h1>box-shadow</h1>
+	<div class="inset">
+
+	</div>
+	<div class="outset">
+
+	</div>
+	<div class="blur">
+
+	</div>
+	<div class="spread">
+
+	</div>
+</body>
+
+</html>

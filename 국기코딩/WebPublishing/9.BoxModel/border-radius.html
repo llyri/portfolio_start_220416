@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>border-radius</title>
+		<style>
+			div{
+				width: 200px;
+				height: 150px;
+				background-color: coral;
+				margin: 50px;
+			}
+
+			.border-radius01{
+				border-radius: 40px;
+			}
+
+			.border-radius02{
+				border-radius: 5px 10px 15px 20px;
+			}
+
+			.top-left01{
+				border-radius: 40px 0;
+			}
+
+			.top-left02{
+				border-top-left-radius: 40px;
+			}
+
+			.top-right01{
+				border-top-right-radius: 40px 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+    <!--1. border - radius 속성은 요소 박스 테두리 선의 둥근 모서리 형태  
+        를 지정한다.
+               border-radius : 속성값;
+
+        2. 속성값은 top-left, top-right, bottom-right, bottom-left 순으로
+         지정한다.
+
+        3.border-*-radius : 속성값;
+          border-top-left-radius (왼쪽 위)
+          border-top-right-radius(오른쪽 위)
+          border-bottom-left-radius(왼쪽 아래)
+          border-bottom-right-radius(오른쪽 아래)
+   
+       4. border-radius : 가로 방향 값 / 세로 방향 값
+
+     -->
+		<h1>border-radius</h1>
+        <!--top-left, top-right, bottom-right, bottom-left 값이 같은 경우-->
+		<div class="border-radius01">
+			border-radius:40px;
+		</div>
+        
+        <!--top-left,bottom-right가 같고 top-right, bottom-left 값이 같은 경우-->
+		<div class="border-radius02">
+			border-radius: 5px 10px 15px 20px;
+		</div>
+     
+		<div class="top-left01">
+			border-top-left-radius: 40px 20px;
+		</div>
+		<div class="top-left02">
+			border-radius: 40px 0 0 0 / 20px 0 0 0;
+		</div>
+		<div class="top-right01">
+			border-top-right-radius: 40px 20px;
+		</div>
+		<div class="top-right02">
+			border-radius: 0 40px 0 0 / 0 20px 0 0;
+		</div>
+		<div class="bottom-right01">
+			border-bottom-right-radius: 40px 20px;
+		</div>
+		<div class="bottom-right02">
+			border-radius: 0 0 40px 0 / 0 0 20px 0;
+		</div>
+		<div class="bottom-left01">
+			border-bottom-left-radius: 40px 20px;
+		</div>
+		<div class="bottom-left02">
+			border-radius: 0 0 0 40px / 0 0 0 0 20px;
+		</div>
+	</body>
+</html>

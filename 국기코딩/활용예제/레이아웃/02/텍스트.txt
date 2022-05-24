@@ -1,0 +1,13 @@
+﻿How to make your website Readable [Tips]
+Featured Image 01
+An important aspect of font selection while designing a website, for one reason or another, I didn’t take in consideration is the readability of the “fonts”: “now” that you have the possibility to choose the font you want for your website, you have to be careful not to base the choice only on the aesthetic ( excited for the new CSS3), since the ability to set a certain font doesn’t necessarily mean that it’s the right choice, simply because some fonts are more readable than others [...]
+
+[Read more]
+
+Gliding Divs Using jParallax Plugin [Tutorial]
+Featured Image 02
+jParallax turns a selected element into a ‘window’, or viewport, and all its children into absolutely positioned layers that can be seen through the viewport. These layers move in response to the mouse, and, depending on their dimensions (and options for layer initialisation), they move by different amounts, in a parallaxy kind of way [...]
+
+[Read more]
+
+©Dzyngiri  About Us - Advertise - Contact Us

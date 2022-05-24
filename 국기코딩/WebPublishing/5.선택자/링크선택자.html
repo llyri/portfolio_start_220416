@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link</title>
+    <script src="../../../jquery-3.6.0.min.js"></script>
+    <script src="../../../jquery-migrate-1.4.1.min.js"></script>
+    <style>
+        .ex {
+            margin: 50px;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* a:visited {
+            color: green;
+        }
+
+        a:hover {
+            color: blueviolet;
+            background-color:aquamarine;
+        }
+
+        a:active {
+            background-color: blue;
+        }
+
+        a:focus {
+            background-color: red;
+        } */
+/* 
+        a:hover, a:active, a:focus{
+            background-color: rgb(252, 7, 129);
+            color: #fff;
+        } */
+
+        /* .box{
+            width: 135px;
+            height: 105px;
+            border: 5px solid #aaa;
+            background: url('./images/textlink_img_01.gif') no-repeat;
+        }
+
+        .box:hover, .box:active, .box:focus{
+            background: url('./images/textlink_img_02.gif') no-repeat;
+        } */
+
+        .box2{
+            width: 135px;
+            height: 105px;
+            border: 5px solid #aaa;
+        }
+        .box2:hover, .box2:active, .box2:focus{
+            opacity: 0.3;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="ex">
+        <a href="#">LINK</a>
+    </div>
+
+    <div class="ex2">
+        <div class="box">
+            <img src="./images/textlink_img_01.gif" alt="고양이">
+        </div>
+        <!-- <div class="box2">
+            <a href="http://www.naver.com">
+                <img src="./images/textlink_img_01.gif" alt="cat">
+            </a>
+        </div> -->
+    </div>
+
+  <script>
+       $(function(){
+       $('.ex').click(function(e){
+           $(this).text('hello')
+       })
+
+       $('img').click(function(e){
+           $(this).attr('src','./images/textlink_img_02.gif')
+       })
+   })
+  </script>
+
+</body>
+
+</html>

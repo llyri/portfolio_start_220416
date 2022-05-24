@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>가상 요소 선택자</title>
+
+</head>
+
+<body>
+<div>
+<h3>::first-line</h3>
+<!--
+::first-line
+문자열 중 첫 번째 줄에 적용
+-->
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+</div>
+
+<div>
+<h3>::first-letter</h3>
+<!--
+::first-letter
+문자열 중 첫 번째  문장에 적용
+-->
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+</div>
+
+<div>
+<h3>::before , ::after</h3>
+<!--
+::before  ,  ::after
+특정 요소의 내용 앞이나 뒤에 텍스트같은  콘텐츠를 추가할 수 있다.
+p::before{content: “내용”;}
+-->
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+</div>
+
+<div>
+<h3>::selection</h3>
+<!--
+::selection
+사용자가 마우스로 드래그 했을 때 선택되는 영역의 스타일 지정
+p::selection{ color : yellow;}
+-->
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+</div>
+</body>
+</html>

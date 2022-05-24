@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>sibling/combinators</title>
+    <style>
+        /* h1 태그의 바로 뒤에 위치하는 h2 태그의
+           color 속성에 red 키워드를 적용합니다. */
+ 
+        
+        /* h1 태그의 뒤에 위치하는 모든 h2 태그의
+           background-color 속성에 orange 키워드를 적용합니다. */
+
+    </style>
+</head>
+<body>
+<!--
+*인접 형제 선택자
+1.같은 부모를 가진 형제 요소 중 바로 옆에 있는 요소에만 스타일을 적용한다.
+2.선행 선택자와 후행 선택자를 + 로 구분하여 선언한다.
+[선택자]  + [선택자]
+
+*기본 형제 선택자
+1.바로 옆에 있지 않아도 인접하여 등장하는 모든 형제 요소에
+   다 적용된다.
+2.기본 형제 선택자를 정의할 때는 ~(틸드)로 표시한다.
+ [선택자] ~[선택자]
+-->
+    <h1>Header - 1</h1>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+</body>
+</html>

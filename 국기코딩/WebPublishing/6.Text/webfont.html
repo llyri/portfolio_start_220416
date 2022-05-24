@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>웹폰트 이해하기</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+   @font-face{
+     font-family: "NBG";
+     src: local('NanumBarunGothic'),
+          local('Nanum Barun Gothic'),
+          url('./font/NanumBarunGothic.woff2') format('woff2'),
+          url('./font/NanumBarunGothic.woff') format('woff')
+          url('./font/NanumBarunGothic.ttf') format('truetype');
+   }
+   
+   @font-face {
+     font-family: "bodoni";
+     src: url(./font/Bauer-Bodoni-D-OT_6246.woff) format('woff'),
+          url(./font/Bauer-Bodoni-D-OT_6246.ttf) format('truetype');
+   }
+
+   @import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+
+   body{
+     font-size: 1.5em;
+     background-color: #000;
+     color: #fff;
+   }
+  .font1{
+    font-family: 'Nanum Brush Script', cursive;
+  }
+
+  li{
+    font: 30px "bodoni", serif;
+  }
+</style>
+  </head>
+
+<body>
+<!--
+@fone-face{ 
+font-family: ‘글꼴이름’;
+src:url(‘글꼴파일경로’), format(‘글꼴파일유형’) ; }
+-->
+<h4 style="font-family: 'Nanum Brush Script', cursive;">웹폰트 적용하기</h4>
+<p style="font-family: 'Gugi', cursive;">이 문장은 웹폰트를 적용하지 않았습니다.</p>
+<p style="font-family: 'Single Day', cursive;">이 문장은 웹폰트로 "나눔명조체"를 사용했습니다.</p>
+<p class="font1">이 문장은 "나눔브러시"를 사용했습니다.</p>
+<p style="font-family: 'Yeon Sung', cursive;">이 문장은 "나눔고딕"를 두껍게 강조했습니다.</p>
+
+<!--
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+-->
+<p>이 문장은 구글에서 직접 연결한 "Tangerine"폰트입니다. </p>
+
+<h4>링크에 웹폰트 적용하기</h4>
+<ul>
+	<li><a href="#">Link1</a></li>
+    <li><a href="#">Link2</a></li>
+    <li><a href="#">Link3</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        @font-face {
+            font-family: "nbg";
+            src: url(./fonts/NanumBarunGothic.woff2) format("woff2"),
+            url(./fonts/NanumBarunGothic.woff) format("woff"),
+            url(./fonts/NanumBarunGothic.ttf) format("truetype");
+        }
+        *{margin:0; padding:0;}
+        a{text-decoration: none; color:#777;}
+        body{font-size: 16px; color:#777;
+                font-family: "nbg" , sans-serif;
+                background: #e7e7e7;}
+
+        /*공통스타일*/
+        .clear::after{content: ""; display: block; clear: both;}
+
+        .col_wrap{width:1200px; margin: 50px auto;
+                        border: 5px solid #333;}
+        /* .col_wrap::after{content: ""; display: block; clear: both;} */
+        .col_wrap .col{width:380px; float:left;
+                            margin-left: 10px; margin-right: 10px;
+                            margin-bottom:20px;
+                            background: #fff;
+                            text-align: center;}
+        .col_wrap .col p{padding:20px 0;}
+        .col_wrap  .border_g{border-bottom: 2px solid #21a089;}
+        .col_wrap  .border_b{border-bottom: 2px solid #4a75b9;}
+        .col_wrap  .border_p{border-bottom: 2px solid #c24ea8;}
+    </style>
+</head>
+<body>
+<div class="col_wrap  clear">
+    <div class="col  border_g ">
+        <a href="#">
+            <img src="./images/01.jpg" alt="온열질환 상세 현황">
+            <p>온열질환 상세 현황</p>
+        </a>
+    </div>
+
+    <div class="col border_b">
+        <a href="#">
+            <img src="./images/02.jpg" alt="일일통계">
+            <p>일일통계</p>
+        </a>
+    </div>
+
+    <div class="col border_p">
+        <a href="#">
+            <img src="./images/03.jpg" alt="신고현황연보">
+            <p>신고현황연보</p>
+        </a>
+    </div>
+
+    <div class="col border_g">
+        <a href="#">
+            <img src="./images/04.jpg" alt="건강수칙홍보자료">
+            <p>건강수칙홍보자료</p>
+        </a>
+    </div>
+
+    <div class="col  border_b">
+        <a href="#">
+            <img src="./images/05.jpg" alt="온열질환 상세 현황">
+            <p>온열질환 상세 현황</p>
+        </a>
+    </div>
+
+    <div class="col border_p">
+        <a href="#">
+            <img src="./images/06.jpg" alt="온열질환 상세 현황">
+            <p>온열질환 상세 현황</p>
+        </a>
+    </div>
+</div>
+</body>
+</html>
