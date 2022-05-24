@@ -64,6 +64,7 @@ body {
     width: 33px;
     height: 33px;
 }
+
 #header>.top_header div{
     display: flex;
     justify-content: space-between;
@@ -76,6 +77,11 @@ body {
     color: white;
     margin-left: 10px;
     line-height: 38px;
+}
+
+#header>.top_header div p>a{
+    width: 100%;
+    display: inline-block;
 }
 
 #header>.top_header>div p:active,
