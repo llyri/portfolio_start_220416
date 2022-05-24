@@ -39,6 +39,11 @@ body {
     margin: 0 auto;
 }
 
+#header .top_line{
+    display: block;
+    background-color: #00a0c8;
+    height: 5px;
+}
 #header>.top_header{
     padding: 24px 242px;
     background-color: #f6f6f6;
@@ -48,23 +53,23 @@ body {
 }
 
 
-#header>.top_header>ul{
+#header>.top_header ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#header>.top_header>ul>li img{
+#header>.top_header ul>li img{
     margin-right: 8px;
     width: 33px;
     height: 33px;
 }
-#header>.top_header>div{
+#header>.top_header div{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#header>.top_header>div p{
+#header>.top_header div p{
     text-align: center;
     width: 121px;
     background-color: #00a0c8 ;
@@ -72,8 +77,21 @@ body {
     margin-left: 10px;
     line-height: 38px;
 }
+
+#header>.top_header>div p:active,
+#header>.top_header>div p:hover,
+#header>.top_header>div p:focus{
+    background-color: yellowgreen
+}
+
 #header>.top_header>div p:last-child{
     background-color: #858786;
+}
+
+#header>.top_header>div p:last-child:active,
+#header>.top_header>div p:last-child:hover,
+#header>.top_header>div p:last-child:focus{
+    background-color: yellowgreen
 }
 
 nav.nav_gnb{
@@ -208,4 +226,35 @@ nav.nav_gnb>ul a:focus{
     border-right: 1px solid #858786;
     color: #515453;
     margin-top: 5px;
+}
+
+#footer{
+    background-color: #515453;
+    padding: 40px 0 100px 0;
+}
+
+#footer>small{
+    display: block;
+    color: #676b6a;
+    font-weight: bold;
+}
+
+#aside{
+    position: relative;
+}
+#aside>p{
+    text-align: center;
+    position: fixed;
+    top: 90%;
+    right: 10vw;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: #343635;
+}
+
+#aside>p a{
+    margin-top: 5px;
+    width: 100%;
+    display: inline-block;
 }
