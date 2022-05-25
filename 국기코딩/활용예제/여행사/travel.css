@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +16,10 @@ ul,
 li,
 ol {
     list-style: none;
+}
+
+img{
+    max-width: 100%;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -39,11 +45,10 @@ body {
     margin: 0 auto;
 }
 
-#header .top_line{
-    display: block;
-    background-color: #00a0c8;
-    height: 5px;
+#header{
+    border-top: 7px solid #00a0c8;
 }
+
 #header>.top_header{
     padding: 24px 242px;
     background-color: #f6f6f6;
@@ -236,7 +241,7 @@ nav.nav_gnb>ul a:focus{
 
 #footer{
     background-color: #515453;
-    padding: 40px 0 100px 0;
+    padding: 40px 20px 100px;
 }
 
 #footer>small{
@@ -245,6 +250,7 @@ nav.nav_gnb>ul a:focus{
     font-weight: bold;
 }
 
+/* aside */
 #aside{
     position: relative;
 }
