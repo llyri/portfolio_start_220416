@@ -33,6 +33,11 @@ img {
     max-width: 100%;
 }
 
+/* 이미지 태그 공간없애기 */
+.bl{
+    display: block;
+}
+
 /* variables */
 :root{
     --main:#00a0c8;
@@ -161,4 +166,54 @@ img {
 
 #contents .special .special_list li:last-child{
     margin-right: 0px;
+}
+
+#contents .about .about_img{
+    float: left;
+    width: 700px;
+}
+#contents .about .about_txt{
+    float: right;
+    width: 660px;
+}
+
+#contents .about .about_txt h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#contents .about .about_txt p:nth-of-type(1){
+    font-size: 18px;
+    color: #343635;
+    margin-bottom: 20px;
+}
+
+#contents .about .about_txt .btn_link{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid #8e9391;
+    margin-top: 40px;
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+}
+
+#contents .about .about_txt .btn_link:active,
+#contents .about .about_txt .btn_link:focus,
+#contents .about .about_txt .btn_link:hover{
+    background-color: #00a0c8;
+    color: #fff;
+}
+
+#footer{
+    background-color:#515453;
+    padding: 40px 0 120px;
+    color: #8e9391;
+    font-size: 14px;
+    font-style: normal;
+}
+
+#footer address{
+    font-style: normal;
 }

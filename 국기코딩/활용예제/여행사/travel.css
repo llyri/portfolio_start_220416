@@ -137,7 +137,7 @@ nav.nav_gnb>ul a:focus{
     padding: 69px 0;
 }
 .sec02>h2{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 45px;
 }
@@ -167,10 +167,6 @@ nav.nav_gnb>ul a:focus{
     height: 219.75px;
 }
 
-.sec03{
-    
-}
-
 .sec03 img{
     float: left;
     width: 703px;
@@ -183,7 +179,7 @@ nav.nav_gnb>ul a:focus{
 }
 
 .sec03 .txt>p:nth-child(1){
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     line-height: 53px;
 }
@@ -203,8 +199,8 @@ nav.nav_gnb>ul a:focus{
     text-align: center;
     font-size: 15px;
     border: 1px solid #858786;
-    border-radius: 30px;
-    padding: 4px 6px;
+    border-radius: 15px;
+    padding: 6px;
     box-sizing: border-box;
     width: 100px;
 }
@@ -221,11 +217,11 @@ nav.nav_gnb>ul a:focus{
     padding: 12px 44px;
 }
 
-.sec04 img{
+.sec04 div{
     float: left;
     margin-right: 44px;
-
 }
+
 .sec04 ul{
     float: left;
 }
