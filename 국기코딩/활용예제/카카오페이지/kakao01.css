@@ -103,10 +103,16 @@ html,body{
     width: 134px;
     font-size: 13px;
     box-sizing: border-box;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     display: block;
     padding:10px 52px 10px 14px ;
     background: #fff url('./images/arrow.png') no-repeat 115px center;
+}
+
+#container #sec01 .inner p a:hover,
+#container #sec01 .inner p a:active,
+#container #sec01 .inner p a:focus{
+    background-color: #fcce00;
 }
 
 /* #container #sec01 p#btn_prev{

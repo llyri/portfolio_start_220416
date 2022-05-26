@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./position_travel02.css">
+    <title>THE SUITES HOTELS</title>
+    <style>
+      h1,h2,h3,h4,h5,h6{
+    color: #343635;
+    margin-bottom: 20px;
+    }
+
+    body {
+        font: 16px/1.5 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+        color: #8e9391;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    ul,
+    li,
+    ol {
+        list-style: none;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .clear::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .inner {
+        position: relative;
+        height: 100%;
+        width: 1415px;
+        margin: 0 auto;
+    }
+
+    #header .top{
+        background-color: #eee;
+        border-top: 5px solid rgb(54, 202, 247);
+        height: 95px;
+        text-align: center;
+    }
+
+    #header .top .social_left {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 180px;
+    margin-top: 5px;
+}
+
+#header .top .social_left li {
+    float: left;
+    margin-right: 5px;
+}
+
+#header .top .social_left li a {
+    display: block;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    text-indent: -999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+#header .top .social_left li:nth-child(1) a {
+    background-image: url('./images/ico_facebook.png');
+}
+
+#header .top .social_left li:nth-child(2) a {
+    background-image: url('./images/ico_blog.png');
+}
+
+#header .top .social_left li:nth-child(3) a {
+    background-image: url('./images/ico_insta.png');
+}
+
+#header .top .social_left li:nth-child(4) a {
+    background-image: url('./images/ico_trip.png');
+}
+
+#header .top .right_btn {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 260px;
+}
+
+#header .top .right_btn a {
+    display: inline-block;
+    width: 120px;
+    line-height: 40px;
+    color: white;
+    background-color: #08f7ff;
+    margin-left: 3px;
+}
+
+#header .top .logo {
+    display: inline-block;
+    text-align: center;
+    background-color: #08f7ff;
+}
+
+
+#header .top .logo a {
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="top">
+                <!--컬럼 그리드 영역(1400픽셀)-->
+                <div class="inner clear">
+                    <!--가운데 로고 시작-->
+                    <h1 class="logo">
+                        <a href="#">
+                            <img src="./images/logo_jeju.png" alt="THE SUITES HOTELS 제주">
+                        </a>
+                    </h1>
+                    <!--가운데 로고 종료-->
+
+                    <!--오른쪽 버튼 시작-->
+                        <div class="right_btn">
+                            <a href="#">예약하기</a>
+                            <a href="#">예약조회/취소</a>
+                        </div>
+                    <!--오른쪽 버튼 종료-->
+
+                     <!--왼쪽 소셜 시작-->
+                         <ul class="social_left">
+                             <li><a href="#">facebook</a></li>
+                             <li><a href="#">blog</a></li>
+                             <li><a href="#">instagram</a></li>
+                             <li><a href="#">youtube</a></li>
+                         </ul>
+                     <!--왼쪽 소셜 종료-->
+                </div>    
+            </div>
+            <div class="nav_area">
+                <div class="inner clear">
+                    <nav class="gnb">
+                        <ul class="gnb_list">
+                            <li><a href="#">스페셜오퍼</a></li>
+                            <li><a href="#">객실</a></li>
+                            <li><a href="#">미팅&연회</a></li>
+                            <li><a href="#">웨딩</a></li>
+                            <li><a href="#">레스토랑</a></li>
+                            <li><a href="#">부대시설</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </div>
+</body>
+</html>
