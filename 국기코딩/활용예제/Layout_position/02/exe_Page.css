@@ -129,7 +129,8 @@ body{
 
 /* visual start */
 #visual{
-    height: 921px;
+    min-height: 921px;
     width: 100%;
-    background: url('./images/background.jpg') no-repeat;
+    background: url('./images/background.jpg') no-repeat center;
+    margin: 0 auto;
 }
