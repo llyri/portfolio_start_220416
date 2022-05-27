@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family:"nbg" ;
+            src: url(./fonts/NanumBarunGothic.woff2) format("woff2"),
+            url(./fonts/NanumBarunGothic.woff) format("woff"),
+            url(./fonts/NanumBarunGothic.ttf) format("truetype")
+            ;
+        }
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        body{font-size:12px; 
+                font-family: "nbg", sans-serif;}
+        .clear::after{content:""; display: block; clear: both;}
+        nav{width:330px; margin: 30px auto;}
+        .gnb_list{background:linear-gradient(to top,#157302 10%, #2caa0e 10%, #2caa0e );
+        border:1px solid #1d9100;}
+        .gnb_list li{float:left; width:40px; height:40px;
+                        text-align: center; line-height: 40px;
+                        text-shadow: 0px 0px 5px #105100,
+                        0px 0px 5px #105100,
+                        0px 0px 5px #105100;}
+        .gnb_list li a{color:#fff;}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="gnb_list clear">
+            <li><a href="#">메일 </a></li>
+            <li><a href="#">카페</a></li>
+            <li><a href="#">블로그</a></li>
+            <li><a href="#">쇼핑</a></li>
+            <li><a href="#">사전</a></li>
+            <li><a href="#">지도</a></li>
+            <li><a href="#">영화</a></li>
+            <li><a href="#">웹툰</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+                                  

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>background-size</title>
+		<style>
+			.box>div{
+				width: 1000;
+				height: 700px;
+				border: 5px solid #333;
+				margin: 50px;
+				background: url('../13.Effect/Animation/03/images/intro-bg.jpg') no-repeat;
+			}
+
+			.box>.bgsize01{
+				background-size: 50px;
+			}
+			.box>.bgsize02{
+				background-size: 50% ;
+			}
+			.box>.bgsize03{
+				background-size: contain ;
+			}
+			.box>.bgsize04{
+				background-size: cover;
+			}
+			.box>.bgsize05{
+				background-size: auto;
+			}
+			.box>.bgsize06{
+				background-size: ;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>background-size 속성</h1>
+		<div class="box">
+			<div class="bgsize01">
+				<span>가로 세로 50px</span>
+			</div>
+			<div class="bgsize02">
+				<span>가로 세로 50%</span>
+			</div>
+			<div class="bgsize03">
+				<span>cotain</span>
+			</div>
+			<div class="bgsize04">
+				<span>cover</span>
+			</div>
+            <div class="bgsize05">
+				<span>auto</span>
+			</div>
+              <div class="bgsize06">
+				<span>length</span>
+			</div>
+		</div>
+	</body>
+</html>

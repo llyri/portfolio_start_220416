@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        a{text-decoration: none; color:#777;}
+        a:hover, a:active, a:focus{color:blue; 
+                                text-decoration: underline;}
+        ul{list-style: none;}
+        body{font-size: 13px; color:#777; line-height: 1.5; font-family: "돋움", "맑은 고딕", dotum, "Malgun Gothic", sans-serif;}
+
+        /*common*/
+        .clear::after{content:""; display: block; clear: both;}
+
+        .article{border:5px solid #333;
+                    width:660px; margin: 30px auto;}
+        .left{ width:335px; float: left; }
+        .left .col{width:154px; float:left; margin-right: 10px;
+                    margin-bottom: 10px;}    
+
+        .right{width:325px; float: right;}
+        .right li{padding:5px 0;}
+        .right li .txt_c{color:blue;}
+    </style>
+</head>
+<body>
+    <article class="article clear">
+        <div class="left">
+            <div class="col">
+                <a href="#">
+                    <img src="./ex1.jpg" alt="지금은 1톤 캥핑카의 전성시대">
+                    <p>지금은 1톤 캥핑카의 전성시대</p>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="#">
+                    <img src="./ex2.jpg" alt="[시승기]르노 클리오 디젤의 젊은 질주의 시작">
+                    <p>[시승기]르노 클리오 디젤의 젊은 질주의 시작</p>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="#">
+                    <img src="./ex3.jpg" alt="고가의 수퍼카 일수록 앞모습이 괴팍해지는 이유 ">
+                    <p>고가의 수퍼카 일수록 앞모습이 괴팍해지는 이유 </p>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="#">
+                    <img src="./ex4.jpg" alt="운전자도 모르는 내 차의 페달 유형">
+                    <p>운전자도 모르는 내 차의 페달 유형</p>
+                </a>
+            </div>
+        </div><!--light End-->
+        <div class="right">
+            <ul class="article_list">
+                <li><a href="#">현대차,하반기 보릿고개..팔리세이드·GV80 내년 출시</a></li>
+                <li><a href="#">내연기관의 종말..가솔린이 먼저일까 디젤이 먼저일까</a></li>
+                <li><a href="#">"한국 추월했나?" 중국인이 바라보는 중국차와 한국차</a></li>
+                <li><a href="#">경유차, 배기가스 측정기준 강화..쪼그라드는 입지</a></li>
+                <li><a href="#">"전기차, 충전소 진입 방해말아주세요"</a></li>
+                <li><a href="#"><span class="txt_c">칼럼</span> 시속 160km부터가 진짜 재미라는 독일인들 운전법</a></li>
+                <li><a href="#">[시승기] 국산 준중형 SUV의 자존심, 투싼 페이스리프트</a></li>
+                <li><a href="#">[시승기] 매력적이지만 한 방이 부족한 그대, 쉐보레 더 뉴 스파크</a></li>
+                <li><a href="#">AK-47 소총 칼라시니코프, 레트로 스타일 전기차 공개</a></li>
+            </ul>
+        </div><!--right End-->
+    </article>
+</body>
+</html>

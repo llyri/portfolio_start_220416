@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANALOG</title>
+    <style>
+     *{
+         margin: 0;
+         padding: 0;
+     }
+
+     ul,li,ol{
+         list-style: none;
+     }
+
+     a{
+         text-decoration: none;
+         color: #000;
+     }
+
+     body{
+         font: 14px/1.5 '굴림','돋움','Malgun Gothic','dotum',sans-serif;
+         color: #000;
+     }
+
+     /* css시작 */
+
+     div#wrap{
+         text-align: center;
+         width: 980px;
+         margin: 20px auto;
+         border: 3px double #000;
+         padding: 30px 0;
+         /* box-sizing: border-box; */
+     }
+
+     nav>ul{
+         display:flex;
+         justify-content: center;
+         align-items: center;
+         border-bottom: 1px solid #000;
+         border-top: 2px solid #000;
+         width: 600px;
+         margin: 0 auto 20px;
+     }
+
+     nav>ul>li{
+         margin: 15px 20px;
+     }
+     
+     a:hover, a:focus{
+         color: red;
+     }
+
+     a:active{
+         color: blue;
+     }
+
+
+     img{
+         margin-bottom: 20px;
+     }
+
+     #contents p{
+         margin-bottom: 20px;
+         font-size: 13px;
+         letter-spacing: 2px;
+     }
+
+     footer{
+         font-size: 11px;
+         color: #777;
+     }
+    </style>
+</head>
+
+<body>
+ <div id="wrap">
+ <!-- header -->
+ <header id="header">
+         <h1 class="logo">
+             <a href="ANALOG.html">
+                 <img src="./logo.gif" alt="logo">
+             </a>
+         </h1>
+         <nav class="gnb">
+             <ul>
+                 <li><a href="#">홈</a></li>
+                 <li><a href="#">판매제품</a></li>
+                 <li><a href="#">수리</a></li>
+                 <li><a href="#">소개</a></li>
+                 <li><a href="#">연락처</a></li>
+             </ul>
+         </nav>
+ </header>
+
+ <!-- main -->
+ <main id="contents">
+     <div>
+        <img src="./keys.jpg" alt="건반사진">
+        <p>클래식 키보드, 특히 Fender Rhodes, Wurlitzer EP200, 
+            Hohner <br> Clavinet의 판매와 수리를 전문으로 합니다.</p>
+     </div>
+ </main>
+
+ <!-- footer -->
+ <footer id="footer">
+   <p>Copyright &copy; ANALOG Corp. All rights reserved.</p> 
+ </footer>
+</div>
+
+</body>
+</html>

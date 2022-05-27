@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Cantora One', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Cantora+One&display=swap');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
+    font-size: 100%;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.blind {
+    display: block;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+/* 상속 */
+body{
+    font: 14px/1.5 'Cantora One', sans-serif;
+    color: #565656;
+}
+
+#inner{
+    width: 1187px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* header start */
+#header #inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 36px;
+}
+
+#header #inner nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header #inner nav ul li{
+    margin-right: 43px;
+}
+
+#header #inner nav ul li a{
+    display: block;
+    font-weight: bold;
+}
+
+#header #inner nav ul li span{
+    display: block;
+    width: 10px;
+    height: 2px;
+    background-color: #e64a3b;
+    visibility: hidden;
+}
+
+#header #inner nav ul li:hover span,
+#header #inner nav ul li:focus span,
+#header #inner nav ul li:active span{
+    visibility: visible;
+}
+
+#header #inner nav ul li a:hover,
+#header #inner nav ul li a:focus,
+#header #inner nav ul li a:active{
+  color: #e64a3b;
+  
+}
+
+#header #inner div.my_btn ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header #inner div.my_btn li{
+    margin-right: 14px;
+}
+
+#header #inner div.my_btn li a{
+    display: block;
+    font-weight: bold;
+}
+
+#header #inner div.my_btn li a:hover,
+#header #inner div.my_btn li a:focus,
+#header #inner div.my_btn li a:active{
+    color: #e64a3b;
+}
+
+/* visual start */
+#visual{
+    min-height: 921px;
+    width: 100%;
+    background: url('./images/background.jpg') no-repeat center;
+    margin: 0 auto;
+}

@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "nbg";
+    src: url("./fonts/NanumBarunGothic.woff") format("woff"),
+        url("./fonts/NanumBarunGothic.ttf") format("truetype")
+}
+
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
+    font-size: 100%;
+}
+
+a,
+span {
+    display: inline-block;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.blind {
+    display: block;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+/* 
+    .blind{
+        width: 0;
+        height: 0;
+        font-size:0;
+        line-height: 0;
+        visibility: hidden;
+        position: absolute;
+    } */
+
+/* 상속 */
+body {
+    font: 16px/1.5 "nbg", "맑은 고딕", "돋움", sans-serif;
+    color: #3e3e3e;
+}
+
+/* 레이아웃 시작 */
+.inner {
+    width: 1740px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+#header {
+    height: 64px;
+    background-color: gold;
+}
+
+#header .logo{
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+#header .nav{
+    position: absolute;
+    left: 590px;
+    top: 20px;
+
+}
+
+
+#header .nav li{
+    float: left;
+}
+
+
+#header .nav li a{
+    padding: 5px 15px;
+}

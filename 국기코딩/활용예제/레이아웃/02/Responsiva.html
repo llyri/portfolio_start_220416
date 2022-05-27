@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsiva</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,li{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+
+        body{
+            font: 15px/1.5 Georgia,serif;
+            background: url('./images/bg.png') no-repeat center;
+            background-size: cover;
+        }
+
+        /* css start */
+        #wrap{
+            width: 651px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #header>h1{
+            margin: 25px 0 0;
+        }
+
+        nav>ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav>ul>li{
+            margin: auto 10px 30px;
+        }
+
+        .main>section>h2{
+            color: #6190ca;
+            text-align: left;
+            font: 400 36px 'Georgia',serif;
+            margin-bottom: 20px;
+        }
+
+        .main>section>p{
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .main>section>p:nth-of-type(1){
+            text-align: justify;
+        }
+
+        .main>section>img{
+            margin-bottom: 20px;
+            border: 10px solid #fff;
+            border-radius: 10px;
+        }
+
+        i{
+            color: #6190ca;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo">
+                <a href="./Responsiva.html">
+                    <img src="./images/logo.png" alt="logo">
+                </a>
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- main -->
+        <main id="container">
+            <div class="main">
+                <section>
+                    <h2>How to make your website Readable [Tips]</h2>
+                    <img src="./images/featured_Image.jpg" alt="featured">
+                    <p>An important aspect of font selection while designing a website, for one reason or another,
+                        I didn’t take in consideration is the readability of the “fonts”: “now” that you have the possibility to 
+                        choose the font you want for your website, you have to be careful not to base the choice only on 
+                        the aesthetic ( excited for the new CSS3), since the ability to set a certain font doesn’t necessarily 
+                        mean that it’s the right choice, simply because some fonts are more readable than others [...]
+                    </p>
+                    <p>[<a href="#">Read more</a>]</p>
+                </section>
+                <section>
+                    <h2>Gliding Divs Using jParallax Plugin [Tutorial]</h2>
+                    <img src="./images/glding_divs.jpg" alt="glding">
+                    <p>jParallax turns a selected element into a ‘window’, or viewport, and all its children into absolutely 
+                        <wbr>layers that can be seen through the viewport. These layers move in response to the 
+                        <wbr>mouse, and, depending on their dimensions (and options for layer initialisation), they move by 
+                        <wbr>different amounts, in a parallaxy kind of way [...]
+                    </p>
+                    <p>[<a href="#">Read more</a>]</p>
+                </section>
+            </div>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+    <!-- How to make your website Readable [Tips]
+Featured Image 01
+An important aspect of font selection while designing a website, for one reason or another, I didn’t take in consideration is the readability of the “fonts”: “now” that you have the possibility to choose the font you want for your website, you have to be careful not to base the choice only on the aesthetic ( excited for the new CSS3), since the ability to set a certain font doesn’t necessarily mean that it’s the right choice, simply because some fonts are more readable than others [...]
+
+[Read more]
+
+Gliding Divs Using jParallax Plugin [Tutorial]
+Featured Image 02
+jParallax turns a selected element into a ‘window’, or viewport, and all its children into absolutely positioned layers that can be seen through the viewport. These layers move in response to the mouse, and, depending on their dimensions (and options for layer initialisation), they move by different amounts, in a parallaxy kind of way [...]
+
+[Read more]
+
+©Dzyngiri  About Us - Advertise - Contact Us -->
+
+</body>
+</html>

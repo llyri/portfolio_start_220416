@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    line-height: 1;
+    color: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    color: white;
+    font: 14px/1.5 Arial, Helvetica, sans-serif;
+}
+
+#wrap {
+    background: url('./images/blurred-bg.jpg') no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.in {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.clear::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.top {
+    padding: 90px 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 56px;
+}
+
+.bottom {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.bottom h2{
+    font-size: 58px;
+    margin-bottom: 40px;
+}
+
+.bottom .social{
+    margin: 100px auto 0;
+    width: 325px;
+}
+
+.bottom .social li{
+    margin:0 7px;
+    float: left;
+}
+
+.bottom .social li a{
+    display: block;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-indent: -999px;
+    overflow: hidden;
+    opacity: 0.6;
+}
+
+.bottom .social li:nth-child(1){
+    background: url('./images/connect-facebook.png') no-repeat center;
+}
+.bottom .social li:nth-child(2){
+    background: url('./images/connect-google.png') no-repeat center;
+}
+.bottom .social li:nth-child(3){
+    background: url('./images/connect-instagram.png') no-repeat center;
+}
+.bottom .social li:nth-child(4){
+    background: url('./images/connect-sharethis.png') no-repeat center;
+}
+.bottom .social li:nth-child(5){
+    background: url('./images/connect-twitter.png') no-repeat center;
+}
+
+.bottom .social li a:hover,
+.bottom .social li a:focus,
+.bottom .social li a:active{
+    opacity: 1;
+}
