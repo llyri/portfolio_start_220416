@@ -12,13 +12,13 @@
 <body>
     <div id="wrap">
         <header id="header">
-            <div id="inner">
+            <div class="inner">
                 <h1 class="logo">
                     <a href="#"><img src="./images/logo.png" alt="logo_img"></a>
                 </h1>
-                <nav>
+                <nav class="nav">
                     <h2 class="blind">메인 네비게이션</h2>
-                    <ul class="gnb">
+                    <ul class="gnb clear">
                         <li><span></span><a href="#">HOME</a></li>
                         <li><span></span><a href="#">ABOUT US</a></li>
                         <li><span></span><a href="#">PAGES</a></li>
@@ -29,77 +29,86 @@
                         <li><span></span><a href="#">CONTACT US</a></li>
                     </ul>
                 </nav>
-                <div class="my_btn">
+                <!-- <div class="my_btn clear">
                     <ul>
                         <li><a href="#">Cart</a></li>
                         <li><a href="#"><img src="./images/icon_cart.png" alt="cart"></a></li>
                         <li><a href="#"><img src="./images/icon_zoom.png" alt="search"></a></li>
                     </ul>
-                </div>
+                </div> -->
             </div>
-
         </header>
 
         <!-- visual -->
         <div id="visual">
-            <div id="inner">
-                <h2>clean & Unique</h2>
-                <h3>Everything You Need is Here</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore </p>
-                <div class="btn">
-                    <p class="left_btn">BUY THIS NOW</p>
-                    <p class="right_btn">SCREENSHOTS</p>
-                </div>
-            </div>                
-             <div class="btn">
-                <p class="prev_btn"><a href="#"><img src="./images/arrow_left.jpg" alt="arrow_left"></a></p>
-                <p class="next_btn"><a href="#"><img src="./images/arrow_right.png" alt="arrow_right"></a></p>
-            </div>
-        </div>
-
-        <!-- main -->
-        <main id="container">
-            <div id="inner">
-                <section class="sec01">
-                    <h4>Tbe Best Solution for Your Business Projectd</h4>
-                    <p>Qualitative PSD Template Template With Unlimited Prossibilities</p>
-                </section>
-                <section class="sec02">
-                    <div class="element">
-                        <div>
-                            <h5>Clean Design</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolor</p>
-                            <span></span>
-                            <img src="./images/icon1.png" alt="icon01">
-                        </div>
-                        <div>
-                            <h5>Branding</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolor</p>
-                            <span></span>
-                            <img src="./images/icon2.png" alt="icon02">
-                        </div>
-                        <div>
-                            <h5>Responsive</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolor</p>
-                            <span></span>
-                            <img src="./images/icon3.png" alt="icon03">
-                        </div>
-                        <div>
-                            <h5>Development</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolor</p>
-                            <span></span>
-                            <img src="./images/icon4.png" alt="icon04">
-                        </div>
+            <div class="inner">
+                <div class="visual_txt">
+                    <h2>Clean & Unique</h2>
+                    <h3>Everything You Need is Here</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore </p>
+                    <div class="btn">
+                        <a class="left_btn">BUY THIS NOW</a>
+                        <a class="right_btn">SCREENSHOTS</a>
                     </div>
-                    <img src="./images/arrow.png" alt="top_arrow">
-                </section>
+                </div>
             </div>
-
+        <div class="btn_arrow">
+            <span class="prev_btn"><img src="./images/arrow_left.jpg" alt="arrow_left"></span>
+            <span class="next_btn"><img src="./images/arrow_right.png" alt="arrow_right"></span>
+        </div>
+        </div>
+        <!-- main -->
+        <main id="contents">
+            <section class="sec">
+                <div class="tit_area">
+                    <h2>The Best Solution for Your Business Project</h2>
+                    <p>Qualitative PSD Template Template With Unlimited Prossibilities</p>
+                </div>
+                <div class="story">
+                    <div class="inner">
+                        <ul class="story_list clear">
+                            <li>
+                                <a href="#">
+                                    <h3>Clean Design</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolor</p>
+                                    <span class="icon"><img src="./images/icon1.png" alt="top_icon01"></span>
+                                    <span class="line"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h3>Branding</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolor</p>
+                                    <span class="icon"><img src="./images/icon2.png" alt="top_icon02"></span>
+                                    <span class="line"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h3>Responsive</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolor</p>
+                                    <span class="icon"><img src="./images/icon3.png" alt="top_icon03"></span>
+                                    <span class="line"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h3>Development</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolor</p>
+                                    <span class="icon"><img src="./images/icon4.png" alt="top_icon04"></span>
+                                    <span class="line"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <!-- footer -->

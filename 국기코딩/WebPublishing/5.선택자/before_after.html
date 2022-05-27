@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .ex {
+            margin: 50px;
+        }
+
+        .clear::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .list1 li {
+            float: left;
+            background: skyblue;
+            padding: 2px 5px;
+        }
+
+        .list1 li::after {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 10px;
+            background: #333;
+            margin-left: 5px;
+        }
+
+        .list1 li a {
+            display: inline-block;
+            background: pink;
+            padding: 5px 10px;
+        }
+
+
+        .list2 li {
+            float: left;
+            background: skyblue;
+            padding: 2px 5px;
+        }
+
+        .list2 li a {
+            display: inline-block;
+            background: pink;
+            padding: 5px 10px;
+            position: relative;
+        }
+
+        .list2 li:hover a::before {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 2px;
+            background-color: crimson;
+            position: absolute;
+            left: 10px;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ex">
+        <ul class="list1 clear">
+            <li><a href="#">MENU1</a> </li>
+            <li><a href="#">MENU2</a></li>
+            <li><a href="#">MENU3</a></li>
+            <li><a href="#">MENU4</a></li>
+        </ul>
+    </div>
+
+    <div class="ex2">
+        <ul class="list2  clear">
+            <li><a href="#">MENU1</a> </li>
+            <li><a href="#">MENU2</a></li>
+            <li><a href="#">MENU3</a></li>
+            <li><a href="#">MENU4</a></li>
+        </ul>
+    </div>
+
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+</body>
+
+</html>

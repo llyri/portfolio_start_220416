@@ -3,7 +3,26 @@
 <head>
 <meta charset="utf-8">
 <title>가상 요소 선택자</title>
+<style>
+    .txt{
+        border: 5px solid #aaa;
+        width: 600px;
+    }
 
+    .txt::before{
+        content: "start->";
+        color: red;
+        font-weight: 700;
+    }
+
+    .txt::after{
+        content: "";
+        background: url(./images/textlink_img_01.gif) no-repeat;
+        width: 135px;
+        height: 105px;
+        display:inline-block;
+    }
+</style>
 </head>
 
 <body>
@@ -36,13 +55,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </div>
 
 <div>
-<h3>::before , ::after</h3>
+<h3 >::before , ::after</h3>
 <!--
 ::before  ,  ::after
 특정 요소의 내용 앞이나 뒤에 텍스트같은  콘텐츠를 추가할 수 있다.
 p::before{content: “내용”;}
 -->
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<p class="txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
