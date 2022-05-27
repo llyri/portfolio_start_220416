@@ -100,8 +100,8 @@ header .nav li a:active{
 }
 
 header .nav li a:hover::before,
-header .nav li a:hover::before,
-header .nav li a:hover::before{
+header .nav li a:focus::before,
+header .nav li a:active::before{
     content: "";
     display: block;
     width: 10px;
