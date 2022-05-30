@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .clear::after {
+            display: block;
+            clear: both;
+            content: "";
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        body {
+            font: 16px;
+            color: #333;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .nav {
+            width: 1200px;
+            margin: 50px auto;
+            border: 5px solid salmon;
+        }
+
+        .nav>.gnb>li {
+            float: left;
+            width: 20%;
+            text-align: center;
+            position: relative;
+            background-color: aquamarine;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .nav>.gnb>li>.sub {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: palegreen;
+            width: 100%;
+            display: none;
+        }
+
+        .nav>.gnb>li a{
+            display: block;
+        }
+
+        .nav>.gnb>li>a:hover+.sub,
+        .nav>.gnb>li>a:focus+.sub,
+        .nav>.gnb>li>a:active+.sub{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <ul class="gnb clear">
+            <li><a href="#">MENU1</a>
+                <ul class="sub">
+                    <li><a href="#">sub1-1</a></li>
+                    <li><a href="#">sub1-2</a></li>
+                    <li><a href="#">sub1-3</a></li>
+                    <li><a href="#">sub1-4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">MENU2</a></li>
+            <li><a href="#">MENU3</a>
+                <ul class="sub">
+                    <li><a href="#">sub3-1</a></li>
+                    <li><a href="#">sub3-2</a></li>
+                    <li><a href="#">sub3-3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">MENU4</a>
+                <ul class="sub">
+                    <li><a href="#">sub4-1</a></li>
+                    <li><a href="#">sub4-2</a></li>
+                    <li><a href="#">sub4-3</a></li>
+                    <li><a href="#">sub4-4</a></li>
+                    <li><a href="#">sub4-5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">MENU5</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

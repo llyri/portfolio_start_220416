@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2depth Navigation</title>
+    <style>
+        @import url(./fonts/nanumbarungothic.css);
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        a,
+        span {
+            display: inline-block;
+        }
+
+        .clear::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        .blind {
+            position: absolute;
+            display: block;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+
+        body{
+            font:14px 'Nanum Barun Gothic', 'Malgun Gothic';
+        }
+
+        .inner{
+            width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #header{
+            height: 114px;
+            border-bottom: 1px solid #e55354;
+        }
+
+        #header .logo{
+            position: relative;
+            top: 50px;
+        }
+        #header .nav{
+            position: absolute;
+            right: 0;
+            top: 56px;
+        }
+
+        #header .nav .gnb>li{
+            float: left;
+            position: relative;
+            /* background-color: #e55354; */
+            padding: 0 5px;
+        }
+
+        #header .nav .gnb>li>a{
+            /* background-color:aqua; */
+            padding: 10px 18px 32px;
+            position: relative;
+        }
+
+        #header .nav .gnb>li>ul{
+            position: absolute;
+            width: 180px;
+            left: 50px;
+            margin-left: -90px;
+            top: 58px;
+            background-color: #e55354;
+            display: none;
+        }
+
+        #header .nav .gnb li .lnb a{
+            padding: 15px;
+            color: #fff;
+            border-bottom: 1px solid #d74040;
+            display: block;
+        }
+
+        #header .nav .gnb>li:hover>a{
+            color: #d74040;
+        }
+
+        #header .nav .gnb>li:hover .lnb{
+            display: block;
+        }
+
+        #header .nav .gnb>li .lnb a:hover{
+            background-color: #ffc2c2;
+        }
+
+        #header .nav .gnb>li>a::after{
+            content: "";
+            display: block;
+            width: 48px;
+            height: 4px;
+            background-color: #d74040;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -24px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="./images/kodi_logo.png" alt="">
+                    </a>
+                </h1>
+                <nav class="nav">
+                    <h2 class="blind">네비게이션</h2>
+                    <ul class="gnb clear">
+                        <li>
+                            <a href="#">회사소개</a>
+                            <ul class="lnb">
+                                <li><a href="#">회사개요</a></li>
+                                <li><a href="#">인사말</a></li>
+                                <li><a href="#">경영이념</a></li>
+                                <li><a href="#">연혁</a></li>
+                                <li><a href="#">고객사</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">사업영역</a></li>
+                        <li><a href="#">제품소개</a></li>
+                        <li><a href="#">IR</a></li>
+                        <li><a href="#">고객정보</a></li>
+                        <li><a href="#">채용정보</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="visual"></div>
+    </div>
+</body>
+
+</html>

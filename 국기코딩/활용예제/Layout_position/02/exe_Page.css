@@ -63,7 +63,7 @@ body{
 #header {
     height: 112px;
     border-bottom: 3px solid #e64a3b;
-    z-index: 9999px;
+    z-index: 100;
     position: relative;
 }
 
@@ -73,7 +73,67 @@ body{
     top: 30px;
 }
 
-header .nav{
+/*nav two-depth*/
+#header .nav{
+    position: absolute;
+    left: 202px;
+    top: 40px;
+}
+
+#header .gnb>li{
+    float: left;
+    padding: 0 7px;
+    position: relative;
+}
+
+#header .gnb>li a{
+    display: block;
+    padding: 10px 15px;
+    color: #565656;    
+    padding: 10px 15px 45px;
+    position: relative;
+}
+
+#header .gnb>li .lnb{
+    background-color: #e64a3b;
+    position: absolute;
+    left: 50%;
+    top: 75px;
+    width: 180px;
+    margin-left:-90px;
+    text-align: center;
+    display: none;
+}
+
+#header .gnb>li .lnb a{
+    padding: 15px 15px;
+    color: #fff;
+}
+
+#header .gnb>li:hover .lnb{
+    display: block;
+}
+
+#header .gnb>li a:hover,
+#header .gnb>li a:focus,
+#header .gnb>li a:active{
+    color:#ff978e;
+}
+
+#header .gnb>li a:hover::before,
+#header .gnb>li a:focus::before,
+#header .gnb>li a:active::before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+    background-color: #e64a3b;
+    position: absolute;
+    top: 0px; 
+}
+
+/*nav one-depth*/
+/* header .nav{
     position: absolute;
     left: 202px;
     top: 40px;
@@ -87,7 +147,6 @@ header .nav li{
 header .nav li a{
     font-size: bold;
     padding: 10px 15px;
-    /* margin: 0 5px; */
     position: relative;
     font-weight: bold;
 
@@ -109,72 +168,6 @@ header .nav li a:active::before{
     background-color: #e64a3b;
     position: absolute;
     top: 0px; 
-}
-
-
-/* header start ver.01 */
-/* #header .inner{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 0 36px;
-}
-
-#header .inner nav ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#header .inner nav ul li{
-    margin-right: 43px;
-}
-
-#header .inner nav ul li a{
-    display: block;
-    font-weight: bold;
-}
-
-#header .inner nav ul li span{
-    display: block;
-    width: 10px;
-    height: 2px;
-    background-color: #e64a3b;
-    visibility: hidden;
-}
-
-#header .inner nav ul li:hover span,
-#header .inner nav ul li:focus span,
-#header .inner nav ul li:active span{
-    visibility: visible;
-}
-
-#header .inner nav ul li a:hover,
-#header .inner nav ul li a:focus,
-#header .inner nav ul li a:active{
-  color: #e64a3b;
-  
-}
-
-#header .inner div.my_btn ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#header .inner div.my_btn li{
-    margin-right: 14px;
-}
-
-#header .inner div.my_btn li a{
-    display: block;
-    font-weight: bold;
-}
-
-#header .inner div.my_btn li a:hover,
-#header .inner div.my_btn li a:focus,
-#header .inner div.my_btn li a:active{
-    color: #e64a3b;
 } */
 
 /* visual start */

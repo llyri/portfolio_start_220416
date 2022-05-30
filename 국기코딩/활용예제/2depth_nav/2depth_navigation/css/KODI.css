@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Nanum Barun Gothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./NanumBarunGothic.eot);
+    src: local('Nanum Barun Gothic'),
+         local('NanumBarunGothic'),
+         url(./NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
+         url(./NanumBarunGothic.woff2) format('woff2'),
+         url(./NanumBarunGothic.woff) format('woff'),
+         url(./NanumBarunGothic.ttf) format('truetype');
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-size: 100%;
+    line-height: 1;
+    color: inherit;
+}
+
+.blind{
+    display: block;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body{
+    font: 13px/1.5 'Nanum Barun Gothic', '나눔바른고딕';
+}
+
+/* header start */
+#header{
+    border-bottom: 2px solid #e55354;
+
+}
+
+#header .inner {
+    width: 1202px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 43px 0 0;
+    position: relative;
+}
+
+/* #header .inner h1{
+    padding: 20px 0;
+} */
+
+#header .inner>nav>ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+#header .inner>nav>ul>li{
+    position: relative;
+    /* width 값을 지정하지 않고 ul에 text-align:center를 없애고 
+    a 요소에 좌우 패딩값으로 여백을 지정하면 
+    IR카테고리가 좁기 때문에 다른것에 비해서 margin-left:-값을 px로
+    지정했을 때 더 많이 이동하는 문제점을 어떻게 해결해야할까..
+    현재방식대로 하면 IR카테고리의 좌우가 너무 넓어보임.. */
+    width: 100px;
+    padding: 0 5px;
+}
+
+#header .inner>nav>ul>li>a{
+    font-weight: bold;
+    padding: 30px 5px ;
+    display: block;
+}
+
+
+#header .inner>nav>ul>li:hover ul,
+#header .inner>nav>ul>li:focus ul,
+#header .inner>nav>ul>li:active ul{
+    display: block;
+}
+
+#header .inner>nav>ul>li>a:hover::after,
+#header .inner>nav>ul>li>a:focus::after,
+#header .inner>nav>ul>li>a:active::after{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #d74040;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    bottom: 0;
+}
+
+#header .inner>nav>ul>li>a:hover,
+#header .inner>nav>ul>li>a:focus,
+#header .inner>nav>ul>li>a:active{
+    color:#ff9a9a;
+}
+
+#header .inner>nav>ul>li>ul{
+    text-align: left;
+    position: absolute;
+    top: 79.5px;
+    left: 50%;
+    width: 200%;
+    margin-left: -100px;
+    display: none;
+}
+
+#header .inner>nav>ul>li>ul>li{
+    color: #fff;
+    background-color: #e55354;
+    border-bottom: 1px solid #d74040;
+}
+
+#header .inner>nav>ul>li>ul>li>a{
+    display: inline-block;
+    width:100%;
+    padding: 17px 13px;
+    box-sizing: border-box;
+}
+
+#header .inner>nav>ul>li>ul>li:hover{
+    background-color: #ffe8e8;
+    color: #d74040;
+}
+
+#header div.top{
+    position: absolute;
+    right: 0;
+    top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+#header div.top p{
+    margin: 0 7px;
+    color: #999;
+}
+
+/* main */
+main#content{
+    width: 100%;
+    height: 594px ;
+    background: url(../images/new_mainImg.png) no-repeat center center;
+    background-size: cover;
+}
