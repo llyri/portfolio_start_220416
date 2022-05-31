@@ -183,11 +183,11 @@ body{
     font-size: 45px;
 }
 
-/* sec04 */
+/* sec04 vehi */
 .vehi{
     /* height:828px; */
     position: relative;
-    background: url(../images/background.png) no-repeat center top/cover;
+    background: url(../images/background.png) no-repeat center center/cover;
 }
 
  .mask02{
@@ -200,7 +200,7 @@ body{
 }
 
 .vehi h2{
-    font-size: 29px;
+    font-size: 40px;
     color: white;
     margin-bottom: 78px;
     font-weight: bold;
@@ -211,6 +211,7 @@ body{
     width: 322px;
     margin-right: 37px;
     position: relative;
+    overflow: hidden;
 }
 
 .vehi ul>li:last-child{
@@ -229,12 +230,12 @@ body{
     box-sizing: border-box;
 }
 .vehi ul>li div.mask h3{
-    font-size: 29px;
+    font-size: 40px;
     color: white;
     margin-bottom: 10px;
 }
 .vehi ul>li div.mask p{
-    font-size: 13px;
+    font-size: 18px;
     color: white;
 }
 
