@@ -83,7 +83,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    text-align: center;
+    /* text-align: center; */
 }
 
 #header .inner>nav>ul>li{
@@ -93,13 +93,13 @@ body{
     IR카테고리가 좁기 때문에 다른것에 비해서 margin-left:-값을 px로
     지정했을 때 더 많이 이동하는 문제점을 어떻게 해결해야할까..
     현재방식대로 하면 IR카테고리의 좌우가 너무 넓어보임.. */
-    width: 100px;
+    /* width: 100px; */
     padding: 0 5px;
 }
 
 #header .inner>nav>ul>li>a{
     font-weight: bold;
-    padding: 30px 5px ;
+    padding: 30px 30px ;
     display: block;
 }
 
@@ -135,8 +135,8 @@ body{
     position: absolute;
     top: 79.5px;
     left: 50%;
-    width: 200%;
-    margin-left: -100px;
+    width: 8.5rem;
+    margin-left: -4.2rem;
     display: none;
 }
 
