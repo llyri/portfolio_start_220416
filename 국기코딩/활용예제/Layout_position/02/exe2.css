@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Cantora+One&display=swap');
+
 
 * {
     margin: 0;
@@ -11,7 +13,8 @@ a {
     color: inherit;
 }
 
-ul,li {
+ul,
+li {
     list-style: none;
 }
 
@@ -19,10 +22,14 @@ img {
     max-width: 100%;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-size: 100%;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     line-height: 1;
-    font-family: 'HurmeGeometricSans', serif;
+    font-size: 100%;
 }
 
 .clear::after {
@@ -41,27 +48,42 @@ h1,h2,h3,h4,h5,h6 {
     clip: rect(0 0 0 0);
 }
 
-.inner{
-    width: 1000px;
+/* 상속 */
+body{
+    font: 14px/1.5 'Cantora One', sans-serif;
+    color: #565656;
 }
 
-#header .inner nav ul{
+#inner{
+    width: 1190px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* header start */
+#header #inner{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    padding: 30px 0 36px;
 }
 
-#header .inner nav ul li{
+#header #inner nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header #inner nav ul li{
     margin-right: 43px;
 }
 
-#header .inner nav ul li a{
+#header #inner nav ul li a{
     display: block;
     font-weight: bold;
 }
 
-#header .inner nav ul li span{
+#header #inner nav ul li span{
     display: block;
     width: 10px;
     height: 2px;
@@ -69,15 +91,179 @@ h1,h2,h3,h4,h5,h6 {
     visibility: hidden;
 }
 
-#header .inner nav ul li a:hover span,
-#header .inner nav ul li a:focus span,
-#header .inner nav ul li a:active span{
-  visibility: visible;
+#header #inner nav ul li:hover span,
+#header #inner nav ul li:focus span,
+#header #inner nav ul li:active span{
+    visibility: visible;
 }
 
-#header .inner nav ul li a:hover,
-#header .inner nav ul li a:active,
-#header .inner nav ul li a:focus{
-    color: #e64a3b;
+#header #inner nav ul li a:hover,
+#header #inner nav ul li a:focus,
+#header #inner nav ul li a:active{
+  color: #e64a3b;
+  
+}
 
+#header #inner div.my_btn ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header #inner div.my_btn li{
+    margin-right: 14px;
+}
+
+#header #inner div.my_btn li a{
+    display: block;
+    font-weight: bold;
+}
+
+#header #inner div.my_btn li a:hover,
+#header #inner div.my_btn li a:focus,
+#header #inner div.my_btn li a:active{
+    color: #e64a3b;
+}
+
+/* visual start */
+#visual{
+    min-height: 921px;
+    min-width: 1440px;
+    background: url('./images/background.jpg') no-repeat center center;
+    color: #fff;
+    position: relative;
+}
+
+#visual #inner .main_tit{
+    text-align: center;
+    padding: 320px 0 0 ;
+}
+
+#visual #inner h2{
+    font-size: 50px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+#visual #inner h3{
+    font-size: 36px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+#visual #inner .main_tit>p{
+    padding: 0 300px;
+    font: 20px/1.5 'Arial', sans-serif;
+    margin-bottom: 20px;
+}
+
+#visual #inner div.btn a{
+    display: inline-block;
+    padding: 16px 26px;
+    font-size: 11px;
+}
+
+#visual #inner div.btn .left_btn{
+    background-color: #363636;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#visual #inner div.btn .right_btn{
+    border: 2px solid #fff;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#visual .page_btn p:first-child{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -21px;
+}
+
+#visual .page_btn p:last-child{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -21px;
+}
+
+/* container start */
+#container .sec01{
+    text-align:center;
+    padding: 40px 0;
+    background: #363636 url('./images/arrow.png') no-repeat center bottom;
+}
+#container .sec01 #inner{}
+#container .sec01 #inner h4{
+    font-size: 28px;
+    color: #949494;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+#container .sec01 #inner p{
+    color: #949494;
+    letter-spacing: 1px;
+    font: lighter 15px Arial,sans-serif;
+}
+
+#container .sec02{
+    background-color: #e8e8e8;
+}
+
+#container .sec02 #inner{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: center;
+    padding: 116px 0 109px;
+}
+#container .sec02 #inner div{
+    width: 272px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 60px 34px 40px;
+    position: relative;
+}
+#container .sec02 #inner div h5{
+    font-size: 18px;
+    color: #363636;
+    margin-bottom: 16px;
+}
+#container .sec02 #inner div p{
+    font: lighter 13px/1.8 Arial,sans-serif;
+    color: #818181;
+    margin-bottom: 10px;
+}
+
+#container .sec02 #inner div p:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    background-color: #363636;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    top: -30px;
+}
+
+#container .sec02 #inner div p:nth-child(3) img{
+    margin-top: 12.5px;
+}
+
+#container .sec02 #inner div span{
+    display: inline-block;
+    width: 35px;
+    height: 2px;
+    background-color: #363636;
+}
+
+#footer{
+    width: 100%;
+    height: 120px;
+    background-color: #b8b8b8;
 }
