@@ -8,6 +8,7 @@
     <title>Ford Web Page</title>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        
 </head>
 
 <body>
@@ -18,6 +19,7 @@
                 <h1 class="logo"><a href="#"><img src="./images/Ford-Logo.png" alt="ford_logo"></a></h1>
                 <nav class="nav">
                     <h2 class="hide">Navigation</h2>
+                    <div class="mask"></div>
                     <ul class="gnb">
                         <li><a href="#">VEHICLE</a>
                             <div class="lnb">
@@ -33,19 +35,19 @@
                                             <h2>EXPLORER</h2>
                                             <img src="./images/lnb_explorer.png" alt="lnb_explorer">
                                             <a href="#">자세히 보기</a>
-                                            <a href="#">시승신청</a>
+                                            <a href="#">시승 신청</a>
                                         </div>
                                         <div>
                                             <h2>EXPEDITION</h2>
                                             <img src="./images/lnb_expedition.png" alt="lnb_expedition">
                                             <a href="#">자세히 보기</a>
-                                            <a href="#">시승신청</a>
+                                            <a href="#">시승 신청</a>
                                         </div>
                                         <div>
                                             <h2>EXPLORER</h2>
                                             <img src="./images/lnb_bronko.png" alt="lnb_bronko">
                                             <a href="#">자세히 보기</a>
-                                            <a href="#">시승신청</a>
+                                            <a href="#">시승 신청</a>
                                         </div>
                                     </div>
                                     <div class="lnb_btn">
@@ -62,11 +64,9 @@
                         <li><a href="#">ABOUT FORD</a></li>
                     </ul>
                     <div class="right_btn">
-                        <a href="#">시승신청</a>
+                        <a href="#">시승 신청</a>
                         <a href="#">전시장 및 서비스센터</a>
-                        <a class="material-symbols-outlined">
-                            person
-                        </a>
+                        <img src="./PNG/user.png" alt="mypage">
                     </div>
                 </nav>
             </div>
@@ -117,28 +117,36 @@
                     </div>
                     <div>
                         <div>
-                          <div>
-                              <p>Exterior&Interior</p>
-                              <h3>RANGER GALLERY </h3>
-                          </div>   
+                            <div>
+                                <p>Exterior&Interior</p>
+                                <h3>RANGER GALLERY </h3>
+                            </div>
                         </div>
                         <div>
                             <div>
-                                <div><h3>MUSTANG</h3></div>
+                                <div>
+                                    <h3>MUSTANG</h3>
+                                </div>
                             </div>
                             <div>
-                                <div><h3>EXPLORER</h3></div>
+                                <div>
+                                    <h3>EXPLORER</h3>
+                                </div>
                             </div>
                             <div>
-                                <div><h3>FORD SERVICE</h3></div>
+                                <div>
+                                    <h3>FORD SERVICE</h3>
+                                </div>
                             </div>
                             <div>
-                                <div><h3>ECOBOOST</h3></div>
+                                <div>
+                                    <h3>ECOBOOST</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section> 
+            </section>
             <!--  -->
             <section class="sec03">
                 <div class="inner">
@@ -146,7 +154,7 @@
                     <div class="form">
                         <input type="text" placeholder="시, 도 등 주소 일부를 적어주세요">
                         <button><span class="material-symbols-outlined">
-                            search
+                                search
                             </span></button>
                     </div>
                 </div>
@@ -155,8 +163,8 @@
             <section class="sec04">
                 <div class="inner">
                     <div>
-                    <h2>About Ford Story</h2>
-                    <p>전 세계인의 다양한 라이프 스타일에 맞춘 포드의 이야기를 들어보세요</p>
+                        <h2>About Ford Story</h2>
+                        <p>전 세계인의 다양한 라이프 스타일에 맞춘 포드의 이야기를 들어보세요</p>
                     </div>
                     <img src="./images/about.png" alt="car">
                 </div>
@@ -164,9 +172,98 @@
         </main>
 
         <!-- footer -->
-        <footer id="footer"></footer>
-    </div>
-    <div class="mask"></div>
+        <footer id="footer">    
+            <div class="inner"></div>
+            <!--  -->
+            <div class="top_footer">
+                <div>
+                    <p>Follow Us</p>
+                    <img src="./PNG/facebook2.png" alt="facebook">
+                    <img src="./PNG/instagram.png" alt="instagram">
+                    <img src="./PNG/twitter.png" alt="twitter">
+                </div>
+                <div class="form">
+                    <input type="text" placeholder="All About Ford">
+                    <button><span class="material-symbols-outlined">
+                            search
+                        </span></button>
+                </div>
+            </div>
+            <!--  -->
+            <div class="middle_footer">
+                <ul>
+                    <h3>ALL VEHICLE</h3>
+                    <li><a href="#">CAR</a></li>
+                    <li><a href="#">SUV</a></li>
+                    <li><a href="#">TRUCK</a></li>
+                </ul>
+                <ul>
+                    <h3>TECHNOLOGY</h3>
+                    <li><a href="#">에코부스트</a></li>
+                    <li><a href="#">싱크3</a></li>
+                </ul>
+                <ul>
+                    <h3>SHOPPING</h3>
+                    <li><a href="#">전시장 및 서비스센터 찾기</a></li>
+                    <li><a href="#">브로셔 다운로드</a></li>
+                    <li><a href="#">마이포드 매거진</a></li>
+                    <li><a href="#">시승 신청</a></li>
+                    <li><a href="#">세일즈 프로모션</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">견적 내기</a></li>
+                    <li><a href="#">타이어 에너지 소비 효율</a></li>
+                </ul>
+                <ul>
+                    <h3>FORD OWNER</h3>
+                    <li><a href="#">오너 포털 사이트</a></li>
+                    <li><a href="#">공인 서비스</a></li>
+                    <li><a href="#">소모성 부품 무상교환 서비스</a></li>
+                    <li><a href="#">24시간 긴급출동 서비스</a></li>
+                    <li><a href="#">순정 부품</a></li>
+                    <li><a href="#">리콜 안내</a></li>
+                    <li><a href="#">보증 및 서비스</a></li>
+                    <li><a href="#">차량 관리</a></li>
+                    <li><a href="#">How to 비디오</a></li>
+                    <li><a href="#">서비스 프로모션</a></li>
+                    <li><a href="#">포드 고객센터</a></li>
+                    <li><a href="#">전시장 및 서비스 센터 찾기</a></li>
+                    <li><a href="#">SYNC™ 3</a></li>
+                </ul>
+                <ul>
+                    <h3>ABOUT FORD</h3>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Corporate</a></li>
+                    <li><a href="#">Heritage</a></li>
+                    <li><a href="#">Our Purpose</a></li>
+                </ul> 
+            </div>
+
+            <!--  -->
+            <div class="bottom_footer">
+                <img src="./images/klipartz.com.png" alt="ford_bottom_logo">
+                <div class="bottom_right">
+                    <ul>
+                        <li><a href="#">Ford</a></li>
+                        <li><a href="#">사이트 맵</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">글로벌 사이트</a></li>
+                        <li><a href="#">포드 고객센터</a></li>
+                        <li><a href="#">세일즈 프로모션</a></li>
+                        <li><a href="#">ABOUT FORD</a></li>
+                    </ul>
+                    <dl>
+                        <dt>고객센터 : </dt>
+                        <dd>1600-6003 (근무시간 : 평일 09:00~18:00)</dd>
+                        <dt>긴급출동 서비스 : </dt>
+                        <dd>080-300-3673 (운영시간 : 24시간, 주 7일)</dd>
+                        <dt>대표이메일 : </dt>
+                        <dd>infokr1@ford.com</dd>
+                    </dl>
+                    <small>Copyright &copy; 2022 Ford Sales and Service Korea Company</small>
+                </div>
+            </div>
+            </div>
+        </footer>
 </body>
 
 </html>
