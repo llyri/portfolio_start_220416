@@ -54,10 +54,10 @@ body{
 .more_view{
    text-align: left;
    color: white;
-   background-color: #2496cc;
    width: 124px;
-   padding-left: 20px;
+   padding-left: 18px;
    line-height: 40px;
+   background: #2496cc url(../images/arrow.png) no-repeat right 12px center;
 }
 
 /* layout start */
@@ -133,7 +133,7 @@ body{
 /* visual start */
 #visual{
     height: 834px;
-    background: url(../images/visual\ two.jpg) no-repeat center center;
+    background: url(../images/Untitled-2.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -179,8 +179,8 @@ body{
     text-indent: -9999px;
 }
     #visual .page_nation>span{
-        width: 14px;
-        height: 14px;
+        width: 12px;
+        height: 12px;
         background-color: #fff;
         border-radius: 50%;
     }

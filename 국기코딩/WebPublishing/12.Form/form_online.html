@@ -1,13 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Online</title>
+    <title>Online 문의 Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --main: #2f902a;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        input,
+        select,
+        button,
+        textarea {
+            border: 0;
+            outline: 0;
+            appearance: none;
+            background-color: transparent;
+            vertical-align: middle;
+        }
+
+        .star{
+            color: var(--main);
+            margin-left: 5px;
+        }
+
+        body {
+            font-size: 14px 'Noto Sans KR', sans-serif;
+            color: #777;
+        }
+
+        .form_area {
+            width: 970px;
+            margin: 50px auto;
+        }
+
+        .data {
+            border-top: 2px solid var(--main);
+            width: 100%;
+        }
+
+        .data th, .data td{
+            border-bottom: 1px solid #d9d9d9;
+            padding: 15px 20px;
+        }
+
+        .data th{
+            border-right: 1px solid #d9d9d9;
+            background-color: #f5f5f5;
+            color: #333;
+            text-align: left;
+            font-weight: normal;
+        }
+
+        .data .txt_top{
+            vertical-align: top;
+        }
+
+        .data input[type="radio"]{
+            width: 16px;
+            height: 16px;
+            border-radius:50px;
+            border: 1px solid #d9d9d9;
+            margin-right: 5px;
+        }
+        .data .ra_label{
+            margin-right: 20px;
+        }
+
+        .data input[type="text"],.data input[type="tel"],.data input[type="email"],.data input[type="file"]{
+            width: 220px;
+            height: 30px;
+            border: 1px solid #d9d9d9;
+            padding: 5px 10px;
+        }
+
+        .data select{
+            width: 110px;
+            border: 1px solid #d9d9d9;
+            padding: 5px 10px 6px;
+        }
+
+        .data textarea{
+            border: 1px solid #d9d9d9;
+            width: 100%
+        }
+
+        .form_btn{
+            padding: 20px 0;
+            text-align: right;
+        }
+
+        .form_btn>button{
+            width: 76px;
+            height: 30px; 
+            background-color: #5f6265;
+            color: #fff;
+        }
+        .form_btn>button[type="submit"]{
+            background-color: var(--main);
+        }
+
+    </style>
 </head>
 
+
 <body>
-    <div class="form"></div>
+    <div class="form_area">
+        <form action="#">
+            <table class="data">
+                <tr>
+                    <th>
+                        구분 <span class="star">*</span>
+                    </th>
+                    <td>
+                        <label><input class="ra_label" type="radio" name="porduct" value="p1">제품(국내)</label>
+                        <label><input class="ra_label"vtype="radio" name="porduct" value="p2">제품(해외)</label>
+                        <label><input type="radio" name="porduct" value="p3">기술</label>
+                        <label><input type="radio" name="porduct" value="p4">품질</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="subject">제목<span class="star">*</span></label>
+                    </th>
+                    <td>
+                        <input type="text" id="subject">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="user_name">성명<span class="star">*</span></label>
+                    </th>
+                    <td>
+                        <input type="text" id="user_name">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="user_tel">전화번호<span class="star">*</span></label>
+                    </th>
+                    <td>
+                        <input type="text" id="user_tel">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="user_mail">이메일<span class="star">*</span></label>
+                    </th>
+                    <td>
+                        <input type="email" id="user_mail">
+                        <select name="sel" id="sel">
+                            <option value="">직접선택</option>
+                            <option value="">gmail.com</option>
+                            <option value="">naver.com</option>
+                            <option value="">daum.net</option>
+                            <option value="">hotmail.com</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="user_file">파일첨부</label>
+                    </th>
+                    <td>
+                        <input type="file" id="user_file">
+                    </td>
+                </tr>
+                <tr class="txt_top">
+                    <th>
+                        <label for="user_content">내용</label>
+                    </th>
+                    <td>
+                        <textarea name="user_content" id="user_content" cols="50" rows="10"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="form_btn">
+                <button type="submit">확인</button>
+                <button type="reset">취소</button>
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>
