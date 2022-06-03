@@ -104,7 +104,9 @@ body{
     margin-left: 20px;
     line-height: 40px;
 
-}#header .right_btn a:first-child{
+}
+
+#header .right_btn a:first-child{
     background-color: #ffba00;
 }
 
