@@ -57,7 +57,8 @@ body{
    width: 124px;
    padding-left: 18px;
    line-height: 40px;
-   background: #2496cc url(../images/arrow.png) no-repeat right 12px center;
+   background: #2496cc url(../images/2cd43b_97a486f9521c485e9f95bc61c7348ff6_mv2.png) no-repeat right 12px center;
+   background-size: 14px;
 }
 
 /* layout start */
@@ -69,7 +70,7 @@ body{
     display: flex;   
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 14px 0;
 }
 
 #header .inner .logo a>img{
@@ -133,7 +134,7 @@ body{
 /* visual start */
 #visual{
     height: 834px;
-    background: url(../images/Untitled-2.jpg) no-repeat center center;
+    background: url(../images/visual_img.jpg) no-repeat center center;
     background-size: cover;
 }
 
