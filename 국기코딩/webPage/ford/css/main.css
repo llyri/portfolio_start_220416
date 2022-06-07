@@ -209,14 +209,15 @@ div.mask{
 
 /* visual start */
 #visual{
-    height: 834px;
-    background: url(../images/visual_02.png) no-repeat center center;
+    /* height: 834px; */
+    background: url(../images/image.imgs.full.high.jpg) no-repeat center center;
     background-size: cover;
     position: relative;
 }
 
 #visual .inner{
     position: relative;
+    padding-bottom: 50px;
 }
 
 #visual .inner h2{
@@ -235,7 +236,7 @@ div.mask{
 }
 
 #visual .inner a{
-    margin-bottom: 390px;
+    margin-bottom: 350px;
 }
 
 #visual .inner img{
@@ -247,7 +248,7 @@ div.mask{
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    top: 790px;
+    top: 715px;
     left: 50%;
     width: 110px;
     margin-left: -55px;
