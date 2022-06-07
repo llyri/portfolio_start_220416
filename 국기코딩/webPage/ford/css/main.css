@@ -54,6 +54,8 @@ body{
 .inner{
     width: 1400px;
     margin: 0 auto;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
 }
 
 .more_view{
@@ -75,19 +77,41 @@ body{
 }
 
 /* layout start */
-#header{
-    background: radial-gradient(circle at 20%, #48c2db,#153779,#313332);
+
+/* top_line */
+#top_line .inner{
+    background-color: #eee;
+    padding: 10px 30px;
+    box-sizing: border-box;
 }
 
+#top_line .inner ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#top_line .inner ul>li{
+    padding: 0 12px;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+/* #header{
+    background: radial-gradient(circle at 20%, #48c2db,#153779,#313332);
+} */
+
 #header .inner{
+    background: radial-gradient(circle at 20%, #48c2db,#153779,#313332);
     display: flex;   
     justify-content: space-between;
     align-items: center;
-    padding: 14px 0;
+    padding: 10px 30px;
+    box-sizing: border-box;
 }
 
 #header .inner .logo a>img{
-    width: 130px;
+    width: 120px;
     margin-top: 10px;
 }
 
@@ -102,7 +126,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 50px;    
+    margin-right: 30px;    
     position: relative;
 
 }
@@ -161,6 +185,7 @@ body{
     line-height: 38px;
     border:1px solid #2496cc;
     box-sizing: border-box;
+    margin-right: 5px;
 }
 
 #header .inner nav .right_btn>a:last-child{
@@ -209,15 +234,16 @@ div.mask{
 
 /* visual start */
 #visual{
-    /* height: 834px; */
-    background: url(../images/image.imgs.full.high.jpg) no-repeat center center;
-    background-size: cover;
-    position: relative;
 }
+
 
 #visual .inner{
     position: relative;
-    padding-bottom: 50px;
+    height: 600px;
+    padding: 0 50px 50px 50px;
+    background: url(../images/image.imgs.full.high.jpg) no-repeat center center;
+    background-size: cover;
+    box-sizing: border-box;
 }
 
 #visual .inner h2{
@@ -227,20 +253,25 @@ div.mask{
     font-weight: 800;
 }
 
-#visual .inner p{
+#visual .inner p:nth-child(2){
     color: #051c48;
     font-size: 32px;
     font-weight: 600;
     letter-spacing: -1px;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 }
 
 #visual .inner a{
-    margin-bottom: 350px;
+    margin-bottom: 218px;
+}
+
+#visual .inner a:hover{
+    background-color: #fff;
 }
 
 #visual .inner img{
     display: block;
+    width: 270px;
 }
 
 #visual .page_nation{
@@ -248,26 +279,26 @@ div.mask{
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    top: 715px;
+    top: 550px;
     left: 50%;
     width: 110px;
     margin-left: -55px;
     text-indent: -9999px;
 }
 #visual .page_nation>span{
-        width: 12px;
-        height: 12px;
+        width: 11px;
+        height: 11px;
         background-color: #fff;
         border-radius: 50%;
 }
 
 #visual .page_nation>span:nth-child(2){
         background-color: transparent;
-        border: 3px solid #fff;
+        border: 2px solid #fff;
 
 }
 
-#visual>p:nth-child(2){
+#visual .inner>p:nth-child(6){
     width: 40px;
     height: 40px;
     position: absolute;
@@ -278,9 +309,10 @@ div.mask{
     color: white;
     text-align: center;
     line-height: 40px;
+    font-size: 20px;
 }
 
-#visual>p:last-child{
+#visual .inner>p:last-child{
     width: 40px;
     height: 40px;
     position: absolute;
@@ -291,6 +323,7 @@ div.mask{
     color: white;
     text-align: center;
     line-height: 40px;
+    font-size: 20px;
 }
 
 

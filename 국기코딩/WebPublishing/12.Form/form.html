@@ -34,6 +34,8 @@
         fieldset,input,button,select{
             border: 0;
             outline: 0;
+            appearance: none;
+            /* background-color: transparent; */
             vertical-align: middle;
         }
 
@@ -140,7 +142,8 @@
                         <input class="user_name2" id="user_name" type="text" placeholder="영문 이름을 입력하세요" required>
                     </li>
                     <li>
-                        <button type="submit"><a href="../../webPage/ford/index.html">확인</a></button>
+                        <button type="submit"><!-- <a href="../../webPage/ford/index.html"> -->확인<!-- </a> --></button>
+                        <!-- button 이랑 a태그는 같이 사용할 수 없음 -->
                     </li>
                 </ul>
             </fieldset>                
