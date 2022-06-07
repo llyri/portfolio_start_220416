@@ -248,21 +248,23 @@ div.mask{
 
 #visual .inner h2{
     padding: 50px 0 5px;
-    color: #051c48;
+    text-shadow: 2px 2px 3px #555;
+    color: #fff;
     font-size: 50px;
     font-weight: 800;
 }
 
 #visual .inner p:nth-child(2){
-    color: #051c48;
+    text-shadow: 2px 2px 3px #555;
+    color: #fff;
     font-size: 32px;
     font-weight: 600;
     letter-spacing: -1px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 #visual .inner a{
-    margin-bottom: 218px;
+    margin-bottom: 255px;
 }
 
 #visual .inner a:hover{
