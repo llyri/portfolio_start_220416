@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{width:800px; border: 5px solid #aaa;
+                display: flex; margin: 50px;}
+        .wrap>div{width:100px; height: 100px;}
+        .wrap>.box1{background-color: aquamarine;}
+        .wrap>.box2{background-color: rgb(133, 127, 255);}
+        .wrap>.box3{background-color: rgb(233, 218, 7);}
+        .wrap1{flex-direction: row;}
+        .wrap2{flex-direction: row-reverse;}
+        .wrap3{flex-direction: column;}
+        .wrap4{flex-direction: column-reverse;}
+    </style>
+</head>
+<body>
+    <div class="wrap wrap1">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+    <div class="wrap wrap2">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+    <div class="wrap wrap3">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+    <div class="wrap wrap4">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+</body>
+</html>
