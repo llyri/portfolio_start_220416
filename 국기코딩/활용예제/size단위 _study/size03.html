@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vw 단위</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-size: 20px;
+        }
+                                                                                                    
+        .wrap{
+            position: relative;
+            border: 2px solid orange;
+            padding: 20px 0;
+            width: 50%;
+        }
+
+        .child{
+            background-color: blueviolet;
+            color: white;
+        }
+
+        .per_parent>.child{
+            width: 80%;
+        }
+        .view_parent>.child{
+            width: 80vw;
+        }
+    </style>
+</head>
+<body>
+   <div class="wrap per_parent">
+       <div class="child">PERCENT</div>
+   </div> 
+   <div class="wrap view_parent">
+       <div class="child">VIEWPORT WIDTH</div>
+   </div> 
+</body>
+</html>
