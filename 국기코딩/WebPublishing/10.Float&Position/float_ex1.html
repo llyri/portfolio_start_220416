@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Float example</title>
     <style>
+        .clear::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
         .container {
             border: 10px solid #111;
             width: 500px;             
@@ -37,18 +43,18 @@
 
         .box3 {
             background-color: blue;
-            /* float: left; */
+            float: left;
         }
 
         .box4 {
             background-color: blueviolet;
-            /* float: left; */
+            float: left;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container clear">
         <div class="box1">A</div>
         <div class="box2">B</div>
         <div class="box3">C</div>

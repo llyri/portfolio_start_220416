@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1 minimum-scale=1" >
-    <link rel="stylesheet" href="./shirt.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1 minimum-scale=1">
+    <link rel="stylesheet" href="./style/shirt.css">
     <title>Shirt WebSite</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            let  target=$(".mobile_menu");
+            let  menu=$(".gnb");
+            $(target).click(function(){
+                menu.slideToggle();
+            });
+
+            $(window).resize(function(){
+                let w=$(window).width();
+                if(w>320 && menu.hide()){
+                    menu.removeAttr("style");
+                }
+            });
+        });
+    </script>
 </head>
+
 <body>
     <div id="wrap">
-        <header id="header"></header>
+        <header id="header">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="./img/bg-logo-240x232.png" alt="logo">
+                </a>
+            </h1>
+            <nav class="gnb_area">
+                <h2 class="blind">Navigation</h2>
+                <div class="mobile_menu">
+                    <a href="#" class="menu">
+                        <span class="blind">모바일메뉴</span>
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </div>
+                <ul class="gnb">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SHIRTS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
         <main id="container">
             <section>
                 <h2>THE SHIRTS</h2>
@@ -80,4 +120,5 @@
         <footer id="footer"></footer>
     </div>
 </body>
+
 </html>
