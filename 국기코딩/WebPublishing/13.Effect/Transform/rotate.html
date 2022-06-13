@@ -3,7 +3,40 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Transform</title>
-    
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+
+			.origin{
+				width: 210px;
+				height: 200px;
+				border: 5px solid #333;
+				display: inline-block;
+				margin: 50px;
+				perspective: 800px;
+			}
+
+			.origin>div{
+				opacity: 0.8;
+			}
+
+			.rotate1{
+				transform: rotateX(45deg);
+			}
+			.rotate2{
+				transform: rotateY(45deg);
+			}
+			.rotate3{
+				transform: rotate(-45deg);
+			}
+
+			/* transform:rotate3d(x축,y축,z축,angle) */
+			.rotate3d{
+				transform: rotate3d(1,0,0,45deg);
+			}
+		</style>
 	</head>
 	<body>		
 		<div class="origin">
@@ -13,6 +46,16 @@
 		</div>
 		<div class="origin">
 			<div class="rotate2">
+				<img src="images/fruit.jpg">
+			</div>
+		</div>
+		<div class="origin">
+			<div class="rotate3">
+				<img src="images/fruit.jpg">
+			</div>
+		</div>
+		<div class="origin">
+			<div class="rotate3d">
 				<img src="images/fruit.jpg">
 			</div>
 		</div>

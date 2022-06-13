@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .ex {
+            margin: 50px;
+            width: 600px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            transition: transform 0.5s, border-radius 0.3s 0.5s, background 1s 1s;
+        }
+
+        .box:hover {
+            transform: scale(1.5);
+            background: gold;
+            border-radius: 50%;
+        }
+
+        .wrap{
+            border: 5px solid #aaa;
+            padding: 30px 0;
+        }
+
+        .wrap>div{
+            height: 50px;
+            margin: 10px 0;
+            width: 10px;
+            background-color: gold;
+            transition: width 3s;
+
+        }
+
+        .wrap:hover div{
+            width: 100%;    
+        }
+
+        .wrap:hover .tr1{
+            transition-timing-function:linear ;
+        }
+        .wrap:hover .tr2{
+            transition-timing-function: ease;
+        }
+        .wrap:hover .tr3{
+            transition-timing-function: ease-in;
+        }
+        .wrap:hover .tr4{
+            transition-timing-function: ease-out;
+        }
+        .wrap:hover .tr5{
+            transition-timing-function:ease-in-out ;
+        }
+        .wrap:hover .tr6{
+            transition-timing-function: cubic-bezier(1,.56,.32,1.9);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ex">
+        <div class="box"></div>
+    </div>
+    <div class="ex">
+        <div class="wrap">
+            <div class="tr1">linear</div>
+            <div class="tr2">ease</div>
+            <div class="tr3">ease-in</div>
+            <div class="tr4">ease-out</div>
+            <div class="tr5">ease-in-out</div>
+            <div class="tr6">cubic-bezier</div>
+        </div>
+    </div>
+</body>
+
+</html>

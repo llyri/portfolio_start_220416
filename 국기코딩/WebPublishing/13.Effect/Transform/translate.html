@@ -1,27 +1,56 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<meta charset="utf-8">
-		<title>Transform</title>
-		<style>
-			.origin{width:200px; height:134px; border:2px solid #000; float:left; margin:50px; perspective:400px; transform-origin:left top}
-		</style>
-	</head>
-	<body>		
-		<div class="origin">
-			<div class="movex">
-				<img src="images/bus.jpg">
-			</div>
+
+<head>
+	<meta charset="utf-8">
+	<title>Transform</title>
+	<style>
+		.origin {
+			width: 200px;
+			height: 134px;
+			border: 2px solid #000;
+			float: left;
+			margin: 50px;
+			perspective: 400px;
+			transform-origin: left top;
+		}
+
+		.movex{
+			transform: translateX(20px);
+		}
+		.movey{
+			transform: translateY(50px);
+		}
+		.movexy{
+			transform: translate(-10px, -10px);
+		}
+		.move3d{
+			transform: translate3d(70px, 100px, -20px);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="origin">
+		<div class="movex">
+			<img src="images/bus.jpg">
 		</div>
-		<div class="origin">
-			<div class="movey">
-				<img src="images/bus.jpg">
-			</div>
+	</div>
+	<div class="origin">
+		<div class="movey">
+			<img src="images/bus.jpg">
 		</div>
-		<div class="origin">
-			<div class="movexy">
-				<img src="images/bus.jpg">
-			</div>
+	</div>
+	<div class="origin">
+		<div class="movexy">
+			<img src="images/bus.jpg">
 		</div>
-	</body>
+	</div>
+	<div class="origin">
+		<div class="move3d">
+			<img src="images/bus.jpg">
+		</div>
+	</div>
+</body>
+
 </html>

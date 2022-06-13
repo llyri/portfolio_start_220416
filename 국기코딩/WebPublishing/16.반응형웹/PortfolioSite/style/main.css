@@ -51,6 +51,7 @@ body{
 #header{
     padding: 50px 5px;
     position: relative;
+    z-index: 100;
 }
 
 #header .menu{
@@ -76,10 +77,6 @@ body{
     display: block;
     padding: 20px 0;
     border-top: 1px solid #eaeaea;
-}
-
-#contents{
-
 }
 
 .port_area .port{
@@ -157,5 +154,44 @@ body{
 @media screen and (min-width:1000px){
     .port_area .port{
         width: calc(100%/3);
+    }
+
+    #header .menu {
+        display: none;
+    }
+
+    #header {
+        position: absolute;
+        width: 200px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: #fff;
+        padding: 0;
+        text-align: center;
+    }
+
+    #contents {
+        padding-left: 200px;
+    }
+
+    #header .logo {
+        margin-top: 100px;
+    }
+
+    #header .gnb {
+        background: transparent;
+        position: static;
+        width: 100%;
+        display: block;
+        margin-top: 50px;
+    }
+
+    #header .gnb a {
+        border-top: none;
+    }
+
+    #header .gnb a:hover{
+        color: black;
     }
 }
