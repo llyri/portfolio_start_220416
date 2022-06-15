@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation-fill-mode</title>
+    <style>
+        div{width:100px; height: 100px; background: tomato;
+            color:#fff; font-size: 12px; 
+            position: relative ; margin: 50px;}
+
+        .ex1{animation: myAni 3s linear 5s none;}
+        .ex2{animation: myAni 3s linear 5s forwards;}
+        .ex3{animation: myAni 3s linear 5s backwards;}
+        .ex4{animation: myAni 3s linear 5s both;}
+
+        @keyframes myAni{
+            from{background: gold; left: 10px;}
+            to{background: blue; left: 1000px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="ex1">none</div>
+    <div class="ex2">forwards</div>
+    <div class="ex3">backwards</div>
+    <div class="ex4">both</div>
+</body>
+</html>

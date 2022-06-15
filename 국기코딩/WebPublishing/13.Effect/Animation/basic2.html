@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ball{width:100px; height: 100px; border-radius: 50%; background: coral; color:#fff; text-align: center; line-height: 100px; position: absolute;
+        animation-name:myAni;
+        animation-duration:6s;
+        animation-iteration-count: infinite;
+        /* animation-delay: 5s; */
+        }
+
+        @keyframes myAni{
+           0%{left:10px; top:50px;}
+           25%{left:1000px; top:50px; background: gold;}
+           50%{left:1000px; top:800px; background-color: aqua;}
+           75%{left:10px; top:800px;}
+           100%{left:10px; top:50px;  background-color: blueviolet;}
+        }
+    </style>
+</head>
+<body>
+    <div class="ball">ani</div>
+</body>
+</html>
