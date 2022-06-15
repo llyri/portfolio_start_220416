@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+
+        /* #wrap{
+            width: 1000px;
+            margin: auto;
+        }
+
+        #header{
+            height: 50px;
+            background-color: #555;
+        }
+
+        #content{
+            background-color: burlywood;
+            height: calc(100vh - 50px);
+        } */
+
+        .wrap{
+            width: 1000px;
+            margin: 50px auto;
+        }
+
+        .wrap::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .wrap1>.box{
+            height: 100px;
+            background-color: tomato;
+            float: left;
+            margin-left:20px;
+            margin-right: 20px;
+            width: calc(100%/3 - 40px);
+        }
+
+        .wrap2>.box{
+            height: 100px;
+            background-color: goldenrod;
+            float: left;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            width: calc(100%/2 - 2rem);
+        }
+
+        .wrap3>.box{
+            height: 100px;
+            background-color: forestgreen;
+            float: left;
+            border: 2px solid #333;
+            margin: 0 10px 0;
+            width: calc(100%/3 - 20px - 4px);
+        }
+
+        :root{
+            --W:300px;
+            --h:150px;
+            --color:coral;
+        }
+
+        .wrap4>.box{
+            height: 100px;
+            background-color: var(--color);
+            width: calc(var(--w)*1.5);
+            height: calc(var(--h)*2);
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="wrap">
+        <header id="header"></header>
+        <main class="" id="content"></main>
+    </div> -->
+
+    <div class="wrap wrap1">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <div class="wrap wrap2">
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <div class="wrap wrap3">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <div class="wrap wrap4">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+</body>
+</html>

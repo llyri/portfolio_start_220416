@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            width: 650px;
+            height: 100px auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        div img{
+            margin: 5px;
+            width: 200px;
+        }
+
+        /* blur */
+        div img:nth-child(2){filter: blur(3px);}
+
+        /* 1보다 작으면 어두워지고 커지면 밝아짐 */
+        div img:nth-child(3){filter: brightness(0.5)}
+
+        /* 100보다 커지면 대비가 강해지고 낮으면 약해짐 */
+        div img:nth-child(4){filter:contrast(150%)}
+
+        /* 100에 가까울수록 흑백이됨 */
+        div img:nth-child(5){filter:grayscale(100%)}
+
+        /* 0deg는 원래색상, 색상은 0~360deg의 각도로 색상변경 */
+        div img:nth-child(6){filter:hue-rotate(270deg)}
+
+        /* 색상반전  */
+        div img:nth-child(7){filter:invert(100%)}
+
+        /* 수치가 0에 가까울수록 채도가 낮아짐 */
+        div img:nth-child(8){filter:saturate(0.4)}
+
+        
+        /* 수치가 100에 가까울수록 갈색톤으로 변경 */
+        div img:nth-child(9){filter:sepia(100%)}
+
+        div.box{
+            width: auto;
+            padding: 0;
+            display: inline-block;
+        }
+
+        .box:hover img{
+            filter: blur(5px);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="./KakaoTalk_20220615_104226065.jpg" alt="flower">
+        <img src="./KakaoTalk_20220615_104226065.jpg" alt="flower">
+        <img src="./KakaoTalk_20220615_104226065.jpg" alt="flower">
+        <img src="./KakaoTalk_20220615_104226065.jpg" alt="flower">
+        <img src="./KakaoTalk_20220615_104226065.jpg" alt="flower">
+        <img src="./KakaoTalk_20220615_104226065.jpg" alt="flower">
+        <img src="./KakaoTalk_20220615_104226065.jpg" alt="flower">
+        <img src="./KakaoTalk_20220615_104226065.jpg" alt="flower">
+        <img src="./KakaoTalk_20220615_104226065.jpg" alt="flower">
+    </div>    
+
+    <div class="box">
+        <img src="./KakaoTalk_20220615_104226065.jpg" alt="flower">
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>말줄임 속성</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        p{
+            width: 200px;
+            background-color: antiquewhite;
+            margin: 50px;
+        }
+
+        .single{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .double{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+    </style>
+</head>
+<body>
+    <p class="single">토끼, 가을로 풀이 별 언덕 것은 있습니다. 
+        별 속의 어머니, 흙으로 멀듯이, 토끼, 이름을 거외다. 위에도 아스라히 별 추억과 오는 내 잠, 둘 말 거외다.
+    </p>
+    <p class="double">토끼, 가을로 풀이 별 언덕 것은 있습니다. 
+        별 속의 어머니, 흙으로 멀듯이, 토끼, 이름을 거외다. 위에도 아스라히 별 추억과 오는 내 잠, 둘 말 거외다.토끼, 가을로 풀이 별 언덕 것은 있습니다. 
+    </p>
+</body>
+</html>
