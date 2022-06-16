@@ -1,27 +1,63 @@
 <!DOCTYPE html>
 
 <html lang="ko">
-	<head>
-		<meta charset="utf-8">
-		<title>03_fadeIn_fadeOut_메소드</title>
-		<style>
-			html * { margin:0; padding:0; }
-			body { margin-top:150px; margin-left:500px; }
-			#wrapper { margin-top:20px; }
-			#box { width:300px; height:300px; background-color:red; border:2px solid blue; }
-			input { width:100px; height:50px; }
-		</style>
-	</head>
-	
-	<body>
-		<div id="control">
-			<input type="button" value="fadeIn">
-			<input type="button" value="fadeOut">
-		</div>
-		<div id="wrapper">
-			<div id="box">
-				
-			</div>
-		</div>
-	</body>
+
+<head>
+	<meta charset="utf-8">
+	<title>03_fadeIn_fadeOut_메소드</title>
+	<style>
+		html * {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			margin-top: 150px;
+			margin-left: 500px;
+		}
+
+		#wrapper {
+			margin-top: 20px;
+		}
+
+		#box {
+			width: 300px;
+			height: 300px;
+			background-color: red;
+			border: 2px solid blue;
+		}
+
+		input {
+			width: 100px;
+			height: 50px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="control">
+		<input type="button" value="fadeIn">
+		<input type="button" value="fadeOut">
+		<input type="button" value="fadeToggle">
+	</div>
+	<div id="wrapper">
+		<div id="box"></div>
+	</div>
+
+	<script>
+		$(function(){
+			$('input[value="fadeIn"]').on('click',function(e){
+				$('#wrapper').fadeIn();
+			})
+			$('input[value="fadeOut"]').on('click',function(e){
+				$('#wrapper').fadeOut();
+			})
+			$('input[value="fadeToggle"]').on('click',function(e){
+				$('#wrapper').fadeToggle();
+			})
+		})
+	</script>
+</body>
+
 </html>

@@ -74,13 +74,15 @@ body {
     margin: auto;
 }
 
-#wrap {}
-
 #header {
     height: 64px;
     width: 100%;
     position: absolute;
     z-index: 100;
+}
+
+#header:hover{
+    background-color: gold;
 }
 
 #header .logo {

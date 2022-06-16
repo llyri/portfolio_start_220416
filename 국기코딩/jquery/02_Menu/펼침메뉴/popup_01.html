@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        body {
+            font: 12px '맑은 고딕', 'Malgun Gothic', sans-serif;
+            color: #888;
+        }
+
+        .inner {
+            width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .overlay{
+            background: rgba(0,0,0,0.6);
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        #popup{
+            width: 400px;
+            background-color: #fff;
+            border-radius: 5px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #popup .pop_dec{
+            height: 400px;
+        }
+
+        #popup #btn{
+            background-color: firebrick;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            display: block;
+        } 
+        .pic{
+            width: 420px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        #btn{
+            font-size: 20px;
+        }    
+
+        .pic .pop_area {
+            display: inline-block;
+            position: relative;
+            margin: 30px auto;
+        }
+        .pic .pop_area .btn02{
+            font-size: 30px;
+            border: 1px solid #fff;
+            padding: 20px;
+            position: absolute;
+            right: -60px;
+            top: 0;
+
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(function(){
+         $('.modal').show()
+            $('#btn').on('click',function(e){
+              $('.overlay').hide();
+               
+            return false;
+            })
+    
+       /*  $('.pic li:nth-child(1) a').on('click',function(){
+            $('.pic li:nth-child(1) .overlay').show()
+            return false;
+        })
+        $('#btn02').on('click',function(){
+            $('.pic li:nth-child(1) .overlay').hide()
+            return false;
+        }) */
+
+        $('.link').on('click',function(){
+            $(this).next().show()
+            return false;
+        })
+        $('.btn02').on('click',function(){
+            $(this).parent().parent().hide()
+            return false;
+        })
+
+  })
+
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <main id="content">
+            <ul class="pic">
+                <li>
+                    <a href="#" class="link"><img src="../../03_메서드/레이어팝업/images/img1s.jpg" alt=""></a>
+                    <div class="overlay">
+                        <div class="pop_area">
+                            <img src="../../03_메서드/레이어팝업/images/img1.jpg" alt="">
+                            <a href="#" class="btn02">X</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="link"><img src="../../03_메서드/레이어팝업/images/img2s.jpg" alt=""></a>
+                    <div class="overlay">
+                        <div class="pop_area">
+                            <img src="../../03_메서드/레이어팝업/images/img2.jpg" alt="">
+                            <a href="#" class="btn02">X</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="link"><img src="../../03_메서드/레이어팝업/images/img3s.jpg" alt=""></a>
+                    <div class="overlay">
+                        <div class="pop_area">
+                            <img src="../../03_메서드/레이어팝업/images/img3.jpg" alt="">
+                            <a href="#" class="btn02">X</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </main>
+        <footer id="footer"></footer>
+
+        <!-- popup -->
+        <div class="overlay modal">
+            <div id="popup">
+                <div class="pop_dec">
+                    팝업에 내용 들어가는 부분
+                </div>
+                <div class="btn_area">
+                    <a href="#" id="btn">close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
