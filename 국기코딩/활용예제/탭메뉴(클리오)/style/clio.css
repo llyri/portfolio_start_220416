@@ -78,9 +78,11 @@ h1,h2,h3,h4,h5,h6 {
     overflow: hidden;
 }
 
-.content>div>div>img:hover{
-    /* width: 400px; */
-    transition: all 0.5s ease-out;
+.content>div>div>img{
+}
+
+.content>div>div:hover>img{
+    transition:0.5s ease-in; 
     transform: scale(115%,115%);
 }
 
