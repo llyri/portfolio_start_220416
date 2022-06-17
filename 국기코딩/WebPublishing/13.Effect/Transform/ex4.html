@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            border: 2px dotted #333;
+            transform-style: preserve-3d;
+            transform: rotateX(45deg) rotateY(60deg);
+        }
+
+        .container>div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.4;
+        }
+
+        .container div:nth-child(1){
+            background-color: red;
+            transform: rotateY(0deg) translate3d(0,0,100px);
+        }
+        .container div:nth-child(2){
+            background-color: blue;
+            transform: rotateY(90deg) translate3d(0,0,100px);
+        }
+        .container div:nth-child(3){
+            background-color: yellow;
+            transform: rotateY(180deg) translate3d(0,0,100px);
+        }
+        .container div:nth-child(4){
+            background-color: green;
+            transform: rotateY(270deg) translate3d(0,0,100px);
+        }
+        .container div:nth-child(5){
+            background-color: rgb(221, 20, 221);
+            transform: rotateX(90deg) translate3d(0,0,100px);
+        }
+        .container div:nth-child(6){
+            background-color: orange;
+            transform: rotateX(270deg) translate3d(0,0,100px);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>

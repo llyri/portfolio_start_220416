@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>05_slideDown_slideUp_메소드</title>
+	<style>
+		html * {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			margin-top: 150px;
+			margin-left: 500px;
+		}
+
+		#wrapper {
+			margin-top: 20px;
+		}
+
+		#box {
+			width: 300px;
+			height: 300px;
+			background-color: red;
+			border: 2px solid blue;
+		}
+
+		input {
+			width: 100px;
+			height: 50px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="control">
+		<input type="button" value="slideUp">
+		<input type="button" value="slideDown">
+		<input type="button" value="slideToggle">
+	</div>
+	<div id="wrapper">
+		<div id="box"></div>
+	</div>
+
+	<script>
+		$(function(){
+			$('input[value="slideUp"]').on('click',function(e){
+				$('#wrapper').slideUp('slow');
+			})
+			$('input[value="slideDown"]').on('click',function(e){
+				$('#wrapper').slideDown(100);
+			})
+			$('input[value="slideToggle"]').on('click',function(e){
+				$('#wrapper').slideToggle(1000);
+			})
+		})
+	</script>
+</body>
+
+</html>

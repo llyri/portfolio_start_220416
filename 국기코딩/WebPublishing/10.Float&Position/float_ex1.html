@@ -1,60 +1,68 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Float example</title>
     <style>
-        .container{
-            border:10px solid #111;
-            width:500px;
+        .clear::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .container {
+            border: 10px solid #111;
+            width: 500px;             
             /* overflow: hidden; */
         }
 
-        .container div{width: 100px;
-        height: 100px;}
+        .container div {
+            width: 100px;
+            height: 100px;
+            /* float: left; */
+        }
 
         /* .container::after{
             content:"";
         } */
 
-        .box1{
+        .box1 {
             background-color: red;
             float: left;
 
         }
-        .box2{
+
+        .box2 {
             background-color: green;
-            float: right;
+            float: left;
 
         }
-        .box3{
 
+        .box3 {
             background-color: blue;
-
+            float: left;
         }
 
-        .box4{
-            display: block;
-            width: 100px;
-            height: 100px;
+        .box4 {
             background-color: blueviolet;
+            float: left;
         }
-
     </style>
 </head>
 
 <body>
-<div class="container">
-    <div class="box1">A</div>
-    <div class="box2">B</div>
-    <div class="box3">C</div>
-    <!-- <div class="box4"></div> -->
-    <span class="box4">Dwsdadddddddddd</span>
-
-</div>    
+    <div class="container clear">
+        <div class="box1">A</div>
+        <div class="box2">B</div>
+        <div class="box3">C</div>
+        <div class="box4">D</div>
+    </div>
+    <div style="background-color: orange; width:100px; height:100px;"></div>
 </body>
 
 <!-- inline 요소  -->
+
 </html>

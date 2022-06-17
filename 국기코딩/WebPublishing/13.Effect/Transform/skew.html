@@ -2,7 +2,27 @@
 <html lang="ko">
 	<head>
 		<meta charset="utf-8">
-	
+		<style>
+			.origin {
+			width: 160px;
+			height: 240px;
+			border: 2px solid #000;
+			float: left;
+			margin: 50px;
+			perspective: 400px;
+			
+		}
+
+		.skewx{		
+			transform: skewX(10deg);
+		}
+		.skewy{
+			transform: skewY(20deg);
+		}
+		.skewxy{
+			transform: skew(10deg, 30deg);
+		}
+		</style>
 	</head>
 	<body>		
 		<div class="origin">

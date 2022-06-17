@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <title>media query</title>
+    <style>
+        body{
+            background-color: gold;
+        }
+
+        .txt::before{
+            content: "pc화면입니다";
+            font-size: 100px;
+            color: blue;
+        }
+
+        @media screen and (min-width:480px) and (max-width:760px){
+            body{
+                background-color: aqua;
+            }
+
+            .txt::before{
+                content: "table화면입니다";
+                font-size: 50px;
+                color: red;
+            }
+        }
+
+        @media screen and (max-width:479px){
+            body{
+                background-color: forestgreen;
+            }
+
+            .txt::before{
+                content: "mobile화면입니다";
+                font-size: 30px;
+                color: sienna;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="txt"></div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #777;
+        }
+
+        body {
+            font: 14px Arial, Helvetica, sans-serif;
+            background-color: #eaeaea;
+        }
+
+        .ex {
+            width: 650px;
+            height: 350px;
+            position: relative;
+            background: #fff url(./01/images/background.png) no-repeat;
+            margin: 100px auto;
+            border: 5px solid #333;
+            overflow: hidden;
+        }
+
+        nav{
+            width: 600px;
+            height: 120px;
+            background: url(./01/images/panel.png) no-repeat;
+            position: absolute;
+            right: -560px;
+            transition: right 0.3s ease-out;
+        }
+
+        nav:hover{
+            transition: right 0.5s ease-out;
+            right: -10px;
+        }
+
+        nav .gnb {
+            height: 120px;
+            margin-left: 40px;
+        }
+
+        nav .gnb li{
+            float: left;
+            width: 20%;
+            padding: 15px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .nav .gnb li strong{
+            color: #111;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .nav .gnb li .icon{
+            display: block;
+            width: 30px;
+            height: 30px;
+            background:url(./01/images/post.png) no-repeat;
+            position: absolute;
+            bottom: -5px;
+            right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ex">
+        <nav class="nav">
+            <ul class="gnb">
+                <li><a href="#">
+                        <strong>Home</strong>
+                        <p>custom description here</p>
+                        <i class="icon"></i>
+                    </a></li>
+                <li><a href="#">
+                        <strong>Tutorials</strong>
+                        <p>custom description here</p>
+                        <i class="icon"></i>
+                    </a></li>
+                <li><a href="#">
+                        <strong>Resources</strong>
+                        <p>custom description here</p>
+                        <i class="icon"></i>
+                    </a></li>
+                <li><a href="#">
+                        <strong>About</strong>
+                        <p>custom description here</p>
+                        <i class="icon"></i>
+                    </a></li>
+                <li><a href="#">
+                        <strong>Back</strong>
+                        <p>custom description here</p>
+                        <i class="icon"></i>
+                    </a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>

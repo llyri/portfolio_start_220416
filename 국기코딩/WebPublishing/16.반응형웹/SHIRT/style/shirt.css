@@ -1,0 +1,210 @@
+@charset "utf-8";
+@import url(./all.css);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    max-width: 100%;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    font: 14px Arial, Helvetica, sans-serif;
+    color: #111;
+    background: url(../img/bg-texture-light.jpg);
+}
+
+.clear::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.blind{
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    display: block;
+}
+
+#wrap{
+    min-width: 320px;
+    padding: 0 15px;
+}
+
+#header{
+    position: relative;
+    padding: 0 15px;
+}
+
+#header .logo{
+    width: 30%;
+}
+
+#header .mobile_menu{
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    font-size: 20px;
+}
+
+#header .gnb{
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    text-align: center;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+    display: none;
+}
+
+#header .gnb a {
+    display: block;
+    padding: 15px 0;
+}
+
+/* container mobile */
+#container{
+    padding:30px 15px 0;
+}
+
+#container h2{
+    font-size: 2.429rem;
+    font-weight: normal;
+    margin-bottom: 2.5rem;
+}
+
+#container .sh{
+    background: #fff url(../img/zig.png) repeat-x 0 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+#container .sh .shirt_area{
+    padding: 45px 25px 0;
+}
+
+#container .sh h3{
+    font-size:/* 18px */ 1.286rem;
+    margin-bottom: 25px;
+    font-weight: lighter;
+}
+
+#container .sh a{
+    background-color: #111;
+    display: block;
+    color: white;
+    padding: 15px 0;
+}
+
+#container .sh a img{
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* tablet */
+@media screen and (min-width:600px){
+    #wrap{
+        padding: 0 30px;
+    } 
+    
+    #container .sh{
+        width:48%;
+        float: left;
+        margin-right: 4%;
+    }
+    #container .sh:nth-child(2n){
+        margin-right: 0;
+    }
+}
+
+/* pc */
+@media screen and (min-width:960px){
+    #wrap{
+        padding: 0;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    #container .sh{
+        width: 32%;
+        margin-right: 2%;
+    }
+    #container .sh:nth-child(2n){
+        margin-right: 2%;
+    }
+    #container .sh:nth-child(3n){
+        margin-right: 0;
+    }
+
+    #header{
+        padding: 0;
+    }
+
+    #header .mobile_menu{
+        display: none;
+    }
+
+    #header .gnb{
+        background-color: transparent;
+        width: 69%;
+        position: absolute;
+        left: auto;
+        right: 0;
+        top: 70px;
+        text-align: center;
+        box-shadow: none;
+        display: flex;
+        justify-content: space-around;
+        font-size: 20px;
+        font-weight: 700;
+        border-bottom: 2px solid #111;
+        border-top: 2px solid #111;
+        padding: 10px 0;
+    }
+
+    #header .gnb li{
+        /* background-color: aquamarine; */
+        position: relative;
+        padding: 10px;
+    }
+    
+    #header .gnb li::after{
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 28px;
+        background-color: #111;
+        position: absolute;
+        right: -40px;
+        top: 25px;
+    }
+
+    #header .gnb li:last-child::After{
+        display: none;
+    }
+
+    #header .gnb a {
+        padding: 15px 0;
+    }
+}

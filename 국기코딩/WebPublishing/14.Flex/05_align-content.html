@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{width:500px; height: 700px; border: 5px solid #aaa;
+                display: flex; flex-wrap: wrap; margin: 50px; }
+        .wrap>div{width:200px; height: 200px;}
+        .wrap>.box1{background-color: aquamarine;}
+        .wrap>.box2{background-color: rgb(133, 127, 255);}
+        .wrap>.box3{background-color: rgb(233, 218, 7);}
+        .wrap1{align-content: flex-start;}
+        .wrap2{align-content: flex-end;}
+        .wrap3{align-content: center;}
+        .wrap4{align-content: space-between;}
+        .wrap5{align-content: space-around;}
+    </style>
+</head>
+<body>
+    <div class="wrap wrap1">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+    <div class="wrap wrap2">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+    <div class="wrap wrap3">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+    <div class="wrap wrap4">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+    <div class="wrap wrap5">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+</body>
+</html>

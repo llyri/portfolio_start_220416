@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em,rem</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            font-size: 16px;
+        }
+
+        body{
+            font-size: 16px;
+        }
+        
+        /* em - 부모의 font-size 기준 */
+        .container{
+            background-color: aquamarine;
+            margin: 30px;
+        }
+
+        .container .parent{
+            border: 2px solid salmon;
+            font-size: 2em;
+        }
+        
+        .container .box{
+            border: 2px solid orange;
+            font-size: 1.25em;
+        }
+        
+        /* rem - html의 font-size 기준 */
+        .container02{
+            background-color: aquamarine;
+            margin: 30px;
+        }
+
+        .container02 .parent{
+            border: 2px solid salmon;
+            font-size: 2rem;
+        }
+        
+        .container02 .box{
+            border: 2px solid orange;
+            font-size: 1.25rem;
+        }
+
+        .box03{
+            width: 300px;
+            background-color: blueviolet;
+            padding: 1.25rem;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+   <div class="container">
+       <div class="parent">
+           <p>font-size:32px</p>
+           <div class="box">
+               <p>font-size:20px</p>
+           </div>
+       </div>
+   </div> 
+   <div class="container02">
+       <div class="parent">
+           <p>font-size:32px</p>
+           <div class="box">
+               <p>font-size:20px</p>
+           </div>
+       </div>
+   </div>
+
+   <div style="font-size:30px">
+   <div class="box03">안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕</div>
+   </div>
+</body>
+</html>
