@@ -5,59 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-
-        .wrap{
-            width: 177px;
-            height: 290px;
-            border: 2px dotted #333;
-            position: relative;
-            margin: 50px auto;
-            perspective: 800px;
-        }
-
-        .card{
-            width: 177px;
-            height: 290px;
-            transform-style: preserve-3d;
-            transition: transform 1s;
-        }
-
-        .card>div{
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            color: #fff;
-            font-size: 40px;
-            line-height: 260px;
-            text-align: center;
-            transform: transform 1s;
-        }
-
-        .card>.front{
-            background-color: hotpink;
-        }
-
-        .card>.back{
-            transform: rotateY(180deg);      
-        }
-
-        .card:hover>.back{
-            transform: rotateY(180deg);
-        }
-    </style>
+    <link rel="stylesheet" href="./card.css">
 </head>
 <body>
     <div class="wrap">
         <div class="card">
-            <div class="front">card1</div>
-            <div class="back"><img src="../images/KakaoTalk_20220613_112713415.jpg" alt="타로카드"></div>
+            <div class="front"></div>
+            <div class="back"></div>
         </div>
     </div>
 </body>

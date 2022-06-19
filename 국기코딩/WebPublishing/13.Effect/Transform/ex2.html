@@ -19,11 +19,12 @@
             margin: 50px auto;
             perspective: 800px;
             transform-style: preserve-3d;
-
+     background-color: skyblue;
+     transition: 1s;     
         }
 
         .card{
-            background-color: skyblue;
+       
             position: absolute;
             left: 0;
             top: 0;
@@ -33,11 +34,15 @@
             line-height: 240px;
             color: #fff;
             text-align: center;
-            transition: 1s;            
-            backface-visibility: hidden;
+            transition-delay: 0.2s;
+            /* backface-visibility:hidden; */
+
         }
 
-        .card:hover{
+        .wrap:hover{
+            transform: rotateY(180deg);
+        }
+        .wrap:hover>.card{
             transform: rotateY(180deg);
         }
     </style>
