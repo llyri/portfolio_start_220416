@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attr02</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul,li{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        #gallery{
+            width: 522px;
+            margin: 50px auto;
+        }
+
+        
+        #gallery .menu{
+            display: flex;
+        }
+
+        #gallery .menu img{
+            display: block;
+            cursor: pointer;
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('li>img:eq(0)').on('click',function(){
+                $(this).attr('src','./images/btn1_2.jpg')
+                $('#big').attr({'src':'./images/spring.jpg','alt':'spring'})
+            })
+            $('li>img:eq(1)').on('click',function(){
+                $(this).attr('src','./images/btn2_2.jpg')
+                $('#big').attr({'src':'./images/summer.jpg','alt':'summer'})
+            })
+            $('li>img:eq(2)').on('click',function(){
+                $(this).attr('src','./images/btn3_2.jpg')
+                $('#big').attr({'src':'./images/fall.jpg','alt':'fall'})
+            })
+            $('li>img:eq(3)').on('click',function(){
+                $(this).attr('src','./images/btn4_2.jpg')
+                $('#big').attr({'src':'./images/winter.jpg','alt':'winter'})
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="gallery">
+        <ul class="menu">
+            <li><img src="./images/btn1_1.jpg" alt="spring"></li>
+            <li><img src="./images/btn2_1.jpg" alt="summer"></li>
+            <li><img src="./images/btn3_1.jpg" alt="fall"></li>
+            <li><img src="./images/btn4_1.jpg" alt="winter"></li>
+        </ul>
+        <div class="big_img">
+            <img src="./images/spring.jpg" alt="spring" id="big">
+        </div>
+    </div>
+</body>
+</html>
