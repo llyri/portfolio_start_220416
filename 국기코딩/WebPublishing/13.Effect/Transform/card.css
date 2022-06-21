@@ -41,6 +41,7 @@ div.wrap {
 }
 .card .back{
  background: url(../images/KakaoTalk_20220613_112713559.jpg) no-repeat center center;
+ /* 90deg로하면 사라져버리는이유? 끝에 선이라도 보여야하는거아닌가요? */
  transform: rotateY(180deg);
  /* transition delay 는 어떤것을 기준으로 1.5s가 되는건가요? */
  /* transition-delay: 1.5s; */
