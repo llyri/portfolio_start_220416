@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul,li{
+            list-style: none;
+        }
+
+        #gallery{
+            width: 335px;
+            margin: 50px auto;
+            position: relative;
+            border: 5px solid hotpink;
+        }
+
+        #gallery span{
+            position: absolute;
+            top: 50%;
+            cursor: pointer;
+        }
+
+        #gallery .prev{
+            left: -50px;
+        }
+
+        #gallery .next{
+            right: -50px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        /* 
+        var num1 = 10;
+        var num2 = 5;
+        var num3 = num1 + num2
+        document.write(num3)
+
+        var str1 = "javascript"
+        var str2 = "jauery"
+        var str3 = str1 + str2
+        document.write(str3)
+
+        var str1 = 'javascript'
+        var num1 = 10
+        var result = str1 + num1
+        document.write(result)
+
+        var str1 = '10' //문자데이터로 출력
+        var num1 = 10
+        var result = str1 + num1
+        document.write(result)
+        */   
+        
+         $(function(){
+            $('button').click(function(){
+            let num = 0
+            var str1 = 'javascript'
+            var str2 = '버전입니다'
+            var result = str1 + i + str2
+            
+           for(let i=1; i<=100; i++){num += 1;}
+
+
+            console.log(result)
+            
+            })
+         })
+
+
+        // var num = 0;
+        // document.write('javascript' + num + '버전입니다')
+
+    //     $(function(){
+    //         var num = 1               
+    //         $('.next').on('click',function(){ 
+    //             num = num + 1
+    //             if(num > 9){
+    //                 num = 1
+    //             }
+    //             $('#big').attr({src:'./images/img' + num + '.jpg'})
+    //         })
+
+    //         $('.prev').on('click',function(){ 
+    //             num = num - 1
+    //             if(num < 1){
+    //                num = 8
+    //             }
+    //             $('#big').attr({src:'./images/img' + num + '.jpg'})
+    //         })
+
+
+    // })
+    </script>
+</head>
+
+<body>
+    <div id="gallery">
+        <div id="pic">
+            <img src="./images/img1.jpg" alt="이미지" id="big">
+        </div>
+        <span class="prev">prev</span>
+        <span class="next">next</span>
+    </div>
+
+    <button type="button">버튼</button>
+</body>
+</html>

@@ -10,6 +10,34 @@
 			#controller { padding: 10px;}
 			#box { width:150px; height:150px; background-color:red; border:2px solid blue; position:absolute; left:200px; }
 		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$('.big').on('click',function(){
+					$('#box').animate({width:'300px',opacity:"0.6"},1000,'linear',function(){
+						$('#box').css({backgroundColor:'gold'})
+					})
+				})
+
+				$('.left').on('click',function(){
+					$('#box').animate({left:'10%'},300,'linear',function(){
+						$('#box').css({backgroundColor:'blue'})
+					})
+				})
+
+				$('.small').on('click',function(){
+					$('#box').animate({width:'50px',opacity:'0.3'},300,'linear',function(){
+						$('#box').css({backgroundColor:'green'})
+					})
+				})
+
+				$('.right').on('click',function(){
+					$('#box').animate({left:'50%'},300,'linear',function(){
+						$('#box').css({backgroundColor:'pink'})
+					})
+				})
+			})
+		</script>
 	</head>
 	
 	<body>

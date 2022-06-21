@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형제선택자</title>
+    <style>
+        .sel{
+            cursor: pointer;
+            background-color: gold;
+        }    
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $(".sel").click(function(){
+            //     $(this).next().css("color","red")
+            //     $(this).prev().css("color","blue")
+            //     $(this).nextAll().css("backgroundColor","green")
+            //     $(this).prevAll().css("backgroundColor","purple")
+            // })
+
+            $(".sel").click(function(){
+                // $(this).siblings(".prevSel").css("color",'blue').css("background","skyblue")
+                $(this).siblings(".prevSel").css({color:'blue',backgroundColor:'red'})
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <p class="prevSel">인접관계선택자 - 형제선택자</p>
+    <p>인접관계선택자 - 형제선택자</p>
+    <p class="sel">인접관계선택자 - 형제선택자</p>
+    <p>인접관계선택자 - 형제선택자</p>
+    <p>인접관계선택자 - 형제선택자</p>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;
+         padding: 0;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    ul>li{
+        list-style: none;
+    }
+
+    .ex{
+        width: 600px;
+        justify-self: 500px;
+        border: 1px solid #fff;
+    }
+
+    .ex>div{
+        display:inline-block;
+        width: 1000;
+        height: 1000px;
+        border: 1px solid white;
+        margin: 30px;
+    }
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // console.log($('.txt').text());
+            $('.txt').text('제이쿼리')
+
+            // console.log($('.ht').html());
+            $('.ht').html('<p>HTML</p>')
+        })
+    </script>
+</head>
+
+<body>
+    <div class="ht">
+        <h1>HTML매서드</h1>
+    </div>
+    <p class="txt">TEXT매서드</p>
+
+    <div class="ex">
+        <div class="box b1">red</div>
+        <div class="box b1">red</div>
+        <div class="box b1">red</div>
+    </div>
+</body>
+</html>
