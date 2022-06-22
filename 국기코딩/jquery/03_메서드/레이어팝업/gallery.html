@@ -65,18 +65,19 @@
         document.write(result)
         */   
         
-         $(function(){
+         $(function(){        
+            let v = 0;
+
             $('button').click(function(){
-            let num = 0
-            var str1 = 'javascript'
-            var str2 = '버전입니다'
-            var result = str1 + i + str2
-            
-           for(let i=1; i<=100; i++){num += 1;}
 
-
-            console.log(result)
-            
+                
+                for(let i = 0; i<=v; i++){   
+                    var str1 = 'javascript'
+                    var str2 = '버전입니다'
+                    var result = str1 + v + str2
+                    console.log(result) 
+                }
+                v++
             })
          })
 
@@ -85,24 +86,28 @@
         // document.write('javascript' + num + '버전입니다')
 
     //     $(function(){
-    //         var num = 1               
+    //         var num = 1 
+
     //         $('.next').on('click',function(){ 
+    //             console.log("current num : " + num);
     //             num = num + 1
-    //             if(num > 9){
+                
+    //             if(num > 8){
     //                 num = 1
     //             }
+    //             console.log(" => " + num);
     //             $('#big').attr({src:'./images/img' + num + '.jpg'})
     //         })
 
     //         $('.prev').on('click',function(){ 
+    //             console.log("current num : " + num);
     //             num = num - 1
     //             if(num < 1){
     //                num = 8
     //             }
+    //             console.log(" => " + num);
     //             $('#big').attr({src:'./images/img' + num + '.jpg'})
     //         })
-
-
     // })
     </script>
 </head>

@@ -11,7 +11,7 @@
     <script>
         $(function () {
             for (let i = 0; i < 4; i++) {
-                $('ul a:eq(' + (i) + ')').on('click', function () {
+                $('ul a:eq(' + i + ')').on('click', function () {
                     console.log("click i : " + i);
                     $('.inner div.content').hide();
                     $('.inner div.content:eq(' + (i) + ')').css("display", "flex");

@@ -40,22 +40,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(function(){
-            $('li>img:eq(0)').on('click',function(){
-                $(this).attr('src','./images/btn1_2.jpg')
-                $('#big').attr({'src':'./images/spring.jpg','alt':'spring'})
+            const seasons = ["spring", "summer", "fall", "winter"];
+            // x = 0
+            // $('li>img:eq('+x+')').on('click',function(){
+            //     $(this).attr('src','./images/btn'+(x+1)+'_2.jpg')
+            //     $('#big').attr({'src':`./images/${seasons[x]}.jpg`,'alt':seasons[x]})
+            // })
+            // x = 1
+            // $('li>img:eq('+x+')').on('click',function(){
+            //     $(this).attr('src','./images/btn'+(x+1)+'_2.jpg')
+            //     $('#big').attr({'src':`./images/${seasons[x]}.jpg`,'alt':seasons[x]})
+            // })
+            // x = 2
+            // $('li>img:eq('+x+')').on('click',function(){
+            //     $(this).attr('src','./images/btn'+(x+1)+'_2.jpg')
+            //     $('#big').attr({'src':`./images/${seasons[x]}.jpg`,'alt':seasons[x]})
+            // })
+            // x = 3
+
+            for(let x = 0; x < 4; x++){
+                $('li>img:eq('+x+')').on('click',function(){
+                    $('li>img:eq(0)').attr('src','./images/btn1_1.jpg')
+                    $('li>img:eq(1)').attr('src','./images/btn2_1.jpg')
+                    $('li>img:eq(2)').attr('src','./images/btn3_1.jpg')
+                    $('li>img:eq(3)').attr('src','./images/btn4_1.jpg')
+
+                    $(this).attr('src','./images/btn'+(x+1)+'_2.jpg')
+                    $('#big').attr({'src':`./images/${seasons[x]}.jpg`,'alt':seasons[x]})
             })
-            $('li>img:eq(1)').on('click',function(){
-                $(this).attr('src','./images/btn2_2.jpg')
-                $('#big').attr({'src':'./images/summer.jpg','alt':'summer'})
-            })
-            $('li>img:eq(2)').on('click',function(){
-                $(this).attr('src','./images/btn3_2.jpg')
-                $('#big').attr({'src':'./images/fall.jpg','alt':'fall'})
-            })
-            $('li>img:eq(3)').on('click',function(){
-                $(this).attr('src','./images/btn4_2.jpg')
-                $('#big').attr({'src':'./images/winter.jpg','alt':'winter'})
-            })
+            }
+
+            // $('li>img:eq(0)').click();
+            $("li>img:eq(0)").attr('src','./images/btn1_2.jpg')
         })
     </script>
 </head>
