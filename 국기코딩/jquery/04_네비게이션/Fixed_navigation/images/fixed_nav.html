@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed_Nav</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul,li{
+            list-style: none;
+        }
+
+        body{
+            font-size: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #header{
+            height: 50px;
+            padding: 30px 0;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+
+        .inner{
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        #header .logo{
+            font-size: 25px;
+            color: #111;
+            float: left;
+        }
+
+        #header .nav{
+            float: right;
+            width: 70%;
+            margin-top: 5px;
+        }
+
+        #header .nav .gnb{
+            display: flex;
+        }
+
+        #header .nav li{
+            flex: 1;
+            text-align: center;
+        }
+
+        #header .nav li a{
+            display: block;
+        }
+
+        /* 제이쿼리 적용 */
+        #header.fixed{
+            background-color: rgba(0,0,0,0.5);
+            position: fixed;
+            /* color: white; */
+        }
+
+        #header.fixed .logo{
+            color: #fff;
+        }
+
+        #header.fixed .gnb li a{
+            color: #fff;
+        }
+
+        #visual{
+            height:800px;
+            background: url(../images/car.jpg) no-repeat center top/cover;
+        }
+
+        #contents{
+            height: 2000px;
+            background-color:greenyellow;
+        }
+
+        .btn_top{
+            display: block;
+            width: 50px;
+            line-height: 50px;
+            color: white;
+            background-color: green;
+            text-align: center;
+            position: fixed;
+            right: 2%;
+            bottom: 2%;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){ 
+            $('.btn_top').hide()
+            $(window).on('scroll',function(){
+                var top = $(document).scrollTop();
+                if(top > 0){
+                    $('#header').addClass('fixed')
+                }
+                else{
+                    $('#header').removeClass('fixed')
+                }  
+                
+                // if($(window.offset().top >= 1000))
+                if(top >= 1000){
+                    $('.btn_top').fadeIn()
+                }
+                else{
+                    $('.btn_top').fadeOut()
+                }
+            })
+
+          
+
+            $('.btn_top').on('click',function(){
+                $('html,body').stop().animate({scrollTop:'0'},800)
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#">LOGO</a>
+                </h1>
+                <nav class="nav">
+                    <ul class="gnb">
+                        <li><a href="#">MENU1</a></li>
+                        <li><a href="#">MENU2</a></li>
+                        <li><a href="#">MENU3</a></li>
+                        <li><a href="#">MENU4</a></li>
+                        <li><a href="#">MENU5</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="visual"></div>
+        <main id="contents"></main>
+        <footer id="footer"></footer>
+        <span class="btn_top">^</span>
+    </div>
+</body>
+</html>

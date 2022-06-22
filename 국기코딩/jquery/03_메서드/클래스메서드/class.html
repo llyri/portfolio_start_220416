@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+    <style>
+        p{
+            font-size:20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .c1{
+            width: 100px;
+            background-color: #660708;
+            transform: scale(1.2);
+            transition: 1s;
+        }
+
+        .c2{
+            background: #a4161a;
+        }
+
+        .c3{
+            color: #ba181b;
+            font-weight: 700;
+            margin-top: 5px;
+            transition: 0.3s;
+        }
+
+        .c4{
+            background-color: aquamarine;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // class 추가
+            $('p:eq(0)').on('click',function(){
+                $(this).addClass('c1')})
+            // class 제거
+            $('p:eq(1)').on('click',function(){
+                $(this).removeClass()})
+            // class 없앴다 생겼다
+            $('p:eq(2)').on('click',function(){
+                $(this).toggleClass('c3')})
+            // class 가지고 있는지확인, if문하고 동반됨
+            $('p:eq(3)').on('click',function(){
+                if($(this).hasClass('c4') == true){
+                    $(this).css({fontSize:'50px'})
+                }
+                else{
+                    $(this).css({backgroundColor:'blue'})
+                }
+        })
+        })
+    </script>
+</head>
+
+<body>
+    <p>addClass</p>
+    <p class="c2">removeClass</p>
+    <p>toggleClass</p>
+    <p class="c4">hasClass</p>    
+</body>
+</html>

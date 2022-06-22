@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Graph</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        span,
+        a {
+            display: inline-block;
+        }
+
+        .section {
+            height: 1000px;
+            position: relative;
+            padding: 100px 0;
+            box-sizing: border-box;
+        }
+
+        .section h2 {
+            color: #d4a373;
+            font-size: 50px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        section:nth-child(1) {
+            background-color: #ccd5ae;
+        }
+
+        section:nth-child(2) {
+            background-color: #e9edc9;
+        }
+
+        section:nth-child(3) {
+            background-color: #faedcd;
+        }
+
+        section:nth-child(4) {
+            background-color: #d4a373;
+        }
+
+        .gr_area {
+            width: 800px;
+            margin: 0 auto;
+            border: 2px dotted #d4a373;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .gr_area .gr {
+            width: 48%;
+            background-color: aqua;
+            margin-bottom: 40px;
+        }
+
+        .gr_area .gr .bar_area {
+            position: relative;
+            margin-top: 10px;
+        }
+
+        .gr_area .gr .bar_area .bar_bg {
+            width: 100%;
+            height: 22px;
+            border-radius: 20px;
+            background: burlywood;
+        }
+
+        .gr_area .gr .bar_area .bar {
+            width: 0%;
+            height: 22px;
+            border-radius: 20px;
+            background: #fafcef;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .gr_area .gr .txt {
+            color: #5c350d;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #header {
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            background-color: white;
+
+            z-index: 100;
+        }
+
+        #header .gnb {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+        }
+
+        #header li a {
+            display: block;
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function (){
+            $(window).on('scroll', function(){
+                var top = $(document).scrollTop();
+                console.log(top)
+
+                // var w = 'width:' + `$('span.num').text()`
+                if (top >= 1000 && top < 2000) {
+                    $('.design .bar').stop().animate({width : '90%'}, 1000)
+                    $('.html .bar').stop().animate({ width: '95%' }, 1000)
+                    $('.javascript .bar').stop().animate({ width: '80%' }, 1000)
+                    $('.figma .bar').stop().animate({ width: '85%' }, 1000)
+                }
+                else {
+                    $('.bar').stop().animate({ width: '0%' }, 500)
+                }
+            })
+            
+            var sc = $('section:nth-child(1)').offset().top
+            var sv = $('section:nth-child(2)').offset().top
+            var ss = $('section:nth-child(3)').offset().top
+            var sd = $('section:nth-child(4)').offset().top
+            $('.gnb li:nth-child(1)').click(function(){
+                $('html,body').stop().animate({scrollTop:sc})
+            })
+            $('.gnb li:nth-child(2)').click(function(){
+                $('html,body').stop().animate({scrollTop:sv})
+            })
+            $('.gnb li:nth-child(3)').click(function(){
+                $('html,body').stop().animate({scrollTop:ss})
+            })
+            $('.gnb li:nth-child(4)').click(function(){
+                $('html,body').stop().animate({scrollTop:sd})
+            })
+
+            // var sc = $('section:eq(' + i + ')').offset().top 
+            // for (let i=0; i<4; i++){         
+            //     $('.gnb li:eq(' + i + ')').click(function(){
+            //         $('html,body').stop().animate({scrollTop:sc})
+            //     })
+            // }
+        })
+    </script>
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <ul class="gnb">
+                <li><a href="#">MENU1</a></li>
+                <li><a href="#">MENU2</a></li>
+                <li><a href="#">MENU3</a></li>
+                <li><a href="#">MENU4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="content">
+        <section class="section"></section>
+        <section class="section graph">
+            <h2>SKILL</h2>
+            <div class="gr_area">
+                <!-- 1 -->
+                <div class="gr design">
+                    <div class="txt">
+                        <span class="tit">Design</span>
+                        <span class="num">90%</span>
+                    </div>
+                    <div class="bar_area">
+                        <span class="bar_bg"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="gr html">
+                    <div class="txt">
+                        <span class="tit">Html/Css</span>
+                        <span class="num">95%</span>
+                    </div>
+                    <div class="bar_area">
+                        <span class="bar_bg"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="gr javascript">
+                    <div class="txt">
+                        <span class="tit">JavaScript</span>
+                        <span class="num">80%</span>
+                    </div>
+                    <div class="bar_area">
+                        <span class="bar_bg"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="gr figma">
+                    <div class="txt">
+                        <span class="tit">Figma</span>
+                        <span class="num">85%</span>
+                    </div>
+                    <div class="bar_area">
+                        <span class="bar_bg"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section"></section>
+        <section class="section"></section>
+    </main>
+</body>
+
+</html>
