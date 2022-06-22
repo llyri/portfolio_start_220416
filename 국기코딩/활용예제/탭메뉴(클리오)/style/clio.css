@@ -79,10 +79,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .content>div>div>img{
+    /* width: 320px;     */
+
 }
 
 .content>div>div:hover>img{
-    transition:0.5s ease-in; 
+    /* width: 400px; */    
+    transition: 0.5s ease-in; 
     transform: scale(115%,115%);
 }
 
