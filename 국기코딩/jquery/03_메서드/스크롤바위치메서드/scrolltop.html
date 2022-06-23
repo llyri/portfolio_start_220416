@@ -52,13 +52,15 @@
                 // console.log(top)
                 $('.txt').text(top)                
                 // offset값을 이용하여 만드려면?
-                if(top >= 1800){
-                    $('span').fadeIn()
-                }
-                else{
-                    $('span').fadeOut()
-                }
-            })
+            if(top >= 1000){
+                $('span').fadeIn()
+            }
+            else{
+                $('span').fadeOut()
+            }
+            })                
+            
+           
 
             $('span').on('click',function(){
                 $('html,body').stop().animate({'scrollTop':'0'},1000)
