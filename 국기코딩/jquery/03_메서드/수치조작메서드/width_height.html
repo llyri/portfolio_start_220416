@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width_Height</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #box{
+            margin: 50px;
+            width: 300px;
+            height: 200px;
+            background-color: rgb(247, 154, 185);
+            border: 5px solid firebrick;
+            padding: 50px;
+        }
+
+        .button_area{
+            margin-top: 50px;
+        }
+
+        .button_area button{
+            padding: 10px 20px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // 요소 선,여백 제외
+            $('.btn1').on('click',function(){
+                // $('#box').width(100)
+                var w = $('#box').width();
+                $('#box').text(w);
+            })
+            $('.btn2').on('click',function(){
+                $('#box').height(100)
+            })
+            // 요소 선,여백 포함
+            $('.btn3').on('click',function(){
+                var w = $('#box').innerWidth();
+                $('#box').text(w);
+            })
+            $('.btn4').on('click',function(){
+                var h = $('#box').innerHeight();
+                $('#box').text(h);
+            })
+            $('.btn5').on('click',function(){
+                var w = $('#box').outerWidth();
+                $('#box').text(w);
+            })
+            $('.btn6').on('click',function(){
+                var w = $('#box').outerHeight();
+                $('#box').text(w);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    <div class="button_area">
+        <button type="button" class="btn1">Width</button>
+        <button type="button" class="btn2">Height</button>
+        <button type="button" class="btn3">innerWidth</button>
+        <button type="button" class="btn4">innerHeight</button>
+        <button type="button" class="btn5">outerWidth</button>
+        <button type="button" class="btn6">outerHeight</button>
+    </div>
+</body>
+</html>

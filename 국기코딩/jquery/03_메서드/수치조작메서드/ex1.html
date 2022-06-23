@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자의 height값 추출하여 h1의 height값 지정하기</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap{
+            background-color: tomato;
+            color: white;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            var h = $(window).height();
+            $('.wrap').height(h)/* css('height',h) */
+        })
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>FullScreen</h1>
+    </div>
+</body>
+</html>

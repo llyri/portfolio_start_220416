@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion-mobile tab menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        body {
+            font-size: 16px;
+            color: #777;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #nav {
+            width: 200px;
+            border: 3px solid #333;
+            margin: 100px;
+        }
+
+        .gnb>li .main {
+            height: 35px;
+            line-height: 35px;
+            background-color: #eee;
+            color: #444;
+            border-bottom: 1px solid #999;
+            cursor: pointer;
+        }
+
+
+        .gnb>li .main:hover,
+        .gnb>li .main.on {
+            background-color: forestgreen;
+        }
+
+        .gnb>li .depth2 {
+            display: none;
+        }
+
+        .gnb>li .depth2 a {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            background-color: white;
+            color: #777;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // $(function(){
+        //     $('.gnb li').click(function(){
+        //         $('.depth2').stop().slideUp(200)
+        //         $(this).children('.depth2').stop().slideDown(200)
+        //     })
+        // })
+        $(function () {
+            $('.main').on('click', function () {
+                // .main에 클래스 .on이 없는경우 -> 서브메뉴 안보이는 상태
+                // => .on이 들어가야하고 서브메뉴가 보이게
+                if ($(this).hasClass('on') == false) {
+                    $('.main').removeClass('on')
+                    $(this).addClass('on')
+                    $('.depth2').stop().slideUp(200)
+                    $(this).next('.depth2').stop().slideDown(200)
+                }
+                // // .main에 클래스 .on이 있는경우 -> 서브메뉴 보이는 상태
+                else {
+                    $('.main').removeClass('on')
+                    $('.depth2').stop().slideUp(200)
+                }
+
+                // $('.depth2').stop().slideUp(200)
+                // $(this).next('.depth2').stop().slideDown(200)
+
+                // $(this).addClass('on')
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <nav id="nav">
+        <ul class="gnb">
+            <li>
+                <div class="main">Menu1</div>
+                <ul class="depth2">
+                    <li><a href="#">Sub1-1</a></li>
+                    <li><a href="#">Sub1-2</a></li>
+                    <li><a href="#">Sub1-3</a></li>
+                    <li><a href="#">Sub1-4</a></li>
+                    <li><a href="#">Sub1-5</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main">Menu2</div>
+                <ul class="depth2">
+                    <li><a href="#">Sub2-1</a></li>
+                    <li><a href="#">Sub2-2</a></li>
+                    <li><a href="#">Sub2-3</a></li>
+                    <li><a href="#">Sub2-4</a></li>
+                    <li><a href="#">Sub2-5</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main">Menu3</div>
+                <ul class="depth2">
+                    <li><a href="#">Sub3-1</a></li>
+                    <li><a href="#">Sub3-2</a></li>
+                    <li><a href="#">Sub3-3</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main">Menu4</div>
+                <ul class="depth2">
+                    <li><a href="#">Sub4-1</a></li>
+                    <li><a href="#">Sub4-2</a></li>
+                    <li><a href="#">Sub4-3</a></li>
+                    <li><a href="#">Sub4-4</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <div class="main">Menu5</div>
+                <ul class="depth2">
+                    <li><a href="#">Sub5-1</a></li>
+                    <li><a href="#">Sub5-2</a></li>
+                    <li><a href="#">Sub5-3</a></li>
+                    <li><a href="#">Sub5-4</a></li>
+                    <li><a href="#">Sub5-5</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

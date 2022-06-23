@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부모선택자</title>
+    <style>
+        p{
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //부모요소선택자 $('요소선택'),parent() -> 선택요소의 부모요소 선택
+        //상위요소선택자 $('요소선택'),parents() -> 선택요소의 상위요소 모두 선택
+        $(function(){
+            $('.rel').click(function(){
+                // $(this).parent().css('border','5px solid red')
+                $(this).parents().css({'border':'5px solid red','box-sizing':'border-box'})
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrap">
+            <p>상위 선택자 - parents</p>
+            <div class="box">
+                <p class="rel">부모 선택자 - parent</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

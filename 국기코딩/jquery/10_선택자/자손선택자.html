@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자손석택자</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+//      하위선택자 -> 하위 모든 선택자 선택
+//      $('부모선택자 후손선택자')
+//      $('부모선택자').find('후손선택자')
+
+//      자식선택자  -> 직계 자식만 선택
+//      $('부모선택자>자식선택자')
+//      $('부모선택자').children('자식선택자')
+        $(function(){
+            // $('.wrap').children('p').css({backgroundColor:'yellow'})
+            $('.wrap').find('p').css({'background-color':'yellow'})
+        })
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <p>자손 선택자 - children</p>
+        <div class="box">
+            <p>후손 선택자 - find</p>
+        </div>
+    </div>    
+</body>
+</html>
