@@ -119,12 +119,19 @@
                 var top = $(document).scrollTop();
                 console.log(top)
 
-                // var w = 'width:' + `$('span.num').text()`
+                var w = {'width' : $('span.num').text()}
+                console.log($('span.num').text())
                 if (top >= 1000 && top < 2000) {
-                    $('.design .bar').stop().animate({width : '90%'}, 1000)
-                    $('.html .bar').stop().animate({ width: '95%' }, 1000)
-                    $('.javascript .bar').stop().animate({ width: '80%' }, 1000)
-                    $('.figma .bar').stop().animate({ width: '85%' }, 1000)
+                    const spans = [$('.design .bar'), $('.html .bar'), $('.javascript .bar'), $('.figma .bar')];
+                    
+                    for(span of spans){
+                        span.stop().animate({'width': span.parents(".gr").find("span.num").text()}, 1000)
+                    }
+
+                    // $('.design .bar').stop().animate({'width': $('.design .bar').parents(".design").find("span.num").text()}, 1000)
+                    // $('.html .bar').stop().animate(w, 1000)
+                    // $('.javascript .bar').stop().animate(w, 1000)
+                    // $('.figma .bar').stop().animate(w, 1000)
                 }
                 else {
                     $('.bar').stop().animate({ width: '0%' }, 500)
@@ -135,25 +142,25 @@
             var sv = $('section:nth-child(2)').offset().top
             var ss = $('section:nth-child(3)').offset().top
             var sd = $('section:nth-child(4)').offset().top
-            $('.gnb li:nth-child(1)').click(function(){
-                $('html,body').stop().animate({scrollTop:sc})
-            })
-            $('.gnb li:nth-child(2)').click(function(){
-                $('html,body').stop().animate({scrollTop:sv})
-            })
-            $('.gnb li:nth-child(3)').click(function(){
-                $('html,body').stop().animate({scrollTop:ss})
-            })
-            $('.gnb li:nth-child(4)').click(function(){
-                $('html,body').stop().animate({scrollTop:sd})
-            })
+            // $('.gnb li:nth-child(1)').click(function(){
+            //     $('html,body').stop().animate({scrollTop:sc})
+            // })
+            // $('.gnb li:nth-child(2)').click(function(){
+            //     $('html,body').stop().animate({scrollTop:sv})
+            // })
+            // $('.gnb li:nth-child(3)').click(function(){
+            //     $('html,body').stop().animate({scrollTop:ss})
+            // })
+            // $('.gnb li:nth-child(4)').click(function(){
+            //     $('html,body').stop().animate({scrollTop:sd})
+            // })
 
-            // var sc = $('section:eq(' + i + ')').offset().top 
-            // for (let i=0; i<4; i++){         
-            //     $('.gnb li:eq(' + i + ')').click(function(){
-            //         $('html,body').stop().animate({scrollTop:sc})
-            //     })
-            // }
+            for (let i=0; i<4; i++){         
+                let sc = $('section:eq(' + i + ')').offset().top 
+                $('.gnb li:eq(' + i + ')').click(function(){
+                    $('html,body').stop().animate({scrollTop:sc})
+                })
+            }
         })
     </script>
 </head>
