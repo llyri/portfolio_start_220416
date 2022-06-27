@@ -21,6 +21,13 @@
        url('../font/SCDream4.otf') format('opentype');
 }
 
+@font-face{
+  font-family:"Score-bb";
+  src: local('S-Core Dream'),
+       local('S-CoreDream'),
+       url('../font/SCDream5.otf') format('opentype');
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -50,8 +57,8 @@ body{
 }
 
 .inner{
-  max-width: 1200px;
-  min-width: 1200px;
+  max-width: 1300px;
+  min-width: 1300px;
   margin: 0 auto;
 }
 
@@ -75,6 +82,26 @@ body{
   padding: 20px 0 10px ;
   border-bottom: 1px solid #fff;
 }
+
+#header:hover{
+  background-color: white;
+  color: #c90f1e;
+  border-bottom: 1px solid #c90f1e;
+  transition: 0.3s;
+}
+
+/* #header:hover .logo{
+  background: url(../images/logo_last.jpg) no-repeat;
+  z-index: 200;
+} */
+
+/* #header:hover .lang,#header:hover .login{
+  font-weight: bold;
+}
+
+#header:hover nav ul.gnb li{
+  font-family: 'Score-b',Arial, Helvetica, sans-serif;
+} */
 
 #header .logo_area{
   margin-bottom:20px;
@@ -113,6 +140,10 @@ body{
   margin: 0 5px;
 }
 
+#header .nav{
+  position: relative;
+}
+
 #header .nav .gnb{
   display: flex;
   justify-content: space-around;
@@ -127,7 +158,29 @@ body{
 }
 
 .nav .lnb{
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  background-color: white;
+  color: #666;
+  padding: 30px 0;
+}
+
+.nav .lnb .lnb_title{
+
+}
+.nav .lnb .lnb_title p:last-child{
+  font-size: 14px;
+}
+
+.nav .lnb .inner{
+  display: flex;
+}
+
+.nav .lnb .inner ul{
+  width: 139px;
 }
 
 /* visual */
@@ -201,17 +254,25 @@ body{
 
 /* section01 */
 #section01{
-  padding: 100px 0;
-  min-width: 1200px;
-  background:url(../images/find03.jpg) no-repeat top center/cover;
-  /* linear-gradient(to right, #c90f1e 50%, #fff 50%) */
+  padding: 100px 0 150px;
+  min-width: 1300px;
+  /* background:url(../images/find03.jpg) no-repeat top center/cover; */
+  background : url(../images/shop-solid.jpg) no-repeat top 20% right 20%,
+  url(../images/magnifying-glass-solid.png) no-repeat top 20% left 38%,
+  url(../images/quiznos_shop.png) no-repeat bottom 0% left 34%,
+  linear-gradient(to right, #c90f1e 50%, #fff 50%);
+  /* background :linear-gradient(to right, #c90f1e 50%, #fff 50%) */
+}
+#section01 img{
+  display: block;
+  z-index: 100;
 }
 
 #section01 .inner{
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  min-width: 1200px;  
+  min-width: 1300px;  
   position: relative;
 }
 
@@ -223,11 +284,11 @@ body{
 } */
 
 #section01 .inner .find{
-  width: calc(1200px/2);
+  width: calc(1300px/2);
 }
 
 #section01 .inner .open{
-  width: calc(1200px/2);
+  width: calc(1300px/2);
   padding-left: 40px;
   box-sizing: border-box;
 }
@@ -235,18 +296,18 @@ body{
 #section01 .inner .find p::before{
   content:"";
   display: block;
-  width: 60px;
+  width: 50px;
   height:6px;
   background-color: white;
-  margin-left: 5px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+  margin-left: 3px;
 }
 
 #section01 .inner .find p{
   width: 480px;
-  font-size :50px;
+  font-size :56px;
   color:white;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 #section01 .inner .find>div{
@@ -255,7 +316,7 @@ body{
 }
 
 #section01 .inner .find>div>input{
-  width: 360px;
+  width: 405px;
   height: 64px;
   outline: 0;
   background: transparent;
@@ -271,7 +332,7 @@ body{
 #section01 .inner .find>div>a{
   position: absolute;
   top: 15px;
-  right: 252px;
+  right: 260px;
 }
 
 #section01 .inner .find>div>a>i{
@@ -280,23 +341,23 @@ body{
 }
 
 #section01 .inner .find p>strong, #section01 .inner .open p strong{
- font-family: 'Score-b', Arial;
+ font-family: 'Score-bb', Arial;
 }
 
 #section01 .inner .open p{
-  font-size :52px;
+  font-size :56px;
   color: #222;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 #section01 .inner .open p::before{
   content:"";
   display: block;
-  width: 60px;
+  width: 50px;
   height:6px;
   background-color: #222;
-  margin-left: 5px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+  margin-left: 3px;
 }
 
 #section01 .inner .open p strong>i{
@@ -304,20 +365,20 @@ body{
 }
 
 #section01 .inner .open .more_btn{
-  width: 360px;
+  width: 405px;
   height: 64px;
   font: 22px/64px 'Score-r';
-  color: #ccc;
+  color: #ddd;
   padding: 0px 20px;
 }
 
 #section01 .inner .open .more_btn:first-child{
-  background: #222 url(../images/caret-right-solid_C.png) no-repeat right 10% center;
+  background: #222 url(../images/caret-right-solid_C.png) no-repeat right 8% center;
   background-size: 10px;
 }
 
 #section01 .inner .open>div>a:last-child{
-  background: transparent url(../images/caret-right-solid_2.png) no-repeat right 10% center;
+  background: transparent url(../images/caret-right-solid_2.png) no-repeat right 8% center;
   background-size: 10px;
   box-sizing: border-box;
   border: 3px solid #222;
@@ -336,23 +397,23 @@ body{
 #section02 h2::before{
   content:"";
   display: block;
-  width: 60px;
+  width: 50px;
   height:6px;
   background-color: #222;
-  margin-left: 5px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+  margin-left: 2px;
 }
 
 #section02 h2{ 
-  font: 2.625rem 'Score-b';
-  margin-bottom: 10px;
+  font: 2.625rem 'Score-bb';
+  margin-bottom: 5px;
 }
 
 #section02 .menu_list{
   display: flex;
   justify-content: flex-start;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 #section02 .menu_list li::after{
   content: "";
@@ -381,7 +442,7 @@ body{
 }
 
 #section02 .menu_img{
-  padding-left: 10vw;
+  /* padding-left: 10vw; */
   display: flex;
   justify-content: flex-start;
 
@@ -389,14 +450,15 @@ body{
 
 /* section03 */
 #section03{
-  background: url(../images/got_02.jpg) no-repeat top center/cover;
-  min-width: 1200px;
-  padding: 70px 0;
+  background: url(../images/about02.png) no-repeat center center/cover;
+  min-width: 1300px;
+  padding: 80px 0;
   color: white;
 }
 
 /* #section03 .inner{
   padding: 70px 0;
+  background: url(../images/got_02.jpg) no-repeat top center/cover;
 } */
 
 #section03 .inner>div>p:first-child{
@@ -405,7 +467,7 @@ body{
 }
 
 #section03 .inner>div>h2{
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 60px;
 }
 
@@ -416,7 +478,7 @@ body{
 #section03 .inner>div>p:nth-child(3){
   font: 1.125rem/1.3 'Score-r',Arial;
   margin-bottom: 20px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 /* section04 */
@@ -427,21 +489,20 @@ body{
 #section04 h2::before{
   content:"";
   display: block;
-  width: 60px;
+  width: 50px;
   height:6px;
   background-color: #222;
-  margin-left: 5px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 #section04 h2{ 
-  font: 2.625rem 'Score-b';
-  margin-bottom: 10px;
+  font: 2.625rem 'Score-bb';
+  margin-bottom: 5px;
 }
 
 #section04 .inner>p{
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 #section04 .inner>ul{
@@ -450,7 +511,7 @@ body{
 }
 
 #section04 .inner>ul>li{
-  width: calc(1140px/3);
+  width: calc(1220px/3);
   background-color: #111;
   margin-right: 30px;
   height: 486px;
@@ -462,16 +523,16 @@ body{
 }
 
 #section04 .inner>ul>li:hover .mask{
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 #section04 .inner>ul>li:hover p{
-  font-size: 1.875rem;
+  transform: translateX(-50%) scale(120%); 
 }
 
 #section04 .inner>ul>li .mask{
   background: #000;
-  opacity: 0;
+  opacity: 0.5;
   width: 100%;
   height: 100%;
   position:absolute;
@@ -480,16 +541,24 @@ body{
   transition: 0.5s;
 }
 
-#section04 .inner>ul>li p{
+#section04 .inner>ul>li i{
   z-index: 9999;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 40px 30px;
-  box-sizing: border-box;
+  top: 41%;
+  left: 50%;
+  transform: translateX(-50%);
   transition: 0.5s;
+  font-size: 50px;
+}
+
+#section04 .inner>ul>li p{
+  z-index: 100;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  font-size: 30px;
 }
 
 #section04 .inner>ul>li:first-child{
@@ -514,21 +583,21 @@ body{
 #section05 h2::before{
   content:"";
   display: block;
-  width: 60px;
+  width: 50px;
   height:6px;
   background-color: #222;
-  margin-left: 5px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+  margin-left: 2px;
 }
 
 #section05 h2{ 
-  font: 2.625rem 'Score-b';
-  margin-bottom: 10px;
+  font: 2.625rem 'Score-bb';
+  margin-bottom: 5px;
 }
 
 #section05 .inner>p{
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 #section05 .inner>.insta_area img{
@@ -551,12 +620,12 @@ body{
 }
 
 #section05 .img_bottom>div>a:first-child img{
-  width: calc((1200px/3));
+  width: calc((1300px/3));
   margin-bottom: 50px;
 }
 
 #section05 .img_bottom>a img{
-  width: calc((1200px/3)*2);
+  width: calc((1300px/3)*2);
 }
 
 #section05 .more_btn{

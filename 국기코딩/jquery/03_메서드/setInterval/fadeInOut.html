@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        img{
+            max-width: 100%;
+        }
+
+        .gallery{
+            width:500px;
+            height: 280px;
+            border: 5px solid #333;
+            margin: 30px auto;
+        }
+
+        .pic{
+            width:500px;
+            height: 280px;
+            position: relative;
+        }
+
+        .pic li{
+            position: absolute;
+        }
+
+        .pic li .num{
+            font-size: 100px;
+            color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% -50%);
+        }
+
+        .pic li.active{
+            z-index: 1;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // setInterval(fadeInOUt,5000);
+            $('.pic li').first().addClass('active');
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="gallery">
+        <ul class="pic">
+            <li>
+                <img src="./images/pic1.jpg" alt="pic1">
+                <span class="num">1</span>
+            </li>
+            <li>
+                <img src="./images/pic2.jpg" alt="pic2">
+                <span class="num">2</span>
+            </li>
+            <li>
+                <img src="./images/pic3.jpg" alt="pic3">
+                <span class="num">3</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

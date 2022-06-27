@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car</title>
+    <style>
+        #car{
+            width: 1000px;
+            height: 500px;
+            border: 1px dotted #333;
+            margin: auto;
+            position: relative;
+        }
+
+        #car img{
+            position: absolute;
+            visibility: hidden;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            for (var i = 1; i <= 36; i++) {
+            $("#car").append("<img src='images/" + i + ".jpg' alt='car'>");
+        }
+        $('#car img:eq(0)').css({ visibility: 'visible' })
+        var time = setInterval(ani, 100);
+        num = 0
+        function ani(){
+            // $('#car').click(function(){
+                $('#car img').css({visibility:'hidden'})
+                $('#car img').eq(num).css({visibility:'visible'})
+                num = num + 1
+                if (num >= 36) //{}생략가능
+                num = 0
+         
+            // })
+        }
+
+        $('#car').mouseover(function(){
+            clearInterval(time);
+        })
+    })
+    </script>
+</head>
+
+
+<body>
+    <div id="car"></div>   
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #movie {
+            width: 150px;
+            height: 290px;
+            border: 1px dotted orange;
+            margin: auto;
+            position: relative;
+        }
+
+        #movie img {
+            position: absolute;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(function () {
+        /*
+        for(변수 초기화; 조건식; 변수증감){
+            실행문
+        }
+        for(var i=1; i<=10; i++){
+            num=i+1;
+        }
+        */
+        for (var i = 1; i <= 8; i++) {
+            $("#movie").append("<img src='images/w_walking" + i + ".png' alt='walking'>");
+        }
+        $('#movie img:eq(0)').css({ visibility: 'visible' })
+        var time = setInterval(ani, 100);
+        var num = 0
+        function ani() {
+            $('#movie img').css({ visibility: 'hidden' })
+            $('#movie img').eq(num).css({ visibility: 'visible' })
+            num += 1;
+            if (num >= 8) {
+                num = 0
+            }
+        }
+
+    });
+</script>
+
+<body>
+    <div id="movie"></div>
+
+</body>
+
+</html>
