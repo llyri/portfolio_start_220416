@@ -9,6 +9,16 @@
   <script src="https://kit.fontawesome.com/e71a2e5021.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="stylesheet" href="./style/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('.click').hide()
+
+      $('.footerrollover').on('click',function(){     
+      $('.click').toggle()     
+      })
+    })
+  </script>
 </head>
 
 <body>
@@ -118,14 +128,14 @@
     <section id="section01">
       <div class="inner">
       <div class="find">
-        <p>가장 가까운 <strong>QUIZNOS 매장을 </strong>검색해보세요.</p>
+        <p>가장 가까운 <strong>QUIZNOS 매장을 </strong><br>검색해보세요.</p>
         <div>
-          <input type="text">
+          <input type="text" autofocus>
           <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
       </div>
       <div class="open">
-        <p>토스트 샌드위치는<strong>퀴즈노스 창업성공의</strong>핵심입니다.</p>
+        <p>토스트 샌드위치는<br><strong>퀴즈노스 창업<i>성공</i>의</strong><br>핵심입니다.</p>
         <div>
           <a href="#" class="more_btn">창업문의 바로가기</a>
           <a href="tel:1899-9795" class="more_btn">창업문의 전화연결 하기</a>
@@ -143,9 +153,9 @@
           <li><a href="#">스프&amp;브레드볼</a></li>
           <li><a href="#">세트메뉴</a></li>
         </ul>
-      </div>
+      </div>        
+      <li><i class="fa-solid fa-caret-left"></i></li>
       <ul class="menu_img">
-        <li><i class="fa-solid fa-caret-left"></i></li>
         <li>
           <p>435Kcal</p>
           <p>치플레 쉬림프</p>
@@ -180,33 +190,42 @@
       <div class="inner">
         <div>
           <p>갓 구운 프리미엄</p>
-          <h2>지금까지 먹어보지 못한 최상의 샌드위치</h2>
-          <p>퀴즈노스의 최신소식과 자사 이벤트를 알아보세요</p>
+          <h2>지금까지 먹어보지 <br>못한 <strong>최상의 샌드위치</strong></h2>
+          <p>퀴즈노스의 최신소식과 <br>자사 이벤트를 알아보세요.</p>
           <a href="#" class="more_btn">자세히 보기</a>
         </div>
       </div>
     </section>
-    <section class="section04">
+    <section id="section04">
       <div class="inner">
-        <h2 class="menu">WHY OUIZNOS</h2>
+        <h2 class="menu">WHY OUIZNOS?</h2>
         <p>왜 퀴즈노스를 선택해야만 할까요?</p>
         <ul>
-          <li>차별화된 메뉴</li>
-          <li>최고의 맛</li>
-          <li>최상의 식감</li>
+          <li>
+            <div class="mask"></div> 
+            <p>차별화된 메뉴</p> 
+          </li>
+          <li>
+            <div class="mask"></div> 
+            <p>최고의 맛</p>
+          </li>
+          <li>
+            <div class="mask"></div> 
+            <p>최상의 식감</p> 
+          </li>
         </ul>
       </div>
     </section>
-    <section class="section05">
+    <section id="section05">
       <div class="inner">
         <h2>QUIZNOS INSTAGRAM</h2>
         <p>인스타그램으로 생생한 후기와 이벤트를 확인하세요</p>
         <div class="insta_area">
-          <div>
-            <a href="https://www.instagram.com/quiznoskorea/"><img src="./images/insta01.jpg" alt="초계 샐러드"></a>
-            <a href="https://www.instagram.com/quiznoskorea/"><img src="./images/insta02.png" alt="초계 샌드위치"></a>
+          <div class="img_top">
+            <a href="https://www.instagram.com/quiznoskorea/"><img src="./images/insta01.jpg" alt="초계 샐러드" style="width: 600px; height: 400px;"></a>
+            <a href="https://www.instagram.com/quiznoskorea/"><img src="./images/insta02.png" alt="초계 샌드위치" style="width: 600px; height: 400px;"></a>
           </div>
-          <div>
+          <div class="img_bottom">
             <div>
               <a href="https://www.instagram.com/quiznoskorea/"><img src="./images/insta03.jpg" alt="코코넛 커피 스무디"></a>
               <a href="https://www.instagram.com/quiznoskorea/" class="more_btn">자세히 보기</a>
@@ -219,8 +238,8 @@
     <footer id="footer">
       <div class="top_footer">
         <div class="inner">
-          <h2 class="logo"><a href="index.html"><img src="./images/logo_last.jpg" alt="quiznos_logo"></a></h2>
-          <a href="#" class="more_btn">퀴즈노스 글로벌 사이트 바로가기</a>
+          <h2 class="logo"><a href="index.html"><img src="./images/btmlogo.png" alt="quiznos_logo" style="width:170px;"></a></h2>
+          <a href="https://www.quiznos.com/" class="more_btn">퀴즈노스 글로벌 사이트 바로가기</a>
         </div>
       </div>
       <div class="bottom_footer">
@@ -238,26 +257,27 @@
           <div class="right">
             <div class="sns">
               <p>Follow US</p>
+              <div>
               <a href="https://www.youtube.com/watch?v=-rvGgYk3heA"><i class="fa-brands fa-youtube"></i></a>
               <a href="https://twitter.com/lovequiznos"><i class="fa-brands fa-twitter-square"></i></a>
               <a href="//www.instagram.com/quiznoskorea/"><i class="fa-brands fa-instagram-square"></i></a>
-              <a href="https://www.facebook.com/Quiznoskorea"><i class="fa-brands fa-facebook-square"></i></a>
+              <a href="https://www.facebook.com/Quiznoskorea"><i class="fa-brands fa-facebook-square"></i></a>            
+              <span class="footerrollover"><i class="fa-solid fa-caret-up"></i></span>
+              </div>
             </div>
-            <span><i class="fa-solid fa-caret-up"></i></span>
+
           </div>
         </div>
-      </div>
-
-      <div class="inner"></div>
-      <span>
-        서울시 강남구 테헤란로 금강빌딩 15층 <i class="fa-solid fa-pipe"></i> 일반문의 Tel : <a href="tel:02-425-3131">02-425-3131</a>
+              <span class="click">
+        서울시 강남구 테헤란로 금강빌딩 15층 <!-- <i class="fa-solid fa-pipe"></i>  -->일반문의 Tel : <a href="tel:02-425-3131">02-425-3131</a>
         E-mail :
-        <a href="mailto:event@quiznos.co.kr">event@quiznos.co.kr</a> <br>가맹문의
+        <a href="mailto:event@quiznos.co.kr">event@quiznos.co.kr</a><br>가맹문의
         Tel : <a href="tel:1899-9795">1899-9795</a>
         E-mail :
         <a href="mailto:franchise@quiznos.co.kr">franchise@quiznos.co.kr</a>
       </span>
-  </div>
+      </div>
+
   </footer>
   </div>
 </body>
