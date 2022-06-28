@@ -600,13 +600,28 @@ body{
   margin-bottom: 30px;
 }
 
-#section05 .inner>.insta_area img{
-  display: block;
-}
-
 #section05 .inner>.insta_area>.img_top{
   display: flex;
   justify-content: center;
+}
+
+#section05 .inner>.insta_area>.img_top a{
+  width: 650px;
+  height: 433px;
+}
+
+#section05 a{
+  overflow: hidden;
+}
+
+#section05 img{
+  width: 100%;
+  transition: 0.6s;  
+  display: block;
+}
+
+#section05 img:hover{
+  transform: scale(105%)
 }
 
 #section05 .inner>.insta_area>.img_bottom{
@@ -619,12 +634,16 @@ body{
   text-align: center;
 }
 
-#section05 .img_bottom>div>a:first-child img{
+#section05 .img_bottom>div{
   width: calc((1300px/3));
-  margin-bottom: 50px;
+
 }
 
-#section05 .img_bottom>a img{
+#section05 .img_bottom>div>a:first-child{
+    margin-bottom: 50px;
+}
+
+#section05 .img_bottom>a:last-child{
   width: calc((1300px/3)*2);
 }
 
