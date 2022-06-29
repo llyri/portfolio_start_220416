@@ -79,7 +79,7 @@ body{
 #header{
   background-color: #c90f1e;
   color: white;
-  padding: 20px 0 0;
+  padding: 20px 0 10px ;
 }
 
 #header:hover{
@@ -93,15 +93,15 @@ body{
 }
 
 #header:hover .logo_area .lang{
-  font-family: 'Score-r',Arial, Helvetica, sans-serif;
+  font-family: 'Score-r', Arial, Helvetica, sans-serif;
 }
 
 #header:hover .logo_area .login {
-  font-family: 'Score-r',Arial, Helvetica, sans-serif;
+  font-family: 'Score-r', Arial, Helvetica, sans-serif;
 }
-/* 
-#header:hover nav ul.gnb li{
-  font-family: 'Score-b',Arial, Helvetica, sans-serif;
+
+/* #header:hover nav ul.gnb li{
+  font-family: 'Score-b', Arial, Helvetica, sans-serif;
 } */
 
 #header .logo_area{
@@ -144,48 +144,41 @@ body{
 #header .nav{
   position: relative;
   text-align: center;
-
 }
 
 #header .nav .gnb{
   display: flex;
 }
 
-#header .nav .gnb li{
+#header .nav .gnb:hover .lnb{
+  display: block;
+}
+
+#header .nav .gnb>li{
   width: 150px;
   margin: 0 33px;
-  font-family: 'Score-b', Arial, Helvetica, sans-serif;
   /* text-align: center; */
 }
 
+#header .nav .gnb>li:first-child:hover .m_first{
+  display: block;
+}
+
 #header .nav .gnb>li>a{
-  padding: 12px 12px 20px;
-  margin: 0 5px;
   font-size: 1.125rem;
   letter-spacing: 1px;
+  padding: 10px 0;
 }
 
 .nav .lnb{
   position: absolute;
-  top: 53px;
+  top: 51px;
   z-index: 100;
   width: 100%;
   /* background:#fff; */
   height: 289px;
-  border-top: 0.6px solid #c90f1e;
   box-sizing: border-box;
-  visibility: hidden;
-  opacity: 0;
-}
-
-#header .nav .gnb li:hover{
-  font-family: "Score-bb",Arial, Helvetica, sans-serif;
-}
-
-#header .nav:hover .lnb{
-  visibility: visible;
-  opacity: 1;
-  transition: 0.3s;
+  display: none;
 }
 
 .nav .lnb .inner {
@@ -194,17 +187,18 @@ body{
 
 .nav .lnb .inner .content_area{
   position: absolute;
-  left: -190px;
+  left: -415px;
   display: flex;
-  min-width: 1680px;
+  width: 1680px;
   color: #666;
   background-color: #fff;
+  border-top: 0.6px solid #c90f1e;
 }
 
 .nav .lnb .lnb_title {
   width: 190px;
   padding-top: 100px;
-  padding-left: 30px;
+  padding-left: 20px;
   background-color: #c90f1e;
   color: white;
   text-align: left;
@@ -212,13 +206,12 @@ body{
 }
 
 .nav .lnb .lnb_title p:first-child{
-  font-size: 40px;
+  font-size: 18px;
 }
 
 .nav .lnb .lnb_title p:last-child{
   font-size: 14px;
-  margin-top: 4px;
-  line-height: 1.4;
+  margin-top: 10px;
 }
 
 .nav .lnb .lnb_menu{
@@ -235,19 +228,16 @@ body{
   background-color: #eee;
 }
 
-.nav .lnb .lnb_menu ul li{
-  padding: 10px 0;
-}
-
-.nav .lnb .lnb_menu ul li:hover{
-  color: #c90f1e;
+.nav .lnb .lnb_menu ul>li>a{
+  font-size: 16px;
+  padding: 10px;
 }
 
 .nav .lnb .lnb_menu ul li:first-child{
-  padding-top: 24px;
+  padding-top: 20px;
 }
 .nav .lnb .lnb_menu ul li:last-child{
-  padding-bottom: 24px ;
+  padding-bottom: 20px ;
 }
 
 /* .nav .lnb .inner ul{
