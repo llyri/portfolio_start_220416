@@ -172,7 +172,8 @@ body{
   /* background:#fff; */
   height: 289px;
   border-top: 0.6px solid #c90f1e;
-  box-sizing: border-box;
+  box-sizing: border-box; 
+
   visibility: hidden;
   opacity: 0;
 }
@@ -203,11 +204,7 @@ body{
 .nav .lnb .lnb_title {
   width: 190px;
   padding-top: 100px;
-<<<<<<< HEAD
   padding-left: 34px;
-=======
-  padding-left: 30px;
->>>>>>> 262a9c6a90b2f276e31610763c1e82b9ea384c75
   background-color: #c90f1e;
   color: white;
   text-align: left;
@@ -236,21 +233,12 @@ body{
 
 .nav .lnb .lnb_menu ul:hover{
   background-color: #eee;
-<<<<<<< HEAD
 }
 
 .nav .lnb .lnb_menu ul li{
   padding: 10px 0;
 }
 
-=======
-}
-
-.nav .lnb .lnb_menu ul li{
-  padding: 10px 0;
-}
-
->>>>>>> 262a9c6a90b2f276e31610763c1e82b9ea384c75
 .nav .lnb .lnb_menu ul li:hover{
   color: #c90f1e;
 }
@@ -265,10 +253,6 @@ body{
 /* .nav .lnb .inner ul{
   width: 139px;
 } */
-<<<<<<< HEAD
-=======
-
->>>>>>> 262a9c6a90b2f276e31610763c1e82b9ea384c75
 /* visual */
 #visual{
   background: url(../images/s_visual.png) no-repeat center center/cover;
@@ -515,8 +499,6 @@ margin-right: 0;
 #footer .bottom_footer .inner .left>small{
   font-size: 0.75rem;
 }
-
-#footer .bottom_footer .inner .right{}
 
 #footer .bottom_footer .inner .right .sns{
   display: flex;
