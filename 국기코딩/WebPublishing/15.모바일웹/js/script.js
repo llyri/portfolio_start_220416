@@ -21,5 +21,29 @@ $('.tit').click(function () {
     $(this).addClass('on')
 });
 
+// script Plug-in
+// var swiper = new Swiper(".mySwiper", {
+//     autoplay: {
+//         delay : 3000,
+//         disableOnInteraction:false,
+//     },
+//     loop:true,
+// });
 
-
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 0,
+        slidesPerView: 3,
+        // freeMode: true,
+        // watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 10,
+        thumbs: {
+          swiper: swiper,
+        },
+        autoplay: {
+            delay : 3000,
+            disableOnInteraction:false,
+        },
+        loop:true,
+      });

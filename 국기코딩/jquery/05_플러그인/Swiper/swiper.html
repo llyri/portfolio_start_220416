@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        #gallery1 {
+            width: 630px;
+            margin: 50px auto;
+        }
+
+
+        :root {
+            --swiper-theme-color: orange;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: red;
+        }
+
+        #gallery2 {
+            width:650px;
+            margin: 50px auto;
+        }
+
+        .swiper-horizontal>.swiper-pagination-progressbar,
+        .swiper-pagination-progressbar.swiper-pagination-horizontal{
+            top: auto;
+            bottom: 0;
+        }
+
+        .gallery2_next::after{
+            content: "";
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gallery1" class="swiper mySwiper">
+        <ul class="slider swiper-wrapper">
+            <li class="swiper-slide">
+                <a href="#">
+                    <img src="./images/pic1.png" alt="">
+                </a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#">
+                    <img src="./images/pic2.png" alt="">
+                </a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#">
+                    <img src="./images/pic3.png" alt="">
+                </a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#">
+                    <img src="./images/pic4.png" alt="">
+                </a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#">
+                    <img src="./images/pic5.png" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div id="gallery2" class="swiper mySwiper">
+        <ul class="slider swiper-wrapper">
+            <li class="swiper-slide">
+                <a href="#">
+                    <img src="./images/pic1.png" alt="">
+                </a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#">
+                    <img src="./images/pic2.png" alt="">
+                </a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#">
+                    <img src="./images/pic3.png" alt="">
+                </a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#">
+                    <img src="./images/pic4.png" alt="">
+                </a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#">
+                    <img src="./images/pic5.png" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="swiper-button-next gallery2_next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper("#gallery1", {
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            loop: true,
+        });
+
+        var swiper = new Swiper("#gallery2", {
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            slidesPerView:2.3,
+            spaceBetween: 20,
+        });
+    </script>
+</body>
+
+</html>
