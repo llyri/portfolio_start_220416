@@ -1,0 +1,248 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url(./all.css);
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub
+,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,
+tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure
+,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video,a{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+}
+
+h1,h2,h3,h4,h5,h6{
+    line-height: 1;
+    font-weight: 400;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input,
+select,
+button {
+    vertical-align: middle;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-radius: 0;
+    appearance: none;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+a,
+span,
+strong,
+i {
+    display: inline-block;
+}
+
+.blind {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: -1px;
+    overflow: hidden;
+    display: block;
+}
+
+/* 공통 */
+:root{
+    --main : #2bd2ca;
+}
+
+body{
+    text-size-adjust: none;
+    font: 16px/1.5 'Open Sans', sans-serif;
+    /* 아이폰의 경우 뷰포트(화면크기)가 변경이 되면 자동으로 텍스트 크기가 조정이 되는 됨.
+    이 현상을 방지하는 속성.(텍스트 크기가 자동으로 조정되지 못하게 막음) */
+}
+
+/* visual */
+#visual{
+    min-height: 260px;
+    background: url(../images/banner-h.jpg) no-repeat center top/cover;
+    text-align: center;
+}
+
+#visual .visual_banner{
+    padding-top: 20px;
+}
+
+#visual .visual_banner h2{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+#visual .visual_banner h3{
+    color: var(--main);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+#visual .visual_search{
+    width: 86%;
+    height: 40px;
+    border: 1px solid #eaeaea;
+    display: inline-block;
+    /* text-align-center apply or margin: 0 auto */
+    margin-top: 10px;
+    position: relative;
+}
+
+#visual .visual_search input{
+    width: 80%;
+    height: 40px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3px 10px;
+    box-sizing: border-box;
+}
+
+#visual .visual_search button{
+    width: 20%;
+    height: 40px;
+    background: #333;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* main */
+#contents section{
+    padding: 30px 20px;
+    /* padding: 9.375% 6.875%; */
+    text-align: center;
+}
+
+#contents section .tit{
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #1d1d1d;
+}
+
+#contents section h3{
+    color: var(--main);
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#contents section .btn_more{
+    font-size: 14px;
+    padding: 10px 20px;
+    border: 1px solid #777;
+    margin: 30px;
+}
+
+#contents .pic_area .pic{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#contents .pic_area .pic img,
+#contents .pic_area .pic a{
+    display: block;
+}
+
+#contents .pic_area .pic .mask{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#contents .pic_area .pic .mask h3{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* animation */
+@keyframes slideUp {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes unerLine {
+    0%{
+        opacity: 0;
+        transform: scaleX(0);
+        transform-origin: left center;
+    }
+
+    100%{
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes slideUp2 {
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* animation 적용 class */
+.ani_slideUp{
+    animation: slideUp .6s ease-in both;
+}
+
+.ani_fadeIn{
+    animation: fadeIn .4s both;
+}
+
+.delay1s{
+    animation-delay: 1s;
+}
