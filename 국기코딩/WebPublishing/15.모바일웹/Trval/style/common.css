@@ -1,0 +1,178 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url(./all.css);
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub
+,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,
+tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure
+,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video,a{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+}
+
+h1,h2,h3,h4,h5,h6{
+    line-height: 1;
+    font-weight: 400;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input,
+select,
+button {
+    vertical-align: middle;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-radius: 0;
+    appearance: none;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+a,
+span,
+strong,
+i {
+    display: inline-block;
+}
+
+.blind {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: -1px;
+    overflow: hidden;
+    display: block;
+}
+
+/* 공통 */
+:root{
+    --main : #2bd2ca;
+}
+
+body{
+    text-size-adjust: none;
+    font: 16px/1.5 'Open Sans', sans-serif;
+    /* 아이폰의 경우 뷰포트(화면크기)가 변경이 되면 자동으로 텍스트 크기가 조정이 되는 됨.
+    이 현상을 방지하는 속성.(텍스트 크기가 자동으로 조정되지 못하게 막음) */
+}
+
+/* header */
+#header{
+    position: relative;
+}
+
+#header .header_top{
+    background-color: var(--main);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    z-index: 98;
+    position: relative;
+}
+
+.menu_area{
+    width: 20%;
+}
+
+/* .menu_area .mmenu{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border: 1px dotted saddlebrown;
+}
+
+.menu_area .mmenu>span{
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    margin: 4px;
+} */
+
+.header_logo{
+    width: 60%;
+}
+
+.user_icon{
+    width: 20%;
+    height: 20px;
+    background-color: #eaeaea;
+}
+
+/* gnb */
+.gnb{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 80%;
+    min-height: 100%;
+    background-color: var(--main);
+    z-index: 100;
+}
+
+.gnb .gnb_list{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.gnb .gnb_list a{
+    /* a의 영역확보 */
+    display: block;
+    color: #fff;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.gnb .btn_close_area{
+    width: 50px;
+    height: 50px;
+    background-color: #eaeaea;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* footer */
+#footer{
+    background-color: #333;
+    font-size: 12px;
+    text-align: center;
+    padding: 30px 0;
+    color: white;
+}
+
+.overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 99;
+    display: none;
+}

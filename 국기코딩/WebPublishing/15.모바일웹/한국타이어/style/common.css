@@ -1,0 +1,288 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+@import url(./all.css);
+
+/* 초기화 (초기화전에 웹폰트먼저 호출해야함) */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,
+section,summary,time,mark,audio,video,a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input,
+select,
+button {
+    vertical-align: middle;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-radius: 0;
+    appearance: none;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+a,
+span,
+strong,
+i {
+    display: inline-block;
+}
+
+.blind {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: -1px;
+    overflow: hidden;
+    display: block;
+}
+
+html {
+    --color: #fe5a17;
+    font-size: 10px;
+}
+
+body {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', sans-serif;
+}
+
+/* header */
+#header {
+    position: relative;
+    z-index: 999;
+}
+
+#header .header_in {
+    background: #fff;
+    position: relative;
+    text-align: center;
+    padding: 20px 0 10px;
+}
+
+#header .header_in .logo {
+    display: inline-block;
+    width: 40%
+        /* 150px */
+    ;
+}
+
+#header .header_in .menu_area {
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    padding: 10px 5px;
+}
+
+#header .header_in .logo img {
+    width: 100%
+}
+
+
+/* navigation */
+.gnb {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    /* 세로 자동 높이조절 */
+    overflow-y: auto;
+    z-index: 1000;
+    right: -100%;
+    top: 0;
+    background: #eee;
+}
+
+/* 오른쪽에서 나오기 때문에 right:-100% */
+.gnb .gnb_header {
+    position: relative;
+    background: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.gnb .gnb_header .btn_close {
+    width: 16px;
+    height: 16px;
+    padding: 10px;
+    /* border:1px dotted orange; */
+    position: absolute;
+    top: 13px;
+    right: 10px;
+}
+
+.gnb .gnb_header .btn_close .close {
+    width: 60%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    transform: rotate(45deg);
+}
+
+/* padding때문에 사이즈가 커지기 때문에 width는 60% 해주고 남은 값은 좌표값으로 진행*/
+.gnb .gnb_header .btn_close .close+.close {
+    transform: rotate(-45deg);
+}
+
+.gnb .gnb_list li {
+    position: relative;
+}
+
+.gnb .gnb_list li .tit {
+    position: relative;
+    color: #121212;
+    font-size: 16px;
+    padding: 20px;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.gnb .gnb_list li .tit .btn_open {
+    width: 16px;
+    height: 16px;
+    padding: 10px;
+    /* border:1px dotted orange; */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.gnb .gnb_list li .tit .btn_open .open {
+    background: #c4c4c4;
+    width: 50%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+}
+
+.gnb .gnb_list li .tit .btn_open .open+.open {
+    transform: rotate(90deg);
+    transition: 0.2s;
+}
+
+.gnb .gnb_list li .tit.on .btn_open .open+.open {
+    transform: rotate(0deg);
+}
+
+.gnb .gnb_list li .sub {
+    background-color: #ddd;
+    padding: 20px;
+    display: none;
+}
+
+.gnb .gnb_list li .tit.on {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.gnb .gnb_list li .sub a {
+    padding: 15px 20px;
+    color: #141414;
+}
+
+
+/* footer */
+#footer>div {
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+#footer .footer_top {
+    background: #eee
+}
+
+#footer .footer_top .footer_g {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .footer_top .social a {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+#footer .fbanner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+#footer .fbanner a {
+    width: calc(100%/3 - 10px);
+    margin-right: 10px;
+    display: block;
+}
+
+#footer .fmenu_list li {
+    display: inline-block;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#footer .fmenu_list li::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #777;
+    margin: 0 15px;
+}
+
+#footer .fmenu_list li:last-child::after {
+    display: none;
+}
+
+#footer .fmenu_list li a {
+    padding: 5px;
+    color: #777;
+}
+
+#footer .customer {
+    padding: 10px;
+    font-size: 1.6rem;
+}
+
+#footer .customer .tel {
+    color: var(--color);
+}
+
+#footer .cpr {
+    padding: 20px 0;
+}
+
+/*
+%로 나누는 계산법
+(padding,margin,width)/부모 넓이*100
+*/
