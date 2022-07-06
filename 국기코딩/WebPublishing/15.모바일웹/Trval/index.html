@@ -1,73 +1,74 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
-    <title>Travel</title>
-    <link rel="stylesheet" href="./style/common.css" type="text/css">
-    <link rel="stylesheet" href="./style/main.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, minimum-scale=1">
+    <title>Trval</title>
+    <link rel="stylesheet" href="./css/common.css" type="text/css">
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
 </head>
-
 <body>
-
     <header id="header">
-        <!-- header top -->
-        <div class="header_top">
-            <div class="menu_area">
+        <div class="header-top">
+            <div class="menu-area">
+                <strong class="blind">mobile menu</strong>
                 <button class="mmenu">
-                <span></span>
-                <span></span>
-            </button>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <div class="header_logo">
+            <div class="header-logo">
                 <h1 class="logo">
                     <a href="#">
                         TRAVEL HUNT
                     </a>
                 </h1>
             </div>
-            <div class="user_icon">
-                <span class="blind">MY PAGE</span>
+            <div class="user-icon-area">
+                <span class="blind">mypage</span>
                 <i></i>
             </div>
-        </div>
-        <!-- nav -->
+        </div><!--header-top-->
         <nav class="gnb">
-            <strong class="blind">Navigation</strong>
-            <ul class="gnb_list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Reservation</a></li>
-                <li><a href="#">Contact</a></li>
+            <strong class="blind">navigation</strong>
+            <ul class="gnb-list">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Reservation</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
             </ul>
-            <div class="btn_close_area">
+            <div class="btn-close-area">
                 <strong class="blind">close button</strong>
-                <button class="btn_close"></button>
-                <span></span>
-                <span></span>
+                <button class="btn-close">
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
-        <!-- div overlap -->
         <div class="overlay"></div>
     </header>
-    <!-- visual -->
     <div id="visual">
-        <div class="visual_banner">
-            <img src="./images/logo.jpg" alt="travel hunt" class="ani_fadeIn">
+        <div class="visual-banner">
+            <img src="./images/logo.jpg" alt="TRAVEL HUNT" class="ani_fadeIn">
             <h2 class="ani_slideUp">WELCOME TO</h2>
-            <h3 class="ani_fadeIn delay1s">You're' going to like us.</h3>
+            <h3 class="ani_fadeIn  delay1s">Your's going to like us.</h3>
         </div>
-        <!-- search area -->
-        <div class="visual_search">
+        <div class="visual-search-area">
             <form action="#">
                 <fieldset>
-                    <legend class="blind">search area</legend>
-                    <div class="search_area">
-                        <input type="search" placeholder="Where to go?">
-                        <button type="submit">
-                            <!-- background로 이미지를 넣을 경우에는 strong태그를 이용하여 접근성 높여줌 -->
+                    <legend class="blind">search</legend>
+                    <div class="search-area">
+                        <input type="text" placeholder="Where to go?">
+                        <button type="button">
                             <img src="./images/search.png" alt="search">
                         </button>
                     </div>
@@ -75,62 +76,77 @@
             </form>
         </div>
     </div>
-    <!-- main -->
     <main id="contents">
         <section class="sec1 welcome">
-            <h2 class="tit">WELCOME&#33;</h2>
-            <h3>Occaecat Cupidatat Proident</h3>
+            <h2 class="tit">WELCOME !</h2>
+            <h3 class="delay05s">Occaecat Cupidatat Proident</h3>
             <p>Ut enim ad minima veniam</p>
-            <p>Quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-                consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
-                consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
-            </p>
+            <p class="delay1s">Quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+
             <a href="#" class="btn_more">READ MORE</a>
         </section>
-        <section class="sec2 pic_area">
-            <h2 class="blind">Banner</h2>
-            <figure class="pic">
+        <section class="sec2 pic-area">
+            <h2 class="blind">banner</h2>
+            <figure class="pic  delay05s">
                 <a href="#">
-                <div class="view"><img src="./images/main_4.jpg" alt="about;"></div>
-                <figcaption class="mask">
-                    <h3>About</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
-                </figcaption>
+                    <div class="view">
+                        <img src="./images/main_4.jpg" alt="about">
+                    </div>
+                    <div class="mask">
+                        <h3>About</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
+                    </div>
                 </a>
             </figure>
-            <figure class="pic">
+            <figure class="pic delay1s">
                 <a href="#">
-                <div class="view"><img src="./images/main_5.jpg" alt="about;"></div>
-                <figcaption class="mask">
-                    <h3>About</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
-                </figcaption>
+                    <div class="view">
+                        <img src="./images/main_5.jpg" alt="Service">
+                    </div>
+                    <div class="mask">
+                        <h3>Service</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
+                    </div>
                 </a>
             </figure>
-            <figure class="pic">
+            <figure class="pic delay15s">
                 <a href="#">
-                <div class="view"><img src="./images/main_6.jpg" alt="about;"></div>
-                <figcaption class="mask">
-                    <h3>About</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
-                </figcaption>
+                    <div class="view">
+                        <img src="./images/main_6.jpg" alt="Destinations">
+                    </div>
+                    <div class="mask">
+                        <h3>Destinations</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
+                    </div>
                 </a>
             </figure>
-            <figure class="pic">
+            <figure class="pic delay2s">
                 <a href="#">
-                <div class="view"><img src="./images/main_7.jpg" alt="about;"></div>
-                <figcaption class="mask">
-                    <h3>About</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
-                </figcaption>
+                    <div class="view">
+                        <img src="./images/main_7.jpg" alt="Contact">
+                    </div>
+                    <div class="mask">
+                        <h3>Contact</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
+                    </div>
                 </a>
             </figure>
         </section>
     </main>
-    <div id="footer"></div>
+    <footer id="footer">
+        <p>&copy; Travel Hunt. All rights reserved.</p>
+    </footer>
+    <div class="float-menu">
+        <div class="menu-box">
+            <a href="#" class="flink">m1</a>
+            <a href="#" class="flink">m2</a>
+            <a href="#" class="flink">m3</a>
+            <a href="#" class="flink">m4</a>
+        </div>
+        <a href="#" class="btn_menu">Menu</a>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
-
 </html>

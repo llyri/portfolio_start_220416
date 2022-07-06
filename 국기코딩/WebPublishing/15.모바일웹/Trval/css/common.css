@@ -1,0 +1,312 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('./all.css');
+
+/*초기화*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
+    font-weight: 400;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input,
+select,
+button {
+    vertical-align: middle;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-radius: 0;
+    appearance: none;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+a,
+span,
+strong,
+i {
+    display: inline-block;
+}
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    display: block;
+    margin: -1px;
+}
+
+:root {
+    --main: #2bd2ca
+}
+
+body {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+    text-size-adjust: none;
+}
+
+/* 
+아이폰의 경우 뷰포트가 변경이 되면 자동으로 텍스트 크기가 조절이 됨. 이 특징을 방지하는 속성.
+text-size-adjust: none;  
+텍스트 크기가 자동으로 조정되지 못하게 막음
+*/
+
+/*header*/
+#header {
+    position: relative;
+}
+
+.header-top {
+    background: var(--main);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    z-index: 98;
+    position: relative;
+}
+
+.menu-area {
+    width: 20%;
+    height: 20px;
+    background: #eaeaea;
+}
+
+/* .menu-area .mmenu{width:50px; height: 50px; padding: 10px; border: 1px dotted orange;}
+.menu-area .mmenu>span{width:100%; height: 3px; background: #fff; display: block; margin: 4px;} */
+.header-logo {
+    width: 60%;
+}
+
+.user-icon-area {
+    width: 20%;
+    height: 20px;
+    background: #eaeaea
+}
+
+/*navigation*/
+.gnb {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 80%;
+    min-height: 100%;
+    height: 100%;
+    background: var(--main);
+    z-index: 100;
+}
+
+.gnb .gnb-list {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.gnb .gnb-list a {
+    display: block;
+    color: #fff;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.gnb .btn-close-area {
+    width: 50px;
+    height: 50px;
+    background: #eaeaea;
+    position: absolute;
+    right: 10px;
+    top: 10px
+}
+
+/*footer*/
+#footer {
+    background: #333;
+    font-size: 12px;
+    text-align: center;
+    padding: 30px 0;
+    color: #fff;
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99;
+    display: none;
+}
+
+/*플로팅메뉴*/
+.float-menu {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+    display: none;
+    border: 1px dotted orange;
+    z-index: 100;
+}
+
+.btn_menu {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--main);
+    color: #fff;
+    text-align: center;
+    line-height: 70px;
+    border-radius: 50%;
+}
+
+.menu-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 0);
+    transition: transform 0.2s ease-out;
+}
+
+.menu-box .flink {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #eaeaea;
+    text-align: center;
+    line-height: 70px;
+    transform: scale(0.8, 0.8);
+}
+
+.menu-box .flink:nth-child(1) {
+    top: -110%;
+    left: 0;
+}
+
+.menu-box .flink:nth-child(2) {
+    top: -220%;
+    left: 0;
+}
+
+.menu-box .flink:nth-child(3) {
+    top: -330%;
+    left: 0;
+}
+
+.menu-box .flink:nth-child(4) {
+    top: -440%;
+    left: 0;
+}
+
+.menu-box.on {
+    transform: scale(1, 1);
+}
