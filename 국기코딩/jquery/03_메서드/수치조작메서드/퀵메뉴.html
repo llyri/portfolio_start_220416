@@ -142,6 +142,7 @@
             $('.gnb li:eq(0) a, #quick_menu li:eq(0) a').addClass('on')
             $('.mmenu, .qmenu').click(function(){
                 let target = $(this).attr('href')
+                console.log(target)
                 let targetPos = $(target).offset().top;
                 $('html,body').stop().animate({scrollTop:targetPos},800)
                 $('.mmenu, .qmenu').removeClass('on')
