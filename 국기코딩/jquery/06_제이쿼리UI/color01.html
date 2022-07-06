@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery_Ui_Color</title>
+    <style>
+        .container {
+            padding: 200px;
+        }
+
+        .container>div {
+            width: 70px;
+            height: 70px;
+            margin: 5px;
+            display: inline-block;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .blind {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            margin: -1px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div><span class="blind">red</span></div>
+        <div><span class="blind">#00c8ae</span></div>
+        <div><span class="blind">black</span></div>
+        <div><span class="blind">blue</span></div>
+        <div><span class="blind">green</span></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+        for (let i = 0; i < 5; i++) {
+            const text = $('.container>div').eq(i).text()
+            console.log(text)
+            $('.container>div').eq(i).css({ background: text })
+            $('.container>div:eq('+i+')').on('click', function () {
+                // var text = $('.container>div').eq(i).text()
+                $('body').stop().animate({'background-color':text})
+            })
+        }
+
+        // $('.container>div').on('click',function(){
+        //     var color = $(this).text()
+        //     console.log(color)
+        //     $('body').stop().animate({'background-color':color})
+        // })
+
+
+
+    </script>
+</body>
+
+</html>

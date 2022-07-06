@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+        .ui-widget-content{
+            background-color: red;
+        }
+
+        .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+            color: green;
+        }
+    </style>
+    <title>Date</title>
+</head>
+<body>
+    <input type="text" id="date">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+          $( "input" ).datepicker({
+            showOn:'both',
+            buttonImage:'./trap/images/btn_list_arrow.png',
+            buttonImageOnly:true,
+            dateFormat:'yy-mm-dd',
+            dayNames:['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
+            dayNamesMin:['일','월','화','수','목','금','토'],
+            monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+            monthNamesShort:['1','2','3','4','5','6','7','8','9','10','11','12']
+          });
+        });
+        </script>
+</body>
+</html>
