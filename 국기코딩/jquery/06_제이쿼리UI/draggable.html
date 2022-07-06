@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery_Ui_Draggable</title>
+    <style>
+        #box{
+            background: #eaeaea;
+            width: 600px;
+            height: 500px;
+            position: relative;
+            margin: 30px auto;
+        }
+
+        #box>div{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        #box>#ball1{
+            background-color: goldenrod;
+            top: 0;
+        }
+        #box>#ball2{
+            background-color: forestgreen;
+            top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div id="ball1"></div>
+        <div id="ball2"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+        $("#ball1").draggable({
+            cursor:'move',
+            stack:'#ball1',//위로 올라갈 개체선택=z-index
+            containment:'parent',
+            // axis:'x' //가로로만 움직이게 가능
+        });
+        $("#ball2").draggable({
+            cursor:'move',
+            stack:'#ball2',//위로 올라갈 개체선택=z-index
+            containment:'parent'
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery_Ui_Color</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            height: 1000px;
+        }
+
+        .blind {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            margin: -1px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="sec">red</section>
+    <section id="sec">blue</section>
+    <section id="sec">green</section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+        for (i = 0; i < 3; i++) {
+            $(window).on('scroll', function () {
+                var top = $(document).scrollTop();
+                var sec_top = $('#sec').eq(i).offset().top;
+                var text = $('#sec').eq(i).text();
+                if (top >= sec_top - 100) {
+                    $('#sec').eq(i).animate({
+                        'background-color': text
+                    }, 100)
+                }
+            })
+
+        }
+
+
+        // $(window).on('scroll', function () {
+        //     var top = $(document).scrollTop();
+        //     if ((top > 1000 * 0) && (top <= 1000 * 1)) {
+        //         $('section').eq(0).delay(100).animate({
+        //             backgroundColor: '#f60'
+        //         }, 1000)
+        //     }
+        //     else if((top > 1000 * 1) && (top <= 1000 * 2)){
+        //         $('section').eq(1).delay(100).animate({
+        //             backgroundColor: 'green'
+        //         }, 1000)
+        //     }
+        //     else if((top > 1000 * 2) && (top <= 1000 * 3)){
+        //         $('section').eq(2).delay(100).animate({
+        //             backgroundColor: 'red'
+        //         }, 1000)
+        //     }
+        // })
+    </script>
+</body>
+
+</html>
