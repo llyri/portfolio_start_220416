@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radio form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .ex1 {
+            position: relative;
+            border: 1px solid #777;
+            width: 300px;
+            margin: 30px auto;
+            height: 50px;
+        }
+
+        .blind {
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            position: absolute;
+            display: block;
+        }
+
+        .ex1 input[type="radio"]+label {
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+        }
+
+        .ex1 input[type="radio"]+label::before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 1px solid green;
+            vertical-align: middle;
+            margin: 0 5px 0 10px;
+        }
+
+        .ex1 input[type="radio"]:checked+label::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-color: green;
+            display: inline-block;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 9px;
+            left: 15px;
+            vertical-align: middle;
+        }
+
+        .ex2 {
+            position: relative;
+            border: 1px solid #777;
+            width: 300px;
+            margin: 30px auto;
+            height: 50px;
+        }
+
+        .ex2 input[type="checkbox"]+label {
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            line-height: 30px;
+        }
+
+        .ex2 input[type="checkbox"]+label::before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 20%;
+            background-color: #fff;
+            border: 1px solid crimson;
+            vertical-align: middle;
+            margin: 0 5px 0 10px;
+            text-align: center;
+        }
+
+        .ex2 input[type="checkbox"]:checked+label::after {
+            content: "\221A";
+            display: inline-block;
+            border-radius: 50%;
+            position: absolute;
+            top: 3px;
+            left: 14px;
+            vertical-align: middle;
+            text-align: center;
+            color: red;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ex1">
+        <input type="radio" id="ex_ra" class="blind">
+        <label for="ex_ra">회원가입을 하시겠습니까?</label>
+    </div>
+    <div class="ex2">
+        <input type="checkbox" id="ex_ch" class="blind">
+        <label for="ex_ch">회원가입을 하시겠습니까?</label>
+    </div>
+</body>
+
+</html>
