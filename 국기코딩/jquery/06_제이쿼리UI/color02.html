@@ -28,26 +28,26 @@
 </head>
 
 <body>
-    <section id="sec">red</section>
-    <section id="sec">blue</section>
-    <section id="sec">green</section>
+    <section class="sec">red</section>
+    <section class="sec">blue</section>
+    <section class="sec">green</section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
     <script>
-        for (i = 0; i < 3; i++) {
-            $(window).on('scroll', function () {
-                var top = $(document).scrollTop();
-                var sec_top = $('#sec').eq(i).offset().top;
-                var text = $('#sec').eq(i).text();
+
+        for(let i =0; i<3; i++){
+            $(window).on('scroll', function (e) {
+                let top = $(document).scrollTop();
+                let sec_top = $('.sec').eq(i).offset().top;
+                var text = $('.sec').eq(i).text();
                 if (top >= sec_top - 100) {
-                    $('#sec').eq(i).animate({
+                    $('.sec').eq(i).stop().animate({
                         'background-color': text
                     }, 100)
                 }
             })
-
-        }
+}
 
 
         // $(window).on('scroll', function () {
@@ -62,7 +62,7 @@
         //             backgroundColor: 'green'
         //         }, 1000)
         //     }
-        //     else if((top > 1000 * 2) && (top <= 1000 * 3)){
+        //     else if((top > 1000 * 2) && (top <= 100x0 * 3)){
         //         $('section').eq(2).delay(100).animate({
         //             backgroundColor: 'red'
         //         }, 1000)

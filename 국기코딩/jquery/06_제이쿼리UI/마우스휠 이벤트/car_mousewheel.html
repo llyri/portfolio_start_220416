@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #car{width:964px; height: 600px; margin: auto; position: relative;}
+        #car img{position: absolute; visibility: hidden;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/jquery.mousewheel.min.js"></script>
+    <script>
+        $(function(){
+
+            for(var k=1; k<=36 ; k++){
+                 $("#car").append("<img src='./images/"+k+".jpg' alt='car' >");
+             }
+             $("#car img").eq(0).css({visibility: "visible"});
+
+             var num=0;//전역변수
+             var img_ind=$("#car img:last").index();//마지막 이미지의 인덱스 번호 반환
+             //console.log(img_ind);
+             $("#car").on("mousewheel", function(e, delta){
+                if(delta<0){
+                    num++;//num=num+1;
+                    if(num>=img_ind){num=0}
+                    $("#car img").css({visibility:"hidden"});
+                    $("#car img").eq(num).css({visibility:"visible"});
+                }else{
+                    num--;
+                    if(num<0){num=img_ind};
+                    $("#car img").css({visibility:"hidden"});
+                    $("#car img").eq(num).css({visibility:"visible"});
+                }
+             });
+           
+        });
+    </script>
+</head>
+<body>
+    <div id="car"></div>
+</body>
+</html>
