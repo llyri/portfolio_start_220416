@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mousemove</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(./images/bg.png) no-repeat center/cover;
+        }
+
+        #container {
+            position: relative;
+        }
+
+        .in {
+            position: relative;
+            width: 1000px;
+            margin: 0 auto;
+            border: 1px solid #333;
+            height: 1200px;
+        }
+
+        .obj {
+            position: absolute;
+        }
+
+        .obj01 {
+            left: 100px;
+            top: 15px;
+        }
+
+        .obj02 {
+            left: 30px;
+            top: 245px;
+        }
+
+        .obj03 {
+            left: 320px;
+            top: 25px;
+        }
+
+        .obj04 {
+            left: 125px;
+            top: 375px;
+        }
+
+        .obj05 {
+            left: 540px;
+            top: 260px;
+        }
+
+        .obj06 {
+            left: 450px;
+            top: 320px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="in">
+            <div class="obj obj01"><img src="./images/ob1.png" alt="obj"></div>
+            <div class="obj obj02"><img src="./images/ob2.png" alt="obj"></div>
+            <div class="obj obj03"><img src="./images/ob3.png" alt="obj"></div>
+            <div class="obj obj04"><img src="./images/ob4.png" alt="obj"></div>
+            <div class="obj obj05"><img src="./images/ob5.png" alt="obj"></div>
+            <div class="obj obj06"><img src="./images/ob6.png" alt="obj"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        var targetX = $('#container').width() / 2;
+        var targetY = $('#container').height() / 2;
+
+        $('#container').on('mousemove', function (e) {
+            var mx = e.pageX;
+            var my = e.pageY;
+            var resultX = (targetX - mx);
+            var resultY = (targetY - my);
+
+            $('.obj01').css({ marginLeft: resultX * 0.02, marginTop: resultY * 0.02 });
+            $('.obj02').css({ marginLeft: resultX * 0.03, marginTop: resultY * 0.04 });
+            $('.obj03').css({ marginLeft: resultX * 0.01, marginTop: resultY * 0.02 });
+            $('.obj04').css({ marginLeft: resultX * 0.04, marginTop: resultY * 0.04 });
+            $('.obj05').css({ marginLeft: resultX * -0.05, marginTop: resultY * -0.05 });
+            $('.obj06').css({ marginLeft: resultX * 0.02, marginTop: resultY * 0.03 });
+        })
+    </script>
+</body>
+
+</html>

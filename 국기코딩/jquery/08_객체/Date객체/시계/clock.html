@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<!-- <div class="data_wrap">
+        <p>현재년도는: <span class="year"></span>
+        <p>현재월는: <span class="year"></span>
+        <p>현재일는: <span class="day"></span>
+        <p>현재요일는: <span clas="d"></span>
+    </div> -->
+
+<body>
+    <script>
+        var myDate = new Date()
+        var day = ['일요일','월요일','화요일','수요일','목요일','금요일','토요일']
+        //console.log(day[0])
+        var day2 = myDate.getDay();
+        console.log(myDate.getFullYear(), myDate.getMonth() + 1, myDate.getDate(), day[day2])
+    </script>
+
+</body>
+
+</html>
