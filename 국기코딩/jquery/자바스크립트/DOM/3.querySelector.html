@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-querySelector</title>
+    
+</head>
+<body>
+    <p id="txt">문서 객체모델이란 HTML문서 구조를 가르킨다.</p>
+    <p class="txt2">문서 객체모델이란 HTML문서 구조를 가르킨다.</p>
+    <p>문서 객체모델이란 HTML문서 구조를 가르킨다.</p>
+    <div id="box">DOM</div>
+    <script>
+
+        document.querySelector("#txt").style.color="red";
+        document.querySelector(".txt2").style.color="blue";
+
+        /*박스 너비 300픽셀, 높이 300픽셀, 배경색 lime*/
+        const $box=  document.querySelector("#box");
+
+       $box.style.width="300px";
+       $box.style.height="300px";
+       $box.style.background="lime";
+       $box.style.fontSize="30px";
+    </script>
+</body>
+</html>
