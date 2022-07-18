@@ -23,6 +23,7 @@
              var img_ind=$("#car img:last").index();//마지막 이미지의 인덱스 번호 반환
              //console.log(img_ind);
              $("#car").on("mousewheel", function(e, delta){
+                console.log(delta)
                 if(delta<0){
                     num++;//num=num+1;
                     if(num>=img_ind){num=0}

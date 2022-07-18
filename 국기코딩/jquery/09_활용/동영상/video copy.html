@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동영상 & 아코디언</title>
+    <style>
+        #container button {
+            padding: 15px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <button class="play">PLAY</button>
+        <button class="stop">STOP</button>
+        <video id="myVedio" muted loop>
+            <source src="./images/vid1.mp4" type="video/mp4">
+        </video>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // get() : 문자열을 입력받아서 변수에 저장
+        var vid = $('#myVideo').get(0);
+        console.log(vid);
+        // play() , pause()
+        $('.play').click(function () {
+            vid.paly();
+        })
+        $('.stop').click(function () {
+            vid.stop();
+        })
+    </script>
+</body>
+
+</html>
