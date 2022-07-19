@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap {
+            width: 500px;
+            height: 500px;
+            padding: 100px;
+            margin: 50px auto;
+            border: 1px solid #eaeaea;
+        }
+
+        #wrap.on #box {
+            background-color: tomato;
+        }
+
+        #box {
+            height: 100%;
+            background-color: olivedrab;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="box"></div>
+    </div>
+
+    <script>
+        const wrap = document.querySelector('#wrap');
+        const box = document.querySelector('#box');
+
+        // ClassList
+        // wrap.addEventListener("click",function(){
+        //     this.classList.toggle("on")
+        // })
+
+        wrap.addEventListener("click", function () {
+            let isOn = this.classList.contains("on");
+            //    if(isOn){
+            //     this.classList.remove('on')
+            //    }else{
+            //     this.classList.add("on")
+            //    }
+
+            /*삼항조건연산자 : 조건식? 실행문1: 실행문2;*/
+            (isOn) ? wrap.classList.remove("on") : wrap.classList.add("on");
+        })
+
+    </script>
+</body>
+
+</html>

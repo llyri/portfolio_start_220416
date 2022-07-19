@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <style>
+        #container {
+            position: relative;
+            width: 1200px;
+            padding: 15px 20px;
+            margin: auto;
+            border: 5px solid #aaa;
+        }
+
+        .over {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border: 1px solid #ccc;
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+        }
+
+        #open {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+        }
+
+        .dec {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <img src="./images/All-Too-Common-Foods-that-Cause-Cancer-01.jpg" alt="#">
+        <button class="over" id="open">상세설명보기</button>
+        <div id="detail" class="dec">
+            <h4>Lorem Ipsum</h4>
+            <p>What is Lorem Ipsum?
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                Why do we use it?
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+                desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,
+            </p>
+            <button class="over" id="close">상세설명닫기</button>
+        </div>
+    </div>
+
+    <script>
+        //상세보기는 클릭하면 #detail이 보이고
+        const open = document.querySelector("#open")
+        const close = document.querySelector("#close")
+        const detail = document.querySelector("#detail")
+
+        open.addEventListener("click", function () {
+            open.style.display = "none";
+            detail.style.display = "block";
+        });
+
+        close.addEventListener("click", function () {
+            open.style.display = "block";
+            detail.style.display = "none";
+        });
+
+    </script>
+</body>
+
+</html>

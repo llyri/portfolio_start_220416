@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <style>
+        #container {
+            padding: 30px;
+            margin: 50px auto;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            background: #05c7fc;
+            margin: 70px;
+            transition: 1s
+        }
+
+        button {
+            padding: 15px 30px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            const box = document.querySelector("#box");
+            const btnL = document.querySelector(".left");
+            const btnR = document.querySelector(".right");
+            let num = 0;
+
+            btnL.addEventListener("click", function () {
+                num++;
+                box.style.transform = "rotate(" + 45 * num + "deg)";//
+
+            });
+            btnR.addEventListener("click", function () {
+                num--;
+                box.style.transform = "rotate(" + 45 * num + "deg)";
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="container">
+        <button class="left">LEFT ROTATION</button>
+        <button class="right">RIGHT ROTATION</button>
+        <div id="box"></div>
+    </div>
+
+
+</body>
+
+</html>

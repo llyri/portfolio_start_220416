@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script>
+        function myFun(){
+            alert("자바스크립트")
+        }
+        window.onload=function(){
+        document.querySelector("#btn").onclick=function()
+        {
+            myFun();
+        }}  
+        //head에 하려면 window.onload를 붙여야함 번거롭다면 스크립트 위치를 바디종료태그
+        //바로 상단에 위치시키면됨
+    </script>
+</head>
+<body>
+     <button type="button" id="btn">Click</button>        
+</body>
+</html>

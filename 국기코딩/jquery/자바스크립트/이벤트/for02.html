@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for구문 & querySelector</title>
+</head>
+
+<body>
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+
+    <script>
+        const obj = document.querySelectorAll('#list li')
+        console.log(obj);
+
+        //for구문을 쓸때는 let으로 선언
+        // for (let i = 0; i < 4; i++) {
+        //     obj[i].addEventListener('click', function () {
+        //         obj[i].style.color = "red"
+        //     })
+        // }
+
+        for (let item of obj) {
+            item.addEventListener('click', function () {
+                item.style.color = "blue"
+            })
+        }
+    </script>
+</body>
+
+</html>
