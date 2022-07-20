@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Rotate</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        .btns {
+            display: flex;
+        }
+
+        .btns li {
+            color: #777;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        #wrap {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #888;
+            margin: 50px;
+            position: relative;
+            perspective: 600px;
+        }
+
+        #wrap .box {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #fff;
+            font-size: 50px;
+            transform: rotateY(-180deg);
+            transition: 0.5s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+        }
+
+        #wrap .box.on {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+
+        #wrap .box:nth-of-type(1) {
+            background: aqua;
+        }
+
+        #wrap .box:nth-of-type(2) {
+            background: rgb(119, 180, 6);
+        }
+
+        #wrap .box:nth-of-type(3) {
+            background: orange;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            const btn = document.querySelectorAll(".btns li");
+            const box = document.querySelectorAll("#wrap .box");
+
+            // length 속성으로 btn의 길이를 자동으로 계산하게 함
+            for (let i = 0; i < btn.length; i++) {
+                btn[i].addEventListener("click", function () {
+                    for (let item of box) {
+                        item.classList.remove("on");
+                    }
+                    box[i].classList.add("on");
+                });
+            }
+
+            // btn[1].addEventListener("click", function () {
+            //     box[0].classList.remove("on");
+            //     box[2].classList.remove("on");
+            //     box[1].classList.add("on");
+            // });
+            // btn[2].addEventListener("click", function () {
+            //     box[0].classList.remove("on");
+            //     box[1].classList.remove("on");
+            //     box[2].classList.add("on");
+            // });
+        }
+    </script>
+</head>
+
+<body>
+    <ul class="btns">
+        <li>MENU1</li>
+        <li>MENU2</li>
+        <li>MENU3</li>
+    </ul>
+    <section id="wrap">
+        <div class="box">BOX1</div>
+        <div class="box">BOX2</div>
+        <div class="box">BOX3</div>
+    </section>
+</body>
+
+</html>

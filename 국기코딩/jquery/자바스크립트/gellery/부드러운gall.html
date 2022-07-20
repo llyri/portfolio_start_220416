@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부드러운 갤러리 효과</title>
+    <style>
+        #box {
+            position: absolute;
+            left: 0;
+            top: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+
+    <script>
+        let x = 0;
+        let target = 1000;
+        let box = document.querySelector('#box');
+
+        function motion() {
+            x = x + (target - x) * 0.1;
+            box.style.left = x + "px";
+        }
+
+
+        setInterval(motion, 100);        
+    </script>
+</body>
+
+</html>
