@@ -16,7 +16,7 @@
             list-style: none;
         }
 
-        h1{
+        h1 {
             text-align: center;
             padding-top: 20px;
         }
@@ -72,7 +72,8 @@
             margin-right: 5px;
         }
 
-        #gallery .prev,#gallery .next{
+        #gallery .prev,
+        #gallery .next {
             position: absolute;
             top: 45%;
             color: #777;
@@ -84,10 +85,11 @@
             box-shadow: 1px 1px 2px #ccc;
         }
 
-        #gallery .prev{
+        #gallery .prev {
             left: -70px;
         }
-        #gallery .next{
+
+        #gallery .next {
             right: -70px;
         }
     </style>
@@ -95,7 +97,7 @@
 </head>
 
 <body>
-    <h1>Smooth Gallery</h1>
+    <h1 id="num">Smooth Gallery</h1>
     <div id="gallery">
         <div class="mask">
             <div class="gall" id="gall">
@@ -119,19 +121,21 @@
             </div>
         </div>
         <ul class="nav">
-            <li><a href="#" class="mn">1</a></li>
-            <li><a href="#" class="mn">2</a></li>
-            <li><a href="#" class="mn">3</a></li>
+            <li><a href="#" class="mn" data-idx="0">1</a></li>
+            <li><a href="#" class="mn" data-idx="1">2</a></li>
+            <li><a href="#" class="mn" data-idx="2">3</a></li>
         </ul>
-        <a href="" class="prev">PREV</a>
-        <a href="" class="next">NEXT</a>
+        <a href="#" class="prev">PREV</a>
+        <a href="#" class="next">NEXT</a>
     </div>
 
     <script>
         const gall = document.querySelector("#gall");
         const mn = document.querySelectorAll(".mn");
         let x = 0; //초기값
-        let targetX = 0;//초기목적값
+        let targetX = 0;//초기목적값        
+        let prev = document.querySelector(".prev");
+        let next = document.querySelector(".next");
         let temp = document.querySelector("#set").cloneNode(true);
         gall.appendChild(temp)
 
@@ -143,36 +147,88 @@
         setInterval("smoothMove()", 10);
 
         mn[0].style.background = "hotpink";
+        //
+        let last_mn = mn[0]; //마지막에 눌렀던 값을 데이터에 저장
+        let idx = 0; //idx를 이용하여 mn[idx] 값을 변경
         for (let i = 0; i < mn.length; i++) {
             mn[i].addEventListener("click", function (e) {
                 e.preventDefault();
-                targetX = -600 * i;
-                for (let el of mn) {
-                    el.style.background = "#333";
-                }
+                idx =  this.getAttribute("data-idx");
+                targetX = -600 * idx
+                last_mn.style.background = "#333";
                 this.style.background = "hotpink";
+                last_mn = this
+
+                // targetX = -600 * i;
+                // for (let el of mn) {
+                //     el.style.background = "#333";
+                // }
+                // this.style.background = "hotpink";
             });
         }
 
-        //버튼이동
-        let prev = document.querySelector(".prev");
-        let next = document.querySelector(".next");
 
-        prev.addEventListener("click",function(e){
-            e.preventDefault();
+
+        //PREV, NEXT 버튼이동
+        function prevGall() {
+            //e.preventDefault();
             targetX = targetX + 600;
-        })
-
-        next.addEventListener("click",function(e){
-            e.preventDefault();
-            targetX = targetX - 600;
-            //이미지 크기보다 1개 적게 해주는 것이 옆의 여백이 안보임
-            if (targetX < -600*5){
-                x = -600*2; //#gall의 왼쪽 좌표값
-                targetX = -600*3
+            if (targetX > 0) {
+                x = -600 * 3;
+                targetX = -600 * 2;
             }
-        })
+            idx--;
+            if (idx < 0) { idx = 2 }
+            last_mn.style.background = "#333"
+            mn[idx].style.background = "hotpink"
+            last_mn = mn[idx]
 
+            count = 0
+            return false;
+        }
+
+        function nextGall() {
+            // e.preventDefault();
+            targetX = targetX - 600;
+            if (targetX < -600 * 5) {
+                x = -600 * 2;
+                targetX = -600 * 3;
+            }
+            idx++;
+            if (idx > 2) { idx = 0 }
+            last_mn.style.background = "#333"
+            mn[idx].style.background = "hotpink"
+            last_mn = mn[idx]
+
+            count = 0
+            return false;
+        }
+
+        prev.addEventListener("click", prevGall)
+        next.addEventListener("click", nextGall)
+
+        // next.addEventListener("click", function (e) {
+        //     e.preventDefault();
+        //     targetX = targetX - 600;
+        //     //이미지 크기보다 1개 적게 해주는 것이 옆의 여백이 안보임
+        //     if (targetX < -600 * 5) {
+        //         x = -600 * 2; //#gall의 왼쪽 좌표값을 이미지가 끊어지지 않는 위치값으로 변경
+        //         targetX = -600 * 3 //한단계 왼쪽위치로 목적지 설정
+        //     }
+        // })
+
+
+        //자동으로 넘어가기
+        let count = 0;
+        function timer() {
+            count++;
+            document.querySelector("#num").innerText = count;
+            if(count === 3){
+                nextGall();
+                count = 0;
+            }
+        }
+        setInterval("timer()", 1000)
     </script>
 </body>
 
