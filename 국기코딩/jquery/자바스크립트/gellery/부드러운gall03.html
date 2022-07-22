@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부드러운 갤러리 효과</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a,
+        span,
+        img {
+            display: inline-block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        .inner {
+            width: 1440px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #header {
+            text-align: center;
+            width: 100%;
+            padding: 36px 0;
+            background-color: #d1a998;
+            color: white;
+            font-size: 30px;
+            box-sizing: border-box;
+            border-bottom: 2px solid #dfbaaa;
+            margin-bottom: 30px;
+            min-width: 1440px;
+        }
+
+        #visual {
+            position: relative;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        #visual .mask {
+            position: relative;
+            width: 100%;
+            /* overflow:auto; */
+            height: 350px;
+        }
+
+        #visual .gallery {
+            display: flex;
+            width: 400%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #visual .gallery li {
+            flex: 1;
+        }
+
+        #visual .gallery li img {
+            display: block;
+            opacity: 0.4;
+        }
+
+        #visual .btn_wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        #visual .btn_wrap .btn {
+            padding: 5px 15px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            margin-right: 5px;
+            color: #ddd;
+        }
+
+        #footer {
+            margin-top: 30px;
+            padding: 50px 0;
+            background-color: #eee;
+            text-align: center;
+            color: #777;
+            min-width: 1440px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">GALLERY</header>
+        <div class="inner">
+            <div id="visual">
+                <div class="mask">
+                    <ul class="gallery">
+                        <li><img src="./images02/img1.jpg" alt="img"></li>
+                        <li><img src="./images02/img2.jpg" alt="img"></li>
+                        <li><img src="./images02/img3.jpg" alt="img"></li>
+                        <li><img src="./images02/photo4.jpg" alt="img"></li>
+                    </ul>
+                </div>
+                <ul class="btn_wrap">
+                    <li><a href="#" class="btn">1</a></li>
+                    <li><a href="#" class="btn">2</a></li>
+                    <li><a href="#" class="btn">3</a></li>
+                    <li><a href="#" class="btn">4</a></li>
+                </ul>
+            </div>
+        </div>
+        <footer id="footer">footer</footer>
+    </div>
+
+    <script>
+        const gallery = document.querySelector(".gallery");
+        const btn = document.querySelectorAll(".btn");
+        const li = document.querySelectorAll(".gallery li");
+        const img = document.querySelectorAll(".gallery li img");
+        console.log(img)
+
+        let x = 0;
+        let targetX = 0;
+
+        function motion() {
+            x = x + (targetX - x) * 0.1;
+            gallery.style.left = x + "px"
+        }
+
+        setInterval(motion, 10);
+
+        img[0].style.opacity = '1'
+        btn[0].style.backgroundColor = "#613b17"
+        for (let i = 0; i < 4; i++) {
+            btn[i].addEventListener('click', function (e) {
+                e.preventDefault();
+
+                for (let item of btn) {
+                    item.style.backgroundColor = "transparent"
+                }
+
+                for(let el of img){
+                    el.style.opacity ="0.4"
+                }
+                this.style.backgroundColor = "#613b17"
+                targetX = 600 * -i
+
+                img[i].style.opacity = '1'
+                img[i].style.scale = '200%'
+            })
+        }
+    </script>
+</body>
+
+</html>

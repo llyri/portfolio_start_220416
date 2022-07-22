@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloneNode</title>
+    <style>
+        #box {
+            width: 50px;
+            height: 50px;
+            background-color: forestgreen;
+            margin: 20px;
+        }
+
+        #in{
+            width: 20px;
+            height: 20px;
+            background-color: firebrick;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="box">
+            <div id="in"></div>
+        </div>
+    </div>
+
+    <script>
+        //복제를 할때에는 class명으로 할수 없으므로 아이디로 해주어야함
+        //class명을 querySelectorAll로 할때 사용하면 됨
+        let box = document.querySelector("#box")
+        let wrap = document.querySelector("#wrap")
+
+        //자식도 함께 복사하려면 ()안에 true값을 넣어주면 된다.
+        //default값이 false
+        let el = box.cloneNode(true);
+        let el1 = box.cloneNode(true);
+
+        wrap.appendChild(el);
+        wrap.appendChild(el1);
+    </script>
+</body>
+
+</html>
