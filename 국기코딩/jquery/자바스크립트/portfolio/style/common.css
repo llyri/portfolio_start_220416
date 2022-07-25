@@ -1,0 +1,163 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    background: url(../images/background.jpg);
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    min-width: 1600px;
+    min-height: 800px;
+    display: flex;
+    /* background-color: #333; */
+}
+
+#container #header {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    padding: 10vh 5vw;
+    z-index: 3;
+    text-align: center;
+}
+
+#container .logo {
+    font-weight: 400;
+    font-size: 2vw;
+    line-height: 1;
+}
+
+#container #nav {
+    /* position: fixed;
+    top: 10vh;
+    right: 5vw; */
+    z-index: 3;
+}
+
+#container #nav ul {
+    padding-top: 20px;
+}
+
+#container #nav ul a {
+    font-size: 1vw;
+    display: block;
+    margin: 0 15px 2px ;
+    color: #eee;
+}
+
+#container #contents {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    padding-top: 15vh;
+}
+
+#container #contents .section {
+    flex: 1;
+    padding: 60px 30px 100px;
+    position: relative;
+    opacity: 0.6;
+    transition: opacity 1s, flex 1s;
+    cursor: pointer;
+}
+
+
+#container #contents .section .inner {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+#container #contents .section .inner .txt {
+    transition: 0.5s;
+}
+
+#container #contents .section .inner .txt h2 {
+    font-size: 2vw;
+    position: relative;
+    font-weight: 100;
+    margin-bottom: 40px;
+    transition: 1s;
+}
+
+#container #contents .section .inner .txt h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #fff;
+    transition: 1s;
+    margin-top: 20px;
+}
+
+#container #contents .section .inner .txt p {
+    color: #ccc;
+}
+
+#container #contents .section .inner figure {
+    height:30vh;
+    /* background: #777;
+    overflow: hidden;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3); */
+}
+
+#container #contents .section .inner figure img{
+    /* width: 100%;
+    height: 100%;
+    object-fit: cover; */
+}
+
+#container #contents .section::before{
+    content: "";
+    color: white;
+    display: block;
+    width: 95%;
+    height: 95%;
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    top: 0;
+    left: -200px;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+#container #contents .section:hover{
+    z-index: 1;
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+#container #contents .section:hover::before{
+    opacity: 1;
+    left: 0;
+}
+

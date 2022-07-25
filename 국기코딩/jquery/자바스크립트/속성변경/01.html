@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성변경</title>
+</head>
+
+<body>
+    <img src="./img.jpg" alt="pic" id="pic">
+    <p class="txt">이미지</p>
+    <script>
+        const el = document.querySelector("#pic");
+        const txt = document.querySelector(".txt")
+        let linkH = el.getAttribute("alt")
+        console.log(linkH)
+
+
+        el.addEventListener("click",imgChange)
+
+        function imgChange(){
+            this.setAttribute("src","./img02.jpg")
+            txt.innerText = linkH
+        }
+    </script>
+</body>
+</html>

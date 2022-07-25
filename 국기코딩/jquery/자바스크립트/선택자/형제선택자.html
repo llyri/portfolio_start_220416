@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형제선택자</title>
+</head>
+
+<body>
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li class="test">3</li>
+        <li>4</li>
+    </ul>    
+
+    <script>
+        let test = document.querySelector(".test")
+        let pre = test.previousElementSibling;
+        let next = test.nextElementSibling;
+
+        console.log(pre)
+        console.log(next)
+        
+        pre.style.background = 'gold'
+        next.style.background = 'pink'
+    </script>
+</body>
+</html>

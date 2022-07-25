@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부모선택자</title>
+</head>
+
+<body>
+    <section class="wrap">
+        <ul id="list">
+            <li>1</li>
+            <li>2</li>
+            <li class="test">3</li>
+            <li>4</li>
+        </ul>
+    </section>
+
+    <script>
+        let test = document.querySelector(".test");
+        let el = test.parentElement //바로위의 직계 부모를 선택
+        console.log(el)
+
+        let parent = test.closest(".wrap"); //부모의 부모를 선택하거나 그 위에 상위선택자를 선택할 때 사용
+        console.log(parent)
+
+        el.style.border = "1px solid orange"
+        parent.style.border = "1px solid green"
+    </script>
+</body>
+</html>

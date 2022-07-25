@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="http://www.naver.com" target="_blank" class="btn">네이버</a> 
+    <p>다음으로 이동</p>   
+    <p>유튜브로 이동</p>   
+
+    <script>
+        const btn = document.querySelector(".btn");
+        const pTxt = document.querySelector("p");
+        console.log(pTxt)
+
+        let btnText = pTxt.innerText;
+        console.log(btnText)
+
+        btn.addEventListener("click",change)
+
+        function change(){
+            this.innerText = btnText;
+            this.setAttribute("href","http://www.daum.net")
+        }
+    </script>
+</body> 
+</html>
