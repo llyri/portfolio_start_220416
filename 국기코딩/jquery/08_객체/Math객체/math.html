@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math객체</title>
+</head>
+
+<body>
+    <script>
+        let num1 = 2.789;
+        let num2 = "30.5px";
+        let num3 = 40;
+        let num4 = 3.1234;
+
+        document.write(Math.max(10, 5, 8, 30), "<br>"); //max는 숫자중에 가장 큰 수를 반환 
+        document.write(Math.min(10, 5, 8, 30), "<br>"); //max는 숫자중에 가장 작은 수를 반환 
+        document.write(Math.round(num1), "<br>"); //소수점 첫번째 자리에서 반올림
+        document.write(Math.ceil(num4), "<br>"); //소수점 자리를 무조건 올림
+        document.write(Math.floor(num4), "<br>"); //소수점 자리를 무조건 절삭
+        document.write(Math.abs(-10), (-20), "<br>"); //수의 절대값을 반환
+
+        // Math.random()*(최대값-최소값)+최소값
+        document.write(Math.random(), "<br>"); //0과 1사이의 난수를 반환
+        document.write(Math.random() * (100 - 10) + 10, "<br>");
+        document.write(Math.floor(Math.random() * (100 - 10) + 10), "<br>"); //랜덤이고 소수점 자리는 절삭
+
+        //parseInt = 데이터를 정수로 반환 / parseFloat = 데이터를 실수(소수점)까지 반환
+        document.write(parseInt(num3 + num4), "<br>");
+        document.write(num3 + parseFloat(num2), "<br>"); //Number()쓸 때는 px가 붙으면 안됨 
+        // document.write(, "<br>");
+    </script>
+</body>
+
+</html>
