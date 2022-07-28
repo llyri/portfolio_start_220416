@@ -14,16 +14,28 @@
     <script>
         window.onload = function () {
             var ctx = document.querySelector("#myCanvas").getContext("2d")
+            var r1 = -Math.PI / 2 //시작값
+            var targetR1 = 330 * Math.PI/180 - Math.PI / 2; //ahrvywlwja
+            
+
+            //Math.PI = 180
+            // radian값 = 각도 * Math.PI / 180
+                let canvas = document.querySelector("#myCanvas")
+
+                canvas.addEventListener('click',motion)
 
             function motion() {
+
+                r1 = r1 + (targetR1 - r1) * 0.1
+
                 ctx.strokeStyle = "green"
                 ctx.lineWidth = 20;
                 ctx.beginPath();
-                ctx.arc(200,150,100,0,Math.PI,false);
+                ctx.arc(200, 150, 100, -Math.PI / 2, r1, false);
                 ctx.stroke();
             }
 
-            motion();
+            setInterval(motion,10);
         }
     </script>
 </head>
