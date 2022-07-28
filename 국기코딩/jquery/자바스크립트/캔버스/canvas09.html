@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        #myCanvas {
+            border: 5px solid #eaeaea;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var ctx = document.querySelector("#myCanvas").getContext("2d")
+
+            function motion() {
+                ctx.strokeStyle = "green"
+                ctx.lineWidth = 20;
+                ctx.beginPath();
+                ctx.arc(200,150,100,0,Math.PI,false);
+                ctx.stroke();
+            }
+
+            motion();
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1000" height="400"></canvas>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        #myCanvas{
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+
+            function draw(){
+            // var canvas = document.querySelector('#myCanvas'); //캔버스로 지정할 객체 
+            // var ctx = canvas.getContext("2d") //2d로 그릴것을 명령
+            //아래는 한번에 쓰는 방식
+            var ctx = document.querySelector("#myCanvas").getContext("2d")
+
+            //path매서드 여러경로를 설정하는 함수, 원그리기
+            ctx.beginPath();
+            ctx.moveTo(75,50)
+            ctx.lineTo(100,75)
+            ctx.lineTo(100,25)            
+            ctx.closePath(); //시작부분과 연결된 직선을 추가 or 라인을 하나 더 만들어서 닫아야함
+            // ctx.fill(); //채워진 도형
+            ctx.stroke(); //선으로 된 도형
+
+            }
+
+            draw();
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        #myCanvas{
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+
+            function draw(){
+            // var canvas = document.querySelector('#myCanvas'); //캔버스로 지정할 객체 
+            // var ctx = canvas.getContext("2d") //2d로 그릴것을 명령
+            //아래는 한번에 쓰는 방식
+            var ctx = document.querySelector("#myCanvas").getContext("2d")
+
+            //사각형
+            ctx.fillRect(25,25,100,100); //채워진 사각형
+            //ctx.strokeRect(25,25,100,100); //선으로된 사각형
+            ctx.clearRect(45,45,60,60);
+            ctx.fillRect(50,50,100,100); 
+            ctx.clearRect(70,70,60,60);
+            ctx.fillRect(75,75,100,100); 
+            ctx.clearRect(95,95,60,60);
+            }
+
+            draw();
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+</body>
+</html>

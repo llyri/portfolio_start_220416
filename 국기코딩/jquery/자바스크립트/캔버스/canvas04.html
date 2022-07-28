@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        #myCanvas{
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+
+            function draw(){
+            // var canvas = document.querySelector('#myCanvas'); //캔버스로 지정할 객체 
+            // var ctx = canvas.getContext("2d") //2d로 그릴것을 명령
+            //아래는 한번에 쓰는 방식
+            var ctx = document.querySelector("#myCanvas").getContext("2d")
+
+            /*호(arc)
+            호나 원을 그릴때는 arc(), arcTo 메서드를 사용
+            arc(x,y,radius,startAngle, endAngle, anticclockwise)*/
+            //anticclockwise => 회전방향(기본값은 false(시계방향), true)
+            
+            ctx.beginPath();
+            ctx.arc(100,100,100,0,Math.PI,true); //중간지점이 50, 반지름이 50, 시작은 오른쪽, Math.PI = 180도회전 
+            ctx.stroke();
+            }
+
+            draw();
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+</body>
+</html>
