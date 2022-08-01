@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 이름 없는 함수
+        let myFun = function () {
+            console.log("javascript")
+        }
+        myFun();
+
+
+        // 이름 있는 함수 
+        function myFun() {
+            console.log("javascript")
+        }
+        myFun();
+
+        // 화살표함수
+        let myFun = () => { console.log("javascript") }
+        // 1줄 일때는 중괄호 생략 가능
+        myFun();
+
+        let myFun = (e) => {
+            e.prventDefault();
+            console.log("javascript")
+        }
+
+    </script>
+</head>
+
+<body>
+    <a href="#" class="btn_link">LINK</a>
+</body>
+
+</html>

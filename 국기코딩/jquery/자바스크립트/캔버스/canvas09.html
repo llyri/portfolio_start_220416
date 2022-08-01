@@ -1,47 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas</title>
+    <title>CANVAS</title>
     <style>
-        #myCanvas {
-            border: 5px solid #eaeaea;
-        }
+        #c1{border: 5px solid #eaeaea;}
+        .txt{font-size: 70px; position: absolute; top:120px;}
+        #t1{left:150px; color:orange;}
+        #t2{left:450px; color:hotpink;}
     </style>
     <script>
-        window.onload = function () {
-            var ctx = document.querySelector("#myCanvas").getContext("2d")
-            var r1 = -Math.PI / 2 //시작값
-            var targetR1 = 330 * Math.PI/180 - Math.PI / 2; //ahrvywlwja
-            
+        /*
+            Math.PI=180;
+            라디안=각도*Math.PI/180;
+        */
+        window.onload=function(){
+            var ctx=document.querySelector("#c1").getContext("2d");
+            var r1=-Math.PI/2;  //시작값
+            var targetR1=300*Math.PI/180-Math.PI/2 ; //목표지점
 
-            //Math.PI = 180
-            // radian값 = 각도 * Math.PI / 180
-                let canvas = document.querySelector("#myCanvas")
+            var r2=-Math.PI/2;  //시작값
+            var targetR2=240*Math.PI/180-Math.PI/2 ; //목표지점
 
-                canvas.addEventListener('click',motion)
+            function motion(){
+                r1=r1+(targetR1-r1)*0.03;
+                r2=r2+(targetR2-r2)*0.06;
 
-            function motion() {
-
-                r1 = r1 + (targetR1 - r1) * 0.1
-
-                ctx.strokeStyle = "green"
-                ctx.lineWidth = 20;
+                ctx.clearRect(0,0,1000,400);    
+                ctx.strokeStyle="orange";
+                ctx.lineWidth=20;
+                ctx.lineCap="round"
                 ctx.beginPath();
-                ctx.arc(200, 150, 100, -Math.PI / 2, r1, false);
+                ctx.arc(200,150,100, -Math.PI/2, r1);
                 ctx.stroke();
-            }
 
-            setInterval(motion,10);
+                ctx.strokeStyle="hotpink";
+                ctx.lineWidth=20;
+                ctx.lineCap="round"
+                ctx.beginPath();
+                ctx.arc(500,150,100, -Math.PI/2, r2);
+                ctx.stroke();
+
+                ctx.strokeStyle="yellowgreen";
+                ctx.lineWidth=20;
+                ctx.lineCap="round"
+                ctx.beginPath();
+                ctx.arc(800,150,100, -Math.PI/2, r2);
+                ctx.stroke();
+
+                //출력
+                document.querySelector("#t1").innerText=Math.round(((180*r1)/Math.PI+90)/360*100)+"%";
+                document.querySelector("#t2").innerText=Math.round(((180*r2)/Math.PI+90)/360*100)+"%";
+                /*
+                각도 = (180*radian)/Math.PI;
+                */
+            }
+            //motion();
+            setInterval(motion, 10);
         }
     </script>
 </head>
-
 <body>
-    <canvas id="myCanvas" width="1000" height="400"></canvas>
+<div id="container">
+    <canvas id="c1" width="1000" height="350"></canvas>
+    <div id="t1" class="txt">0</div>
+    <div id="t2" class="txt">0</div>
+</div>
 </body>
-
 </html>
