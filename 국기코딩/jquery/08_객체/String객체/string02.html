@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String02</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto';
+        }
+
+        .typo1 {
+            font-size: 300px;
+            text-align: center;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="typo1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </p>
+
+    <script>
+        let t = document.querySelectorAll(".typo1 span")
+        let abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        // alert(abc.charAt(3))
+       t[0].innerText = abc.charAt(3)
+       t[2].innerText = abc.charAt(4)
+       t[3].innerText = abc.charAt(18)
+       t[4].innerText = abc.charAt(8)
+       t[5].innerText = abc.charAt(6)
+       t[6].innerText = abc.charAt(13)
+    </script>
+</body>
+
+</html>
