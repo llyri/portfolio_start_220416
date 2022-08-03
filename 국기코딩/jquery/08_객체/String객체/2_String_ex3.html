@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <style>
+        *{margin:0; padding:0;}
+        body{font-family: "Roboto";}
+        .typo1{font-size: 300px; text-align: center; 
+                   font-weight: 900;}
+    </style>
+</head>
+<body>
+    <p class="typo1">
+        <span></span><!--
+    --><span></span><!--
+    --><span></span><!--
+    --><span></span><!--
+    --><span></span><!--
+     --><span></span>
+    </p>
+    <script>
+        let t=document.querySelectorAll(".typo1 span");
+        let abc="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let i0=0;
+        let i1=0;
+        let i2=0;
+        let i3=0;
+        let i4=0;
+        let i5=0;
+
+        function m0(){t[0].innerText=abc.charAt(i0); i0++; if(i0>3){clearInterval(s0);}}
+        function m1(){t[1].innerText=abc.charAt(i1);i1++;if(i1>4){clearInterval(s1);} }
+        function m2(){t[2].innerText=abc.charAt(i2);i2++;if(i2>18){clearInterval(s2);}}
+        function m3(){t[3].innerText=abc.charAt(i3);i3++;if(i3>8){clearInterval(s3);}}
+         function m4(){t[4].innerText=abc.charAt(i4);i4++;if(i4>6){clearInterval(s4);}}
+        function m5(){t[5].innerText=abc.charAt(i5);i5++;if(i5>13){clearInterval(s5);}}
+
+        let s0=setInterval(m0,200);
+        let s1=setInterval(m1,300);
+        let s2=setInterval(m2,350);
+        let s3=setInterval(m3,150);
+        let s4=setInterval(m4,700);
+        let s5=setInterval(m5,250);
+      
+
+
+        // t[0].innerText=abc.charAt(3);
+        // t[1].innerText=abc.charAt(4);
+        // t[2].innerText=abc.charAt(18);
+        // t[3].innerText=abc.charAt(8);
+        // t[4].innerText=abc.charAt(6);
+        // t[5].innerText=abc.charAt(13);
+    </script>
+</body>
+</html>

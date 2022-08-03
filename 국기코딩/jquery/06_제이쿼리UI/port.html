@@ -13,7 +13,7 @@
         }
 
         section {
-            height: 1000px;
+            height: 300px;
             border-bottom: 1px solid #eaeaea;
             padding: 100px 0;
             text-align: center;
@@ -25,10 +25,7 @@
             background-color: #eee;
             text-decoration: none;
             color: #777;
-        }
-
-        .overlay_wrap {
-            /* display: none; */
+            margin-bottom: 15px;
         }
 
         .overlay {
@@ -43,10 +40,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            display: none;
+            text-align: center;
         }
 
         .modal_pic {
             position: relative;
+            display: inline-block;
+            margin-top: 50px;
         }
 
         .modal_pic .pic {
@@ -61,40 +62,112 @@
 
         .close {
             position: absolute;
-            right: -50px;
+            right: -70px;
             top: 0;
             color: #fff;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+
+        .graphic {
+            width: 600px;
+            margin: 100px auto;
+            display: flex;
+        }
+
+        .graphic .gr {
+            flex: 1;
+            text-align: center;
+            line-height: 50px;
+            margin: 10px;
+            background: #d4736d;
+            color: white;
+            border-radius: 10px;
         }
     </style>
 </head>
 
 <body>
-    <section class="section"></section>
-    <section class="section"></section>
+    <section class="section">
+        <div class="graphic">
+            <div class="gr">화난 루피</div>
+            <div class="gr">행복 루피</div>
+            <div class="gr">우는 루피</div>
+        </div>
+    </section>
     <section class="section">
         <ul>
             <li>
                 <a href="#" class="mobile">Mobile</a>
             </li>
+            <li>
+                <a href="#" class="mobile">Mobile</a>
+            </li>
+            <li>
+                <a href="#" class="mobile">Mobile</a>
+            </li>
         </ul>
-
     </section>
-    <aside class="overlay_wrap">
+    <aside class="design_area cl">
         <div class="overlay">
             <div class="modal_pic">
-                <img src="./iphone.png" alt="iphone">
+                <img src="./images/lupi1.png" alt="루피" width="300px">
+                <span class="close">Close</span>
+            </div>
+        </div>
+    </aside>
+    <aside class="overlay_wrap cl">
+        <div class="overlay">
+            <div class="modal_pic">
+                <img src="./images/iphone.png" alt="iphone">
                 <div class="pic">
                     <iframe src="http://showty.pe.kr/coca/" frameborder="0" width="380" height="650"></iframe>
                 </div>
-                <div class="close"></div>
+                <span class="close">X</span>
+            </div>
+        </div>
+        <div class="overlay">
+            <div class="modal_pic">
+                <img src="./images/iphone.png" alt="iphone">
+                <div class="pic">
+                    <iframe src="http://uxuidesign.pe.kr/zara" frameborder="0" width="380" height="650"></iframe>
+                </div>
+                <div class="close">X</div>
+            </div>
+        </div>
+        <div class="overlay">
+            <div class="modal_pic">
+                <img src="./images/iphone.png" alt="iphone">
+                <div class="pic">
+                    <iframe src="http://showty.pe.kr/coca/" frameborder="0" width="380" height="650"></iframe>
+                </div>
+                <div class="close">X</div>
             </div>
         </div>
     </aside>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
-        $(".mobile").click(function () {
-            let n = $(this).parent("li").index()
+        $(".mobile").click(function (e) {
+            e.preventDefault();
+            let n = $(this).parent("li").index();
+            console.log(n);
+            $(".overlay_wrap .overlay").eq(n).show();
+        });
+
+        $(".close").click(function (e) {
+            e.preventDefault();
+            $(".cl .overlay").hide();
+            $("body").css({overflow:"auto"})
         })
+
+        $(".gr").on("click",function () {
+            let n = $(this).index();
+            $(".design_area .overlay").show();
+            $(".design_area .modal_pic img").attr("src", "./images/lupi" + n + ".png")
+            $("body").css({overflow:"hidden"})
+        })
+
     </script>
 </body>
 

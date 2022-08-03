@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array01</title>
+    <script>
+        // new 연산자를 사용한 방식
+        let myArray = new Array();
+        myArray[0] = "Apple";
+        myArray[1] = "Grape";
+        myArray[2] = "Pineapple";
+        myArray[3] = "Tomato";
+        myArray[4] = "Melon";
+
+        console.log("I want to eat" + myArray[2] + "fruit");
+        console.log(myArray[1] + "빌런 입니다");
+
+        // 저장 별 지정한 배열 객체 생성법
+        let myName = new Array(5);
+        console.log(myName);
+
+        // 편리한 배열 객체 생성법
+        let fruit = ["Apple", "Grape", "Pineapple", "Tomato", "Melon"]
+        document.write(fruit[2])
+
+        // 
+        let myFood = [2, "fruit", ['마라탕', '우육면'], '심현석', '100', 'A']
+        console.log(myFood[2][0], myFood[2][1], "<br>")
+        console.log(myFood[3], "<br>")
+        console.log("배열의 길이는 총 "+ myFood.length +" 개 입니다.")
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

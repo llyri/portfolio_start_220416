@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Roboto";
+        }
+
+        .typo1 {
+            font-size: 300px;
+            text-align: center;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>0</h1> -->
+    <p class="typo1">
+        <span></span>
+        <!--
+    --><span></span>
+        <!--
+    --><span></span>
+        <!--
+    --><span></span>
+        <!--
+    --><span></span>
+        <!--
+     --><span></span>
+    </p>
+    <script>
+        let t = document.querySelectorAll(".typo1 span");
+        let abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let i = [];
+        for (var j = 0; j <= 5; j++) {
+            i.push(j);
+        }
+        console.log(i);
+
+        ///count출력
+        let count = 0;
+        let textMotion = setInterval(() => {
+
+            if (count === 0) {
+                s0 = setInterval(() => {
+                    t[0].innerText = abc.charAt(i[0]);
+                    i[0]++;
+                    if (i[0] > 3) { clearInterval(s0); }
+                }, 150)
+            };
+            if (count === 5) {
+                s1 = setInterval(() => {
+                    t[1].innerText = abc.charAt(i[1]);
+                    i[1]++;
+                    if (i[1] > 4) { clearInterval(s1); }
+                }, 250)
+            };
+            if (count === 15) {
+                s2 = setInterval(() => {
+                    t[2].innerText = abc.charAt(i[2]);
+                    i[2]++;
+                    if (i[2] > 18) { clearInterval(s2); }
+                }, 30)
+            };
+            if (count === 20) {
+                s3 = setInterval(() => {
+                    t[3].innerText = abc.charAt(i[3]);
+                    i[3]++;
+                    if (i[3] > 8) { clearInterval(s3); }
+                }, 80)
+            };
+            if (count === 25) {
+                s4 = setInterval(() => {
+                    t[4].innerText = abc.charAt(i[4]);
+                    i[4]++;
+                    if (i[4] > 6) { clearInterval(s4); }
+                }, 100)
+            };
+            if (count === 30) {
+                s5 = setInterval(() => {
+                    t[5].innerText = abc.charAt(i[5]);
+                    i[5]++;
+                    if (i[5] > 13) { clearInterval(s5); }
+                }, 50)
+            };
+
+            count++;
+            //document.querySelector("h1").innerText=count; 
+        }, 100);
+    </script>
+</body>
+
+</html>
