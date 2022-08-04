@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정의 객체</title>
+    <script>
+        window.onload = function () {
+            const toyRobot = {
+                productID: "12-3",
+                name: "12-3",
+                price: "30,000",
+                mainIn: "korea",
+                showPrice: function () {
+                    document.querySelector('#display').innerHTML = this.name + '제품의 가격은' + this.price + '입니다.'
+                },
+                showOrigin: function () {
+                    document.querySelector('#price').innerHTML = '이 제품의 원산지는' + this.mainIn + '입니다.'
+                }
+            }
+
+
+
+            toyRobot.showPrice();
+            toyRobot.showOrigin();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="display"></div>
+    <div id="price"></div>
+</body>
+
+</html>

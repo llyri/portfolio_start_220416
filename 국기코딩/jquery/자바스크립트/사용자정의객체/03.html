@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정의 객체</title>
+    <script>
+        // 객체를 만들어내는 함수를 생성자 함수라고 함 
+        // function 예약어를 이용해서 만듬
+        // 생성자 함수 안에 객체의 속성과 함수를 정의 할때는 this예약어 다음에, 와 속성을 입력
+        window.onload = function () {
+            function Travel(city, country, people, price) {
+                this.city = city,
+                this.country = country,
+                this.people = people
+                this.price = price
+            }
+
+            // 객체를 복사해서 사용, 복제한 객체를 인스턴스라고 함
+            // 인스턴스 사용
+            var asia = new Travel('Seoul', 'Korea', '2', '300,000');
+            var europe = new Travel('취리히', '스위스', '10', '1,000,000');
+
+            console.log(asia)
+            console.log(europe)
+            console.log(asia.people)
+        }
+    </script>
+</head>
+
+<body>
+    <div id="display"></div>
+    <div id="price"></div>
+</body>
+
+</html>

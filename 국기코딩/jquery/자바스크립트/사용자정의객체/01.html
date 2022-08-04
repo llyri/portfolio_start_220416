@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정의 객체</title>
+    <script>
+        // var a = 0 ---> 리터널방식, 변수를 선언하면서 값을 지정하는 방식
+
+        // 사용자정의객체란 사용자가 필요에 따라 객체를 만들 수 있는 것을 말함
+        // 사용자정의함수는 객체리터널 표기방법으로, 객체를 선언하면서 동시에 값을 지정하는 방식
+        // // const 함수이름 = {
+        //     속성 : 속성값,
+        //     속성 : 속성값,
+        // }
+
+        const user = {
+            name: "Jain",
+            age: 20,
+            job: "Designer",
+            hobby: "Music"
+        }
+        // console.log(user.name)
+        console.log(user.job)
+
+        // 새로운 속성추가
+        user.hairColor = "gold"
+        console.log(user)
+
+        // 속성삭제
+        delete user.age;
+        console.log(user)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
